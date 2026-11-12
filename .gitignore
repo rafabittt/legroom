@@ -9,9 +9,9 @@ DerivedData/
 Legroom.xcodeproj/
 
 # Local-only material (reference screenshots, captures, landing page drafts)
-refs/
-snapshots/
-site/
+/refs/
+/snapshots/
+/site/
 
 # macOS / Xcode noise
 .DS_Store
