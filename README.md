@@ -52,6 +52,8 @@ Most Mac "cleaners" are subscriptions wrapped in scare tactics: red warnings, a 
 2. Drag Legroom to Applications and open it.
 3. Optional but recommended: give Legroom **Full Disk Access** in System Settings › Privacy & Security › Full Disk Access. Without it, macOS hides some folders (Mail, Messages, some app containers) and the scan will be incomplete. Legroom tells you when that happens.
 
+Updates are delivered with [Sparkle](https://sparkle-project.org): use **Legroom › Check for Updates…**, or let Legroom check automatically (it asks first). Every update is the same notarized DMG published under Releases, signed with the project's update key.
+
 Legroom is distributed outside the Mac App Store on purpose: the App Store requires the sandbox, which would make a full disk scan, the process list and complete uninstalls impossible.
 
 ## How it works

@@ -469,6 +469,7 @@ struct SettingsView: View {
     @AppStorage(AppearanceMode.key) private var appearance: AppearanceMode = .system
     @AppStorage(MenuBarPrefs.show) private var showMenuBar = true
     @AppStorage(MenuBarPrefs.freePercent) private var showFreePercent = false
+    @ObservedObject private var updates = Updates.shared
     var body: some View {
         @Bindable var state = state
         Form {
@@ -481,6 +482,9 @@ struct SettingsView: View {
             Toggle("Show % free next to the icon", isOn: $showFreePercent)
                 .disabled(!showMenuBar)
                 .padding(.leading, 18)
+            Toggle("Check for updates automatically", isOn: Binding(
+                get: { updates.automaticallyChecks },
+                set: { updates.automaticallyChecks = $0 }))
             Text("Sizes always show the space allocated on disk (what you get back as free space when you delete). The logical size appears in the details panel.")
                 .font(.footnote).foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)

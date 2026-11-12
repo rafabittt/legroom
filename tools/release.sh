@@ -12,6 +12,10 @@
 # Usage: tools/release.sh             → notarized dist/Legroom-<version>.dmg
 #        tools/release.sh --no-notary → archive + export + DMG only (to test the pipeline)
 #        then: tools/install.sh --from dist/export.noindex/Legroom.app → installs in /Applications
+#
+# Updates: the notarized DMG is signed for Sparkle (EdDSA key in the login Keychain,
+# account "legroom", created with Sparkle's generate_keys) and added to appcast.xml.
+# Publishing = GitHub Release v<version> with the DMG + pushing appcast.xml.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -63,6 +67,10 @@ if [[ $NOTARIZE == 1 ]]; then
   xcrun stapler validate "$DMG"
   echo "▸ Gatekeeper"
   spctl --assess --type open --context context:primary-signature --verbose=2 "$DMG" || true
+  echo "▸ appcast (Sparkle update feed)"
+  NOTES=dist/notes-$VERSION.html
+  if [[ -f $NOTES ]]; then tools/appcast.py "$DMG" "$VERSION" "$BUILD" --notes "$NOTES"
+  else tools/appcast.py "$DMG" "$VERSION" "$BUILD"; fi
 fi
 
 rm -rf "$STAGE"
@@ -72,3 +80,6 @@ find ~/Library/Developer/Xcode/DerivedData -path "*ArchiveIntermediates/Legroom/
   -exec "$LSREGISTER" -u {} \; >/dev/null 2>&1 || true
 echo "✓ $DMG"
 echo "  to use it on this Mac: tools/install.sh --from $EXPORT/Legroom.app"
+if [[ $NOTARIZE == 1 ]]; then
+  echo "  to ship it: gh release create v$VERSION $DMG, then commit and push appcast.xml"
+fi

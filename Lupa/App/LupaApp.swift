@@ -13,6 +13,7 @@ struct LegroomApp: App {
     init() {
         Trail.note("launched: version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"), arguments \(CommandLine.arguments.count - 1)")
         DebugLaunch.early()
+        _ = Updates.shared   // starts Sparkle's scheduler (Release builds)
     }
 
     var body: some Scene {
@@ -29,6 +30,7 @@ struct LegroomApp: App {
         .windowToolbarStyle(.unifiedCompact(showsTitle: false))
         .commands {
             CommandGroup(replacing: .newItem) { }
+            CommandGroup(after: .appInfo) { CheckForUpdatesButton() }
             CommandMenu("Scan") {
                 Button("Scan Folder…") { state.chooseFolder() }
                     .keyboardShortcut("o", modifiers: [.command])

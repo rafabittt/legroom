@@ -7,6 +7,11 @@ options:
   # English is the development language; pt-BR lives in the String Catalogs
   developmentLanguage: en
   generateEmptyDirectories: true
+packages:
+  # Sparkle: in-app updates for apps distributed outside the App Store
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.10.1
 settings:
   base:
     SWIFT_VERSION: "5.0"
@@ -43,14 +48,17 @@ targets:
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "0.9.7"
-        CFBundleVersion: "8"
+        CFBundleShortVersionString: "0.9.8"
+        CFBundleVersion: "9"
         LSMinimumSystemVersion: "14.0"
         LSApplicationCategoryType: public.app-category.utilities
         NSPrincipalClass: NSApplication
         NSHighResolutionCapable: true
         NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
         NSAppleEventsUsageDescription: "Legroom asks Finder to move system-owned items, such as apps installed by a package, to the Trash. Finder asks for your administrator password; Legroom never sees or stores it."
+        # Sparkle: update feed in the GitHub repo and the public half of the signing key
+        SUFeedURL: https://raw.githubusercontent.com/rafabittt/legroom/main/appcast.xml
+        SUPublicEDKey: NflgF7VNoNBnvw7rPgAZHFKjIpDc9lGa1Z9uuZGtP0w=
         # legroom://resumo (the widget opens the app on the Overview)
         CFBundleURLTypes:
           - CFBundleURLName: com.rafabitt.legroom
@@ -64,6 +72,7 @@ targets:
         com.apple.security.automation.apple-events: true
     dependencies:
       - target: LegroomWidget
+      - package: Sparkle
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.rafabitt.legroom
@@ -90,8 +99,8 @@ targets:
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "0.9.7"
-        CFBundleVersion: "8"
+        CFBundleShortVersionString: "0.9.8"
+        CFBundleVersion: "9"
         LSMinimumSystemVersion: "14.0"
         NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
         NSExtension:

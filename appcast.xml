@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Legroom</title>
+    <link>https://github.com/rafabittt/legroom</link>
+    <description>Legroom updates</description>
+    <language>en</language>
+    <item>
+      <title>Legroom 0.9.8</title>
+      <pubDate>Thu, 12 Nov 2026 19:24:52 GMT</pubDate>
+      <sparkle:version>9</sparkle:version>
+      <sparkle:shortVersionString>0.9.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v0.9.8</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 0.9.8</h3>
+<ul>
+<li><b>Automatic updates.</b> Legroom can now update itself. Use <i>Legroom › Check for Updates…</i>, or turn on automatic checks in Settings.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v0.9.8/Legroom-0.9.8.dmg" length="3844297" type="application/octet-stream" sparkle:edSignature="l8flGwTETZtBCV7SJD/LhEVer2IVdM23yTr9P+OmXL+V+/otDPaZMTBrbC/j8hOcuEFmcobSuhym5rDWwZcTAQ=="/>
+    </item>
+  </channel>
+</rss>
