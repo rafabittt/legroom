@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rafabittt.github.io/legroom/sitemap.xml

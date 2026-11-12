@@ -21,3 +21,6 @@ xcuserdata/
 
 # Internal design log (references private material)
 DESIGN.md
+
+# Local tooling
+.claude/

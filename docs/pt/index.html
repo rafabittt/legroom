@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Legroom — gerenciador de armazenamento grátis e open source para Mac</title>
+<meta name="description" content="Veja o que ocupa o disco do seu Mac, limpe caches com segurança e desinstale apps por completo. Grátis e open source. Tudo vai para o Lixo; nada roda sozinho.">
+<link rel="canonical" href="https://rafabittt.github.io/legroom/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://rafabittt.github.io/legroom/pt/">
+<link rel="alternate" hreflang="en" href="https://rafabittt.github.io/legroom/">
+<link rel="alternate" hreflang="x-default" href="https://rafabittt.github.io/legroom/">
+<meta name="theme-color" content="#07070a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legroom — gerenciador de armazenamento grátis e open source para Mac">
+<meta property="og:description" content="Veja o que ocupa o disco do seu Mac, limpe caches com segurança e desinstale apps por completo. Grátis e open source. Tudo vai para o Lixo; nada roda sozinho.">
+<meta property="og:url" content="https://rafabittt.github.io/legroom/pt/">
+<meta property="og:image" content="https://rafabittt.github.io/legroom/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="stylesheet" href="../assets/site.css?v=727777f7">
+<link rel="preload" as="image" href="../assets/overview-pt-BR.webp" fetchpriority="high">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Legroom", "operatingSystem": "macOS 14 or later", "applicationCategory": "UtilitiesApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Veja o que ocupa o disco do seu Mac, limpe caches com segurança e desinstale apps por completo. Grátis e open source. Tudo vai para o Lixo; nada roda sozinho.", "url": "https://rafabittt.github.io/legroom/pt/", "downloadUrl": "https://github.com/rafabittt/legroom/releases/latest", "license": "https://opensource.org/licenses/MIT", "codeRepository": "https://github.com/rafabittt/legroom", "inLanguage": "pt-BR", "image": "https://rafabittt.github.io/legroom/assets/og.png", "author": {"@type": "Person", "name": "Rafael Bittencourt"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="nav">
+  <a class="brand" href="../"><img src="../assets/icon-180.png" alt="" width="28" height="28">Legroom</a>
+  <nav class="links" aria-label="Sections"><a href="#features">Recursos</a><a href="#tour">Tour</a><a href="#principles">Princípios</a><a href="#open-source">Open source</a></nav>
+  <a class="lang" href="../" hreflang="en" lang="en">English</a>
+  <a class="btn btn-ghost btn-sm" href="https://github.com/rafabittt/legroom" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span class="lbl">GitHub</span><span class="stars" data-stars hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:14px;height:14px"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b></b></span></a>
+  <a class="btn btn-primary btn-sm" href="https://github.com/rafabittt/legroom/releases/latest" data-dl>Baixar</a>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1" style="padding-top:150px">
+  <div class="tree" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow"><span class="dot"></span>Grátis e open source · macOS 14 ou superior</span>
+    <h1 id="h1">Seu Mac com <em>folga</em> de novo.</h1>
+    <p class="lead">Veja o que ocupa o disco, limpe o que o Mac recria sozinho e desinstale apps por completo. Tudo vai para o Lixo. Nada roda sem você.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://github.com/rafabittt/legroom/releases/latest" data-dl><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.8c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.33c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Baixar para Mac</a>
+      <a class="btn btn-ghost" href="https://github.com/rafabittt/legroom"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Ver no GitHub<span class="stars" data-stars hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:14px;height:14px"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b></b></span></a>
+    </div>
+    <p class="meta">Versão <span data-version>0.9.8</span> · <span data-size>3.8 MB</span> · Apple silicon e Intel · Notarizado pela Apple</p>
+  </div>
+  <div class="stage">
+    <div class="chip c1"><span class="n">−2,12 GB</span> foram para o Lixo</div>
+    <div class="chip c2">Disco saudável · <span class="n">178 GB</span> livres</div>
+    <div class="window"><img src="../assets/overview-pt-BR.webp" alt="Resumo do Legroom: saúde do disco, memória, processador com temperatura, rede e espaço já liberado" width="1600" height="1085" fetchpriority="high"></div>
+  </div>
+  <div class="wrap trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Notarizado pela Apple</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tudo vai para o Lixo</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sem telemetria, sem conta</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Licença MIT</span></div>
+</section>
+
+<section id="features" aria-labelledby="f-h">
+  <div class="wrap">
+    <div class="head rv"><span class="kicker">Recursos</span><h2 id="f-h">Seis perguntas. Um app tranquilo.</h2><p>Cada tela responde a uma coisa que você quer saber sobre o disco — e lê só as pastas de que precisa.</p></div>
+    <div class="bento">
+      <article class="cell w4 rv">
+        <span class="tag">Mapa</span><h3>O que ocupa meu disco?</h3><p>Uma leitura completa em blocos e em lista. A última leitura fica salva e reabre na hora.</p>
+        <div class="viz"><div class="mini-tree" data-items='[{&quot;n&quot;: &quot;Xcode&quot;, &quot;s&quot;: &quot;3.97 GB&quot;, &quot;v&quot;: 397}, {&quot;n&quot;: &quot;Final Cut Pro&quot;, &quot;s&quot;: &quot;3.1 GB&quot;, &quot;v&quot;: 310}, {&quot;n&quot;: &quot;Chrome&quot;, &quot;s&quot;: &quot;1.55 GB&quot;, &quot;v&quot;: 155}, {&quot;n&quot;: &quot;Blender&quot;, &quot;s&quot;: &quot;1 GB&quot;, &quot;v&quot;: 100}, {&quot;n&quot;: &quot;VS Code&quot;, &quot;s&quot;: &quot;986 MB&quot;, &quot;v&quot;: 98}, {&quot;n&quot;: &quot;Docker&quot;, &quot;s&quot;: &quot;820 MB&quot;, &quot;v&quot;: 82}, {&quot;n&quot;: &quot;Slack&quot;, &quot;s&quot;: &quot;540 MB&quot;, &quot;v&quot;: 54}, {&quot;n&quot;: &quot;Spotify&quot;, &quot;s&quot;: &quot;380 MB&quot;, &quot;v&quot;: 38}, {&quot;n&quot;: &quot;Figma&quot;, &quot;s&quot;: &quot;320 MB&quot;, &quot;v&quot;: 32}, {&quot;n&quot;: &quot;Notion&quot;, &quot;s&quot;: &quot;290 MB&quot;, &quot;v&quot;: 29}]' aria-hidden="true"></div></div>
+      </article>
+      <article class="cell rv d1" data-enter>
+        <span class="tag">Resumo</span><h3>Como está meu Mac?</h3><p>Saúde do disco, memória, processador com a temperatura do chip, rede — e quanto o Legroom já liberou.</p>
+        <div class="viz"><div class="ring" style="--to:64" data-v="64%" aria-hidden="true"></div><div class="metrics"><div class="metric"><small>Memória</small><b><span data-count="22.3" data-dec="1">0</span><i> GB</i></b></div><div class="metric"><small>Chip</small><b><span data-count="48" data-dec="0">0</span><i> °C</i></b></div><div class="metric"><small>Liberado</small><b><span data-count="10.8" data-dec="1">0</span><i> GB</i></b></div></div></div>
+      </article>
+      <article class="cell w3 rv" data-enter>
+        <span class="tag">Apps</span><h3>Desinstalar é desinstalar.</h3><p>O Legroom acha o que o app deixa para trás — dados, caches, preferências, agentes de inicialização, até o instalador em Downloads — e mostra antes de mexer.</p>
+        <div class="viz"><ul class="ulist" aria-hidden="true"><li><span class="bx"></span><span>Blender.app</span><span class="sz">1 GB</span></li><li><span class="bx"></span><span>~/Library/Application Support/Blender</span><span class="sz">864 KB</span></li><li><span class="bx"></span><span>…/C/org.blenderfoundation.blender</span><span class="sz">755 MB</span></li><li><span class="bx"></span><span>~/Library/Caches/Blender</span><span class="sz">504 KB</span></li><li><span class="bx"></span><span>~/Downloads/blender-5.3.0-macos-arm64.dmg</span><span class="sz">360 MB</span></li></ul>
+        <div class="utotal"><span>para o Lixo</span><b data-utotal data-v="2,12 GB">2,12 GB</b></div></div>
+      </article>
+      <article class="cell w3 rv d1" data-enter>
+        <span class="tag">Limpeza</span><h3>O que posso limpar sem medo?</h3><p>Caches, logs e restos de ferramentas que o Mac refaz. Regras abertas em JSON, cada uma com explicação.</p>
+        <div class="viz rows"><div class="row"><b>Caches dos apps</b><span>6,63 GB</span><div class="bar"><i style="--w:64%"></i></div></div><div class="row"><b>DeviceSupport do iOS<span class=pill>revise antes</span></b><span>14,39 GB</span><div class="bar"><i style="--w:100%"></i></div></div><div class="row"><b>DerivedData do Xcode</b><span>840 MB</span><div class="bar"><i style="--w:18%"></i></div></div><div class="row"><b>npm, Cargo, Gradle</b><span>5,82 GB</span><div class="bar"><i style="--w:52%"></i></div></div></div>
+      </article>
+      <article class="cell w3 rv">
+        <span class="tag">Bagunça</span><h3>Onde está a bagunça?</h3><p>Duplicados confirmados pelo conteúdo, downloads esquecidos, instaladores antigos e pilhas de capturas de tela.</p>
+        <div class="viz"><div class="dupes" aria-hidden="true"><div class="dupe">IMG_2041</div><div class="dupe">report.pdf</div><div class="dupe">song.m4a</div><div class="dupe">deck.key</div><div class="dupe">deck.key</div><div class="dupe">IMG_2041</div><div class="dupe">song.m4a</div><div class="dupe">report.pdf</div></div></div>
+      </article>
+      <article class="cell w3 rv d1">
+        <span class="tag">Barra de menus e widgets</span><h3>De relance, sem abrir o app.</h3><p>Um Resumo compacto na barra de menus e widgets para a Mesa e a Central de Notificações.</p>
+        <div class="viz widgets"><img src="../assets/widget-small.webp" alt="" width="416" height="416" loading="lazy" class="ws"><img src="../assets/widget-medium.webp" alt="" width="776" height="416" loading="lazy" class="wm"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tour" aria-labelledby="t-h">
+  <div class="wrap show">
+    <div class="head center rv"><span class="kicker">Tour</span><h2 id="t-h">Olhando de perto.</h2><p>SwiftUI nativo, claro e escuro, português e inglês.</p></div>
+    <div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-caption="Entre nas pastas e veja exatamente o que ocupa espaço.">Mapa<span class="prog"></span></button><button class="tab" role="tab" aria-selected="false" data-caption="Uma seleção conservadora vem marcada; o resto é com você.">Limpeza<span class="prog"></span></button><button class="tab" role="tab" aria-selected="false" data-caption="Claro e escuro, acompanhando o Mac — ou como você preferir.">Tema claro<span class="prog"></span></button></div>
+    <div class="screens rv"><img src="../assets/map-pt-BR.webp" alt="Mapa" width="1600" height="1085" loading="lazy" decoding="async" class=on><img src="../assets/cleanup-pt-BR.webp" alt="Limpeza" width="1600" height="1085" loading="lazy" decoding="async"><img src="../assets/overview-light-pt-BR.webp" alt="Tema claro" width="1600" height="1085" loading="lazy" decoding="async"></div>
+    <p class="caption" aria-live="polite"></p>
+  </div>
+</section>
+
+<section id="principles" aria-labelledby="p-h">
+  <div class="wrap">
+    <span class="kicker">Princípios</span>
+    <h2 id="p-h" class="manifesto" style="margin-top:18px"><span class="w">A</span> <span class="w">maioria</span> <span class="w">dos</span> <span class="w">“limpadores”</span> <span class="w">de</span> <span class="w">Mac</span> <span class="w">é</span> <span class="w">assinatura</span> <span class="w">embrulhada</span> <span class="w">em</span> <span class="w">susto.</span> <span class="w g">O</span> <span class="w g">Legroom</span> <span class="w g">mostra</span> <span class="w g">o</span> <span class="w g">que</span> <span class="w g">tem</span> <span class="w g">e</span> <span class="w g">deixa</span> <span class="w g">você</span> <span class="w g">decidir.</span></h2>
+    <div class="rules"><div class="rule rv d0"><b>Nada roda sozinho</b><p>Toda leitura começa quando você pede. A principal ainda pede para segurar o botão.</p></div><div class="rule rv d1"><b>Tudo vai para o Lixo</b><p>Nada é apagado de vez, e o Legroom nunca esvazia o Lixo.</p></div><div class="rule rv d2"><b>Tudo é explicado</b><p>Caminho completo, tamanho em disco, tamanho lógico, datas — e o que são as pastas conhecidas.</p></div><div class="rule rv d3"><b>Nada sai do seu Mac</b><p>Sem conta, sem análise de uso. A única conexão é o teste de velocidade, quando você clica.</p></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="hood-h">
+  <div class="wrap">
+    <div class="head rv"><span class="kicker">Por dentro</span><h2 id="hood-h">Feito como ferramenta de sistema.</h2><p>Sem processo auxiliar como root, sem itens de login, sem agentes em segundo plano. Um processo nativo.</p></div>
+    <div class="hood">
+      <div class="term rv" data-enter><div class="bar"><i></i><i></i><i></i></div><pre aria-label="Example output"><span class="k">▸ Map</span> · full scan of <span class="s">/</span>
+  <span class="c">fts(3) · physical walk · allocated sizes</span>
+  3,071,882 files · 368.94 GB · 2 min 31 s
+  saved map: 3.97M nodes → 35 MB <span class="c">(LZFSE)</span>
+
+<span class="k">▸ Apps</span> · uninstall <span class="s">Nod</span>
+  <span class="c">dev.nod.desktop + helpers · exact names only</span>
+  ~/.nod-desktop                       4.83 GB
+  ~/Library/Application Support/nod    1.88 GB
+  ~/Downloads/nod-arm64.dmg            337 MB
+  → 7 items, 8.1 GB moved to the Trash <span class="c">(never deleted)</span></pre></div>
+      <div class="facts"><div class="fact rv d0"><b><code>fts(3)</code>, como o <code>du</code></b><p>Tamanho alocado, o espaço que realmente volta. Hard links contam uma vez; clones APFS e arquivos esparsos aparecem.</p></div><div class="fact rv d1"><b>Um mapa salvo em ~35 MB</b><p>Quatro milhões de nós numa árvore binária compacta, comprimida com LZFSE. Reabre em cerca de um segundo.</p></div><div class="fact rv d2"><b>Atualizações assinadas</b><p>Notarizado pela Apple, atualizado com Sparkle e versões assinadas com EdDSA.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="open-source" class="oss" aria-labelledby="o-h">
+  <div class="wrap">
+    <div class="oss-card rv">
+      <p class="mono">O código é aberto</p>
+      <h2 id="o-h">Use, ou construa com a gente.</h2>
+      <p>O Legroom tem licença MIT. Veja como funciona, abra uma issue, traduza para o seu idioma ou mande um pull request.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://github.com/rafabittt/legroom"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Dar star no GitHub<span class="stars" data-stars hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:14px;height:14px"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3 6.1 20.5l1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b></b></span></a>
+        <a class="btn btn-ghost" href="https://github.com/rafabittt/legroom/releases/latest" data-dl><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.8c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.33c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>Baixar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div class="head center"><h2 id="faq-h">Perguntas</h2></div>
+    <details><summary>É grátis mesmo?</summary><p>Sim. Sem teste, sem assinatura, sem compras dentro do app. O código está no GitHub, com licença MIT.</p></details><details><summary>É seguro?</summary><p>O Legroom nunca apaga nada de vez: tudo vai para o Lixo, de onde você pode devolver. É assinado com Developer ID e notarizado pela Apple.</p></details><details><summary>Por que pede Acesso Total ao Disco?</summary><p>O macOS esconde algumas pastas (Mail, Mensagens, contêineres de apps) de todos os apps. Com o acesso a leitura fica completa; sem ele, o Legroom avisa o que não conseguiu ler.</p></details><details><summary>Por que não está na Mac App Store?</summary><p>A App Store exige sandbox, o que impede ler o disco inteiro, listar processos e desinstalar apps por completo.</p></details><details><summary>Como funcionam as atualizações?</summary><p>Legroom › Procurar Atualizações…, ou verificação automática se você permitir. São as mesmas versões notarizadas publicadas no GitHub.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot"><span>Feito no Brasil por Rafael Bittencourt.</span><nav aria-label="Footer"><a href="https://github.com/rafabittt/legroom">GitHub</a><a href="https://github.com/rafabittt/legroom/releases">Versões</a><a href="https://github.com/rafabittt/legroom/issues">Issues</a><a href="https://github.com/rafabittt/legroom/blob/main/LICENSE">Licença</a><a href="../" hreflang="en">English</a></nav></div>
+  <div class="giant" aria-hidden="true">Legroom</div>
+</footer>
+<script src="../assets/site.js?v=78d98ef4" defer></script>
+</body>
+</html>

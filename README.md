@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="../../releases/latest"><b>Download the latest release</b></a> ·
+  <a href="https://rafabittt.github.io/legroom/">Website</a> ·
   macOS 14 Sonoma or later · Apple silicon and Intel · English and Brazilian Portuguese
 </p>
 
