@@ -1,0 +1,344 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ available": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ livres"
+          }
+        }
+      }
+    },
+    "%@ s": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ s"
+          }
+        }
+      }
+    },
+    "%@ used of %@. %@ available.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ used of %2$@. %3$@ available."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ usados de %@. %@ livres."
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld%%": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "CPU": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador"
+          }
+        }
+      }
+    },
+    "Disk": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco"
+          }
+        }
+      }
+    },
+    "Disk almost full": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco quase cheio"
+          }
+        }
+      }
+    },
+    "Disk is healthy": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco saudável"
+          }
+        }
+      }
+    },
+    "Disk unavailable": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco indisponível"
+          }
+        }
+      }
+    },
+    "Freed by Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liberado pelo Legroom"
+          }
+        }
+      }
+    },
+    "Getting full": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Começando a apertar"
+          }
+        }
+      }
+    },
+    "Goals": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Objetivos"
+          }
+        }
+      }
+    },
+    "Legroom": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "Low on space": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pouco espaço"
+          }
+        }
+      }
+    },
+    "Memory": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória"
+          }
+        }
+      }
+    },
+    "Memory has room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória folgada"
+          }
+        }
+      }
+    },
+    "Memory under pressure": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória sob pressão"
+          }
+        }
+      }
+    },
+    "Normal memory use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória em uso normal"
+          }
+        }
+      }
+    },
+    "Nothing yet": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada ainda"
+          }
+        }
+      }
+    },
+    "Open Legroom to see the status of your goals.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra o Legroom para ver o estado dos objetivos."
+          }
+        }
+      }
+    },
+    "Open Legroom to start counting here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra o Legroom para somar aqui."
+          }
+        }
+      }
+    },
+    "Overview": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resumo"
+          }
+        }
+      }
+    },
+    "Plenty of room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco folgado"
+          }
+        }
+      }
+    },
+    "Your Mac's disk, memory and CPU, plus what Legroom has freed.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco, memória e processador do Mac, e o que o Legroom já liberou."
+          }
+        }
+      }
+    },
+    "has room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "folgada"
+          }
+        }
+      }
+    },
+    "in %@ items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %@ itens"
+          }
+        }
+      }
+    },
+    "in 1 item": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em 1 item"
+          }
+        }
+      }
+    },
+    "just now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "agora"
+          }
+        }
+      }
+    },
+    "never": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nunca"
+          }
+        }
+      }
+    },
+    "normal use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "uso normal"
+          }
+        }
+      }
+    },
+    "of %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "de %@"
+          }
+        }
+      }
+    },
+    "under pressure": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sob pressão"
+          }
+        }
+      }
+    },
+    "used": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "usado"
+          }
+        }
+      }
+    },
+    "—": {
+      "localizations": {},
+      "shouldTranslate": false
+    }
+  },
+  "version": "1.0"
+}

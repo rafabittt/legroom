@@ -1,0 +1,113 @@
+name: Legroom
+options:
+  bundleIdPrefix: com.rafabitt
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+  # English is the development language; pt-BR lives in the String Catalogs
+  developmentLanguage: en
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: 2V59R8969W
+    # Hardened Runtime is required for notarization; the app needs no exceptions.
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+    ENABLE_APP_SANDBOX: NO
+    SWIFT_STRICT_CONCURRENCY: minimal
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    DEAD_CODE_STRIPPING: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+  configs:
+    Debug:
+      # Local development with the maintainer's Apple Development certificate (not ad hoc):
+      # without a Team ID, macOS denies the widget the App Group 2V59R8969W.com.rafabitt.legroom.
+      # No provisioning profile needed. To build without it: LEGROOM_ADHOC=1 tools/build.sh
+      CODE_SIGN_IDENTITY: "Apple Development: Rafael Bittencourt (DYWK3RRP3K)"
+    Release:
+      # Distributed outside the App Store: Developer ID (Xcode › Settings › Accounts › Manage Certificates)
+      CODE_SIGN_IDENTITY: "Developer ID Application"
+      OTHER_CODE_SIGN_FLAGS: "--timestamp"
+targets:
+  Legroom:
+    type: application
+    platform: macOS
+    sources:
+      - path: Lupa
+    info:
+      path: Lupa/Info.plist
+      properties:
+        CFBundleName: Legroom
+        CFBundleDisplayName: Legroom
+        CFBundleShortVersionString: "0.9.7"
+        CFBundleVersion: "8"
+        LSMinimumSystemVersion: "14.0"
+        LSApplicationCategoryType: public.app-category.utilities
+        NSPrincipalClass: NSApplication
+        NSHighResolutionCapable: true
+        NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
+        NSAppleEventsUsageDescription: "Legroom asks Finder to move system-owned items, such as apps installed by a package, to the Trash. Finder asks for your administrator password; Legroom never sees or stores it."
+        # legroom://resumo (the widget opens the app on the Overview)
+        CFBundleURLTypes:
+          - CFBundleURLName: com.rafabitt.legroom
+            CFBundleURLSchemes: [legroom]
+    # App Group shared with the widget (only Overview numbers, through UserDefaults)
+    entitlements:
+      path: Lupa/Legroom.entitlements
+      properties:
+        com.apple.security.application-groups: [2V59R8969W.com.rafabitt.legroom]
+        # ask Finder to move to the Trash what requires an administrator password
+        com.apple.security.automation.apple-events: true
+    dependencies:
+      - target: LegroomWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rafabitt.legroom
+        PRODUCT_NAME: Legroom
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+
+  # Desktop and Notification Center widgets (WidgetKit). A sandboxed extension:
+  # it reads disk, memory and CPU itself and gets from the App Group what only
+  # the app knows (freed totals, goals). It never starts a disk scan.
+  LegroomWidget:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: LegroomWidget
+      # logic shared with the app (same files, no copies)
+      - path: Lupa/Models/WidgetSnapshot.swift
+      - path: Lupa/Models/Volume.swift
+      - path: Lupa/Models/Memory.swift
+      - path: Lupa/Models/Formatting.swift
+      - path: Lupa/Views/DiskHealth.swift
+    info:
+      path: LegroomWidget/Info.plist
+      properties:
+        CFBundleName: Legroom
+        CFBundleDisplayName: Legroom
+        CFBundleShortVersionString: "0.9.7"
+        CFBundleVersion: "8"
+        LSMinimumSystemVersion: "14.0"
+        NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: LegroomWidget/LegroomWidget.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups: [2V59R8969W.com.rafabitt.legroom]
+    dependencies:
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rafabitt.legroom.widget
+        PRODUCT_NAME: LegroomWidget
+        ENABLE_APP_SANDBOX: YES
+        SKIP_INSTALL: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks"

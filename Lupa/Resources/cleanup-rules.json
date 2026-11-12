@@ -1,0 +1,176 @@
+[
+  {
+    "_comment": "preselect = what Legroom checks on its own, only in safety=safe rules: minAgeDays (nothing changed inside the item for N days), skipRunningApps (skips folders named after the bundle id of an open app), skipPrefixes/skipNames (never checked), minBytes (ignores small items). review/info rules are never prechecked."
+  },
+  {
+    "id": "trash",
+    "title": "Trash",
+    "symbol": "trash",
+    "paths": [
+      "~/.Trash"
+    ],
+    "mode": "info",
+    "why": "What's already in the Trash still takes up space. Emptying it is the only permanent removal, so Legroom doesn't do it for you: open the Trash in Finder and empty it when you're sure."
+  },
+  {
+    "id": "user-caches",
+    "title": "App caches",
+    "symbol": "archivebox",
+    "paths": [
+      "~/Library/Caches"
+    ],
+    "mode": "children",
+    "safety": "safe",
+    "why": "Local copies apps keep so they open faster. Deleting them is safe; apps recreate what they need, so the gain may be partial.",
+    "preselect": {
+      "minAgeDays": 7,
+      "skipRunningApps": true,
+      "skipPrefixes": [
+        "com.apple."
+      ],
+      "minBytes": 1000000
+    }
+  },
+  {
+    "id": "user-logs",
+    "title": "Logs",
+    "symbol": "doc.text",
+    "paths": [
+      "~/Library/Logs"
+    ],
+    "mode": "children",
+    "safety": "safe",
+    "why": "Diagnostic records from your apps. They're only useful for investigating problems; deleting them is safe.",
+    "preselect": {
+      "minAgeDays": 7,
+      "skipRunningApps": true
+    }
+  },
+  {
+    "id": "saved-state",
+    "title": "Saved window state",
+    "symbol": "macwindow.on.rectangle",
+    "paths": [
+      "~/Library/Saved Application State"
+    ],
+    "mode": "children",
+    "safety": "safe",
+    "why": "Window positions and contents used to restore each app when it reopens. Small, and harmless to delete.",
+    "preselect": {
+      "minAgeDays": 30,
+      "skipRunningApps": true
+    }
+  },
+  {
+    "id": "xcode-derived",
+    "title": "Xcode builds (DerivedData)",
+    "symbol": "hammer",
+    "paths": [
+      "~/Library/Developer/Xcode/DerivedData"
+    ],
+    "mode": "children",
+    "safety": "safe",
+    "why": "Intermediate build results. Xcode rebuilds them the next time you open the project; it only costs time.",
+    "preselect": {
+      "minAgeDays": 14,
+      "skipNames": [
+        "ModuleCache.noindex",
+        "SymbolCache.noindex"
+      ]
+    }
+  },
+  {
+    "id": "xcode-archives",
+    "title": "Xcode Archives",
+    "symbol": "shippingbox",
+    "paths": [
+      "~/Library/Developer/Xcode/Archives"
+    ],
+    "mode": "children",
+    "safety": "review",
+    "why": "Builds archived for distribution, with debug symbols. Keep the ones for versions still published; delete the old ones."
+  },
+  {
+    "id": "ios-device-support",
+    "title": "iOS symbols (DeviceSupport)",
+    "symbol": "iphone",
+    "paths": [
+      "~/Library/Developer/Xcode/iOS DeviceSupport",
+      "~/Library/Developer/Xcode/watchOS DeviceSupport",
+      "~/Library/Developer/Xcode/tvOS DeviceSupport"
+    ],
+    "mode": "children",
+    "safety": "review",
+    "why": "One folder per iOS version you've connected to Xcode. Keep only the versions for devices you still use; Xcode downloads them again if needed."
+  },
+  {
+    "id": "simulators",
+    "title": "Simulators",
+    "symbol": "ipad.and.iphone",
+    "paths": [
+      "~/Library/Developer/CoreSimulator/Devices",
+      "~/Library/Developer/CoreSimulator/Caches"
+    ],
+    "mode": "info",
+    "why": "Each simulator is a complete iPhone with apps and data. Don't move these folders by hand: run `xcrun simctl delete unavailable` in Terminal, which safely removes outdated ones."
+  },
+  {
+    "id": "ios-backups",
+    "title": "iPhone & iPad backups",
+    "symbol": "externaldrive.badge.icloud",
+    "paths": [
+      "~/Library/Application Support/MobileSync/Backup"
+    ],
+    "mode": "children",
+    "safety": "review",
+    "why": "Local backups made by Finder. Each one can be tens of GB. Before deleting, check in Finder › device › Manage Backups which one belongs to which device and date."
+  },
+  {
+    "id": "mail-downloads",
+    "title": "Attachments opened in Mail",
+    "symbol": "paperclip",
+    "paths": [
+      "~/Library/Containers/com.apple.mail/Data/Library/Mail Downloads",
+      "~/Library/Mail Downloads"
+    ],
+    "mode": "children",
+    "safety": "safe",
+    "why": "Copies of attachments you opened from Mail. The originals stay in the messages.",
+    "preselect": {
+      "minAgeDays": 30
+    }
+  },
+  {
+    "id": "dev-caches",
+    "title": "Developer tool caches",
+    "symbol": "terminal",
+    "paths": [
+      "~/.npm/_cacache",
+      "~/.cache",
+      "~/.gradle/caches",
+      "~/.cargo/registry",
+      "~/Library/pnpm/store",
+      "~/.yarn/cache",
+      "~/.cocoapods/repos",
+      "~/Library/Caches/Homebrew",
+      "~/.bun/install/cache",
+      "~/.m2/repository"
+    ],
+    "mode": "self",
+    "safety": "safe",
+    "why": "Packages downloaded by npm, pnpm, yarn, bun, Gradle, Cargo, Maven, CocoaPods, and Homebrew. Everything is downloaded again when a project needs it.",
+    "preselect": {
+      "minAgeDays": 30
+    }
+  },
+  {
+    "id": "docker",
+    "title": "Docker Desktop",
+    "symbol": "cube",
+    "paths": [
+      "~/Library/Containers/com.docker.docker/Data/vms"
+    ],
+    "mode": "info",
+    "why": "Docker's virtual disk grows and doesn't shrink on its own. Run `docker system prune` and reduce the disk size in Docker Desktop settings."
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "How much free space do I have in ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quanto espaço livre eu tenho no ${applicationName}"
+          }
+        }
+      }
+    },
+    "Check free space with ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver o espaço livre com o ${applicationName}"
+          }
+        }
+      }
+    },
+    "${applicationName} free space": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espaço livre no ${applicationName}"
+          }
+        }
+      }
+    },
+    "How much can ${applicationName} clean": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quanto o ${applicationName} pode limpar"
+          }
+        }
+      }
+    },
+    "What can ${applicationName} clean": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que o ${applicationName} pode limpar"
+          }
+        }
+      }
+    },
+    "${applicationName} cleanup": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpeza do ${applicationName}"
+          }
+        }
+      }
+    },
+    "Which apps don't I use in ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quais apps eu não uso no ${applicationName}"
+          }
+        }
+      }
+    },
+    "Show unused apps in ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar apps sem uso no ${applicationName}"
+          }
+        }
+      }
+    },
+    "${applicationName} unused apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps sem uso no ${applicationName}"
+          }
+        }
+      }
+    },
+    "Open ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir o ${applicationName}"
+          }
+        }
+      }
+    },
+    "Open ${screen} in ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ${screen} no ${applicationName}"
+          }
+        }
+      }
+    },
+    "Show ${screen} in ${applicationName}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar ${screen} no ${applicationName}"
+          }
+        }
+      }
+    },
+    "Free space": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espaço livre"
+          }
+        }
+      }
+    },
+    "What can be cleaned": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que dá para limpar"
+          }
+        }
+      }
+    },
+    "Unused apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps sem uso"
+          }
+        }
+      }
+    },
+    "Open Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir o Legroom"
+          }
+        }
+      }
+    }
+  }
+}

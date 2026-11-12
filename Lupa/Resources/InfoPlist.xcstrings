@@ -1,0 +1,29 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSAppleEventsUsageDescription" : {
+      "comment" : "Shown when Legroom first asks to control Finder",
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Legroom pede ao Finder para mover para o Lixo itens do sistema, como apps instalados por pacote. O Finder pede a sua senha de administrador; o Legroom não vê nem guarda a senha."
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Rafael Bittencourt. Licença MIT."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

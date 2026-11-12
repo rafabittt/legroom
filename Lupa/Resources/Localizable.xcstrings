@@ -1,0 +1,5024 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    " To uninstall, use the Apps screen in Legroom.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " Para desinstalar, use a tela Apps do Legroom."
+          }
+        }
+      }
+    },
+    " and %lld more.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " e mais %lld."
+          }
+        }
+      }
+    },
+    "%": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "% CPU": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "% do processador"
+          }
+        }
+      }
+    },
+    "%@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ %2$@"
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
+    "%@ and %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ and %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ e %@"
+          }
+        }
+      }
+    },
+    "%@ files · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ files · %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ arquivos · %@"
+          }
+        }
+      }
+    },
+    "%@ free": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ livre"
+          }
+        }
+      }
+    },
+    "%@ free of %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ free of %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ livres de %@"
+          }
+        }
+      }
+    },
+    "%@ in %@ files. Nothing is permanently deleted: you can restore them from the Trash.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ in %2$@ files. Nothing is permanently deleted: you can restore them from the Trash."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ em %@ arquivos. Nada é apagado permanentemente: você pode recuperar no Lixo."
+          }
+        }
+      }
+    },
+    "%@ in %lld items": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ in %2$lld items"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ em %lld itens"
+          }
+        }
+      }
+    },
+    "%@ in %lld items moved to the Trash": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ in %2$lld items moved to the Trash"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ em %lld itens movidos para o Lixo"
+          }
+        }
+      }
+    },
+    "%@ in 1 file. Nothing is permanently deleted: you can restore it from the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ em 1 arquivo. Nada é apagado permanentemente: você pode recuperar no Lixo."
+          }
+        }
+      }
+    },
+    "%@ is open and will be quit first.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ está aberto e será fechado antes."
+          }
+        }
+      }
+    },
+    "%@ is using %@%% of the CPU. Asks the app to quit, like ⌘Q.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ is using %2$@%% of the CPU. Asks the app to quit, like ⌘Q."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ está usando %@%% do processador. Pede para o app sair, como ⌘Q."
+          }
+        }
+      }
+    },
+    "%@ items in %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ items in %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ itens em %@"
+          }
+        }
+      }
+    },
+    "%@ mapped": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ mapeados"
+          }
+        }
+      }
+    },
+    "%@ moved to the Trash": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ movido para o Lixo"
+          }
+        }
+      }
+    },
+    "%@ of %@ in use": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ of %2$@ in use"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ de %@ em uso"
+          }
+        }
+      }
+    },
+    "%@ s": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ s"
+          }
+        }
+      }
+    },
+    "%@ suggested": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ sugeridos"
+          }
+        }
+      }
+    },
+    "%@ used of %@. %@ available.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ used of %2$@. %3$@ available."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ usados de %@. %@ livres."
+          }
+        }
+      }
+    },
+    "%@ · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$@"
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
+    "%@ · %@ items": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$@ items"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ itens"
+          }
+        }
+      }
+    },
+    "%@. Hottest point: %@. Up to about 95 °C under load is normal for M chips.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@. Hottest point: %2$@. Up to about 95 °C under load is normal for M chips."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@. Ponto mais quente: %@. Até uns 95 °C sob carga é normal para chips M."
+          }
+        }
+      }
+    },
+    "%@. The app moves to the Trash, where you can restore it.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@. O app vai para o Lixo e pode ser recuperado de lá."
+          }
+        }
+      }
+    },
+    "%@: needs an administrator password, and the operation was canceled or not authorized.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: precisa da senha de administrador, e a operação foi cancelada ou não foi autorizada."
+          }
+        }
+      }
+    },
+    "%lld apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld apps"
+          }
+        }
+      }
+    },
+    "%lld apps haven't been used in over three months, %@ in total. The largest: ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld apps haven't been used in over three months, %2$@ in total. The largest: "
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld apps estão sem uso há mais de três meses, somando %@. Os maiores: "
+          }
+        }
+      }
+    },
+    "%lld apps · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld apps · %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld apps · %@"
+          }
+        }
+      }
+    },
+    "%lld copies of %@ · %@ more than needed": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld copies of %2$@ · %3$@ more than needed"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld cópias de %@ · %@ a mais que o necessário"
+          }
+        }
+      }
+    },
+    "%lld cores · last %lld s": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld cores · last %2$lld s"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld núcleos · últimos %lld s"
+          }
+        }
+      }
+    },
+    "%lld d %lld h": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld d %2$lld h"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld d %lld h"
+          }
+        }
+      }
+    },
+    "%lld dBm": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "%lld days ago": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "há %lld dias"
+          }
+        }
+      }
+    },
+    "%lld folders": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pastas"
+          }
+        }
+      }
+    },
+    "%lld h %lld min": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld h %2$lld min"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h %lld min"
+          }
+        }
+      }
+    },
+    "%lld items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld itens"
+          }
+        }
+      }
+    },
+    "%lld items to the Trash": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld itens para o Lixo"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld not opened in over 6 months": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld sem abrir há mais de 6 meses"
+          }
+        }
+      }
+    },
+    "%lld of %lld selected": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld of %2$lld selected"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld de %lld marcados"
+          }
+        }
+      }
+    },
+    "%lld other items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld outros itens"
+          }
+        }
+      }
+    },
+    "%lld smaller items totaling %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld smaller items totaling %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld itens menores somando %@"
+          }
+        }
+      }
+    },
+    "%lld suggested": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld sugeridos"
+          }
+        }
+      }
+    },
+    "1 folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 pasta"
+          }
+        }
+      }
+    },
+    "1 item": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 item"
+          }
+        }
+      }
+    },
+    "1 item to the Trash": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 item para o Lixo"
+          }
+        }
+      }
+    },
+    "1 suggested": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 sugerido"
+          }
+        }
+      }
+    },
+    "A bit warm": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um pouco quente"
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo"
+          }
+        }
+      }
+    },
+    "All Selected": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo marcado"
+          }
+        }
+      }
+    },
+    "Already had room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Já estava folgada"
+          }
+        }
+      }
+    },
+    "Any age": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qualquer idade"
+          }
+        }
+      }
+    },
+    "App": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        }
+      }
+    },
+    "App caches": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches dos apps"
+          }
+        }
+      }
+    },
+    "App caches. Deleting them frees space, but apps recreate them when they open, so the gain is usually temporary.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches dos apps. Apagar libera espaço, mas os apps recriam ao abrir, então o ganho costuma ser temporário."
+          }
+        }
+      }
+    },
+    "App data": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados do app"
+          }
+        }
+      }
+    },
+    "App support data: databases, models, plug-ins. Leftovers from uninstalled apps end up here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados de suporte dos apps: bancos de dados, modelos, plug-ins. Sobras de apps desinstalados ficam aqui."
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aparência"
+          }
+        }
+      }
+    },
+    "Application": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicativo"
+          }
+        }
+      }
+    },
+    "Applications": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicativos"
+          }
+        }
+      }
+    },
+    "Apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps"
+          }
+        }
+      }
+    },
+    "Apps I don't use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps que não uso"
+          }
+        }
+      }
+    },
+    "Apps, files and system. Same number as System Settings › Storage.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps, arquivos e sistema. Mesmo número dos Ajustes do Sistema › Armazenamento."
+          }
+        }
+      }
+    },
+    "Archive": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivo comprimido"
+          }
+        }
+      }
+    },
+    "Archives & installers": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimidos e instaladores"
+          }
+        }
+      }
+    },
+    "Asking the system for memory…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedindo memória ao sistema…"
+          }
+        }
+      }
+    },
+    "Asks Apple Intelligence, on this Mac, to explain this item. Nothing leaves your computer.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pede ao Apple Intelligence, no próprio Mac, uma explicação deste item. Nada sai do computador."
+          }
+        }
+      }
+    },
+    "Asks the app to quit, like ⌘Q. It may still ask whether to save.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pede para o app sair, como ⌘Q. Ele ainda pode perguntar se quer salvar."
+          }
+        }
+      }
+    },
+    "At a glance: disk, memory, processor, network, and what Legroom has freed.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status geral: disco, memória, processador, rede e o que o Legroom já liberou."
+          }
+        }
+      }
+    },
+    "Attachments opened in Mail": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anexos abertos no Mail"
+          }
+        }
+      }
+    },
+    "Audio": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Áudio"
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como o Mac"
+          }
+        }
+      }
+    },
+    "Available": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Livres"
+          }
+        }
+      }
+    },
+    "Average Load": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carga média"
+          }
+        }
+      }
+    },
+    "Average over the charted period. Short spikes are normal when opening apps and compiling.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Média do período no gráfico. Picos curtos são normais ao abrir apps e compilar."
+          }
+        }
+      }
+    },
+    "Battery": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bateria"
+          }
+        }
+      }
+    },
+    "Better to keep": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Melhor manter"
+          }
+        }
+      }
+    },
+    "Both": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ambos"
+          }
+        }
+      }
+    },
+    "Builds archived for distribution, with debug symbols. Keep the ones for versions still published; delete the old ones.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Builds arquivados para distribuição, com símbolos de depuração. Mantenha os das versões ainda publicadas; apague os antigos."
+          }
+        }
+      }
+    },
+    "Builds archived for distribution. Delete the ones you no longer need to publish.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Builds arquivados para distribuição. Apague os que você não precisa mais publicar."
+          }
+        }
+      }
+    },
+    "CPU": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador"
+          }
+        }
+      }
+    },
+    "CPU at its limit": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador no limite"
+          }
+        }
+      }
+    },
+    "CPU busy": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador ocupado"
+          }
+        }
+      }
+    },
+    "CPU relaxed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador tranquilo"
+          }
+        }
+      }
+    },
+    "Cached Files": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cache de arquivos"
+          }
+        }
+      }
+    },
+    "Caches & temporary files": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches e temporários"
+          }
+        }
+      }
+    },
+    "Caches and snapshots that macOS clears on its own when it needs space. They're already included in available space, as in System Settings; there's nothing to delete.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches e snapshots que o macOS descarta sozinho quando precisa de espaço. Já estão somados nos livres, como nos Ajustes do Sistema; não há o que apagar."
+          }
+        }
+      }
+    },
+    "Caches from command-line tools.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches de ferramentas de linha de comando."
+          }
+        }
+      }
+    },
+    "Caches, logs, and tool folders are empty or don't exist on this Mac.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches, logs e pastas de ferramentas estão vazios ou não existem neste Mac."
+          }
+        }
+      }
+    },
+    "Caches, logs, and tool leftovers your Mac recreates on its own. You choose what goes to the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches, logs e restos de ferramentas que o Mac recria sozinho. Você escolhe o que vai para o Lixo."
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        }
+      }
+    },
+    "Cancel Scan": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar análise"
+          }
+        }
+      }
+    },
+    "Check before moving": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Olhe antes de mover"
+          }
+        }
+      }
+    },
+    "Chip Temperature": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temperatura do chip"
+          }
+        }
+      }
+    },
+    "Chip temperature. %@.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temperatura do chip. %@."
+          }
+        }
+      }
+    },
+    "Choose a folder to scan": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha uma pasta para analisar"
+          }
+        }
+      }
+    },
+    "Choose a volume in the sidebar.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha um volume ao lado."
+          }
+        }
+      }
+    },
+    "Cleanup": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpeza"
+          }
+        }
+      }
+    },
+    "Click for details": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clique para ver detalhes"
+          }
+        }
+      }
+    },
+    "Close (Esc)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechar (Esc)"
+          }
+        }
+      }
+    },
+    "Clutter": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bagunça"
+          }
+        }
+      }
+    },
+    "Clutter looks in the visible folders of your home folder, outside Library.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Bagunça procura nas pastas visíveis da sua pasta pessoal, fora da Biblioteca."
+          }
+        }
+      }
+    },
+    "Code": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código"
+          }
+        }
+      }
+    },
+    "Comparing %lld of %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Comparing %1$lld of %2$lld"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comparando %lld de %lld"
+          }
+        }
+      }
+    },
+    "Compressed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimida"
+          }
+        }
+      }
+    },
+    "Conservative Suggestion Only": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só a sugestão conservadora"
+          }
+        }
+      }
+    },
+    "Copies of attachments you opened from Mail. The originals stay in the messages.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cópias dos anexos que você abriu a partir do Mail. Os originais continuam nas mensagens."
+          }
+        }
+      }
+    },
+    "Copy Path": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar caminho"
+          }
+        }
+      }
+    },
+    "Couldn't explain this item right now.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não deu para explicar este item agora."
+          }
+        }
+      }
+    },
+    "Couldn't move to the Trash:": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível mover para o Lixo:"
+          }
+        }
+      }
+    },
+    "Couldn't open %@.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível abrir %@."
+          }
+        }
+      }
+    },
+    "Couldn't read memory.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ler a memória."
+          }
+        }
+      }
+    },
+    "Couldn't run the test right now: %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não deu para testar agora: %@"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escuro"
+          }
+        }
+      }
+    },
+    "Data from sandboxed apps, one container per app. App Store apps keep almost everything here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados de apps em sandbox, um contêiner por app. Apps da App Store guardam quase tudo aqui."
+          }
+        }
+      }
+    },
+    "Data shared between apps from the same developer, such as extensions and widgets.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados compartilhados entre apps do mesmo desenvolvedor, como extensões e widgets."
+          }
+        }
+      }
+    },
+    "Data shared by all users: app support, fonts, drivers, and launch agents.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados compartilhados por todos os usuários: suporte de apps, fontes, drivers e agentes de inicialização."
+          }
+        }
+      }
+    },
+    "Date Modified": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modificado"
+          }
+        }
+      }
+    },
+    "Dependencies for JavaScript projects.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dependências de projetos JavaScript."
+          }
+        }
+      }
+    },
+    "Deselect All": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desmarcar tudo"
+          }
+        }
+      }
+    },
+    "Deselect Copies": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desmarcar cópias"
+          }
+        }
+      }
+    },
+    "Developer tool caches": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches de ferramentas de desenvolvedor"
+          }
+        }
+      }
+    },
+    "Diagnostic records from your apps. They're only useful for investigating problems; deleting them is safe.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registros de diagnóstico dos seus apps. Só servem para investigar problemas; apagar é seguro."
+          }
+        }
+      }
+    },
+    "Differences from 'Used' come from folders without read permission, snapshots and APFS metadata.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diferenças para o 'Usados' vêm de pastas sem permissão de leitura, snapshots e metadados do APFS."
+          }
+        }
+      }
+    },
+    "Disk almost full": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco quase cheio"
+          }
+        }
+      }
+    },
+    "Disk image": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagem de disco"
+          }
+        }
+      }
+    },
+    "Disk images": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagens de disco"
+          }
+        }
+      }
+    },
+    "Disk images and installer packages (.dmg, .pkg, .xip, .iso) in your folders. Once the app is installed, they're no longer needed.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagens de disco e pacotes de instalação (.dmg, .pkg, .xip, .iso) nas suas pastas. Depois de instalar o app, não servem para mais nada."
+          }
+        }
+      }
+    },
+    "Disk is healthy": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco saudável"
+          }
+        }
+      }
+    },
+    "Docker Desktop": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Docker Desktop"
+          }
+        }
+      }
+    },
+    "Docker Desktop data, including the virtual machines' disk.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados do Docker Desktop, incluindo o disco das máquinas virtuais."
+          }
+        }
+      }
+    },
+    "Docker's virtual disk grows and doesn't shrink on its own. Run `docker system prune` and reduce the disk size in Docker Desktop settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O disco virtual do Docker cresce e não encolhe sozinho. Use `docker system prune` e, nos ajustes do Docker Desktop, reduza o tamanho do disco."
+          }
+        }
+      }
+    },
+    "Document": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documento"
+          }
+        }
+      }
+    },
+    "Documents": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentos"
+          }
+        }
+      }
+    },
+    "Done: moved %@ in %lld items to the Trash.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Done: moved %1$@ in %2$lld items to the Trash."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronto: %@ em %lld itens foram para o Lixo."
+          }
+        }
+      }
+    },
+    "Done: moved %@ in 1 item to the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronto: %@ em 1 item foi para o Lixo."
+          }
+        }
+      }
+    },
+    "Download": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        }
+      }
+    },
+    "Downloaded installer": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalador baixado"
+          }
+        }
+      }
+    },
+    "Downloading 40 MB and uploading 12 MB…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baixando 40 MB e enviando 12 MB…"
+          }
+        }
+      }
+    },
+    "Downloads. Used .dmg and .pkg installers often end up here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloads. Instaladores .dmg e .pkg já usados costumam estar aqui."
+          }
+        }
+      }
+    },
+    "Duplicates": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplicados"
+          }
+        }
+      }
+    },
+    "Duplicates, old downloads, used installers, and piled-up screenshots.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplicados, downloads antigos, instaladores já usados e capturas de tela acumuladas."
+          }
+        }
+      }
+    },
+    "Each simulator is a complete iPhone with apps and data. Don't move these folders by hand: run `xcrun simctl delete unavailable` in Terminal, which safely removes outdated ones.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada simulador é um iPhone completo com apps e dados. Não mova essas pastas à mão: use `xcrun simctl delete unavailable` no Terminal, que remove os obsoletos de forma segura."
+          }
+        }
+      }
+    },
+    "Empty folder.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta vazia."
+          }
+        }
+      }
+    },
+    "Enterprise": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empresarial"
+          }
+        }
+      }
+    },
+    "Error": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro"
+          }
+        }
+      }
+    },
+    "Everything Found (Your Call)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo o que foi encontrado (por sua conta)"
+          }
+        }
+      }
+    },
+    "Everything Xcode: DerivedData, simulators, device files, and archives. Often tens of GB.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo do Xcode: DerivedData, simuladores, arquivos de dispositivos e archives. Geralmente dezenas de GB."
+          }
+        }
+      }
+    },
+    "Everything you move to the Trash with Legroom adds up here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo o que você mover para o Lixo pelo Legroom aparece somado aqui."
+          }
+        }
+      }
+    },
+    "Explanation generated by Apple Intelligence on this Mac. It can be wrong: check before moving.\n\n%@\n\n%@: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Explanation generated by Apple Intelligence on this Mac. It can be wrong: check before moving.\n\n%1$@\n\n%2$@: %3$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explicação gerada pelo Apple Intelligence neste Mac. Pode errar: confira antes de mover.\n\n%@\n\n%@: %@"
+          }
+        }
+      }
+    },
+    "Figuring out what this item is…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pensando no que é este item…"
+          }
+        }
+      }
+    },
+    "File": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivo"
+          }
+        }
+      }
+    },
+    "Files": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos"
+          }
+        }
+      }
+    },
+    "Files of 1 MB or larger in your home folder, outside Library.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos a partir de 1 MB nas pastas da sua pasta pessoal, fora da Biblioteca."
+          }
+        }
+      }
+    },
+    "Files of the same size are being compared byte by byte.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos de mesmo tamanho estão sendo comparados byte a byte."
+          }
+        }
+      }
+    },
+    "Files with identical content (same size and same signature) in your folders, outside the Library. Choose which copies go to the Trash; one always stays.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos com conteúdo idêntico (mesmo tamanho e mesma assinatura) nas suas pastas, fora da Biblioteca. Escolha quais cópias vão para o Lixo; uma sempre fica."
+          }
+        }
+      }
+    },
+    "Folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        }
+      }
+    },
+    "Folders": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pastas"
+          }
+        }
+      }
+    },
+    "Free Up Memory": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar memória"
+          }
+        }
+      }
+    },
+    "Free Up Memory asks the system for memory so it discards file caches, then gives it back right away. The gain lasts until apps need it again.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar pede memória ao sistema para ele descartar cache de arquivos e devolve em seguida. O ganho dura até os apps voltarem a precisar."
+          }
+        }
+      }
+    },
+    "Free space": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espaço livre"
+          }
+        }
+      }
+    },
+    "Freed %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liberou %@"
+          }
+        }
+      }
+    },
+    "Freed by Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liberado pelo Legroom"
+          }
+        }
+      }
+    },
+    "Getting full": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Começando a apertar"
+          }
+        }
+      }
+    },
+    "Give Legroom Full Disk Access and scan again to see everything.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conceda Acesso Total ao Disco ao Legroom e analise de novo para ver tudo."
+          }
+        }
+      }
+    },
+    "Go modules and binaries.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Módulos e binários do Go."
+          }
+        }
+      }
+    },
+    "Go to Enclosing Folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voltar à pasta acima"
+          }
+        }
+      }
+    },
+    "Goals": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Objetivos"
+          }
+        }
+      }
+    },
+    "Gradle caches and distributions.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches e distribuições do Gradle."
+          }
+        }
+      }
+    },
+    "Hold for %@ seconds to start.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segure por %@ segundos para começar."
+          }
+        }
+      }
+    },
+    "Hold to Scan %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segure para analisar %@"
+          }
+        }
+      }
+    },
+    "Hold to start. Releasing early cancels.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segure para começar. Soltar antes cancela."
+          }
+        }
+      }
+    },
+    "Home": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta Pessoal"
+          }
+        }
+      }
+    },
+    "Home folders for each account on this Mac.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pastas pessoais de cada conta deste Mac."
+          }
+        }
+      }
+    },
+    "Homebrew packages. Run brew cleanup to delete old versions and downloads.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacotes do Homebrew. Use brew cleanup para apagar versões antigas e downloads."
+          }
+        }
+      }
+    },
+    "Hot: the Mac is slowing down": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quente: o Mac reduz o ritmo"
+          }
+        }
+      }
+    },
+    "How is my Mac doing?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como está meu Mac?"
+          }
+        }
+      }
+    },
+    "How much space each app really takes, and which ones you haven't opened in a while.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quanto cada app pesa de verdade e quais você não abre há tempos."
+          }
+        }
+      }
+    },
+    "I couldn't read the disk right now.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não consegui ler o disco agora."
+          }
+        }
+      }
+    },
+    "I haven't scanned Cleanup yet. Do you want me to open Legroom there?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda não li a Limpeza. Quer que eu abra o Legroom nela?"
+          }
+        }
+      }
+    },
+    "Idle": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponível"
+          }
+        }
+      }
+    },
+    "Image": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagem"
+          }
+        }
+      }
+    },
+    "In the last scan, %@, Legroom found %@ that are safe to move to the Trash, out of %@ possible.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "In the last scan, %1$@, Legroom found %2$@ that are safe to move to the Trash, out of %3$@ possible."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na última leitura, %@, o Legroom achou %@ que dá para mover para o Lixo com segurança, de %@ possíveis."
+          }
+        }
+      }
+    },
+    "In the last scan, %@, there was nothing to clean up.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na última leitura, %@, não havia nada para limpar."
+          }
+        }
+      }
+    },
+    "In the last scan, %@, there were %@ possible, but nothing I'd select without you looking first.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "In the last scan, %1$@, there were %2$@ possible, but nothing I'd select without you looking first."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na última leitura, %@, havia %@ possíveis, mas nada que eu marcaria sem você olhar antes."
+          }
+        }
+      }
+    },
+    "Installed apps. Deleting an .app here doesn't remove the preferences, caches, and data it left in the Library.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicativos instalados. Apagar um .app daqui não remove preferências, caches e dados que ele deixou na Biblioteca."
+          }
+        }
+      }
+    },
+    "Installers": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instaladores"
+          }
+        }
+      }
+    },
+    "Interface %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interface %@"
+          }
+        }
+      }
+    },
+    "Intermediate build results. Xcode rebuilds them the next time you open the project; it only costs time.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultados intermediários de compilação. O Xcode recompila na próxima vez que você abrir o projeto; só custa tempo."
+          }
+        }
+      }
+    },
+    "Internal system data: temporary files, logs, and caches in var/folders.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados internos do sistema: temporários, logs e caches em var/folders."
+          }
+        }
+      }
+    },
+    "It's running low on space.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Está com pouco espaço."
+          }
+        }
+      }
+    },
+    "It's starting to get tight.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Está começando a apertar."
+          }
+        }
+      }
+    },
+    "Items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itens"
+          }
+        }
+      }
+    },
+    "Items in Downloads unused for more than 90 days. Many were opened once and forgotten.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itens em Downloads sem uso há mais de 90 dias. Boa parte foi aberta uma vez e esquecida."
+          }
+        }
+      }
+    },
+    "Keep holding…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue segurando…"
+          }
+        }
+      }
+    },
+    "Kind": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo"
+          }
+        }
+      }
+    },
+    "Large & Forgotten": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grandes e esquecidos"
+          }
+        }
+      }
+    },
+    "Large files you haven't opened in months. Decide what goes to the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos pesados que você não abre há meses. Decida o que vai para o Lixo."
+          }
+        }
+      }
+    },
+    "Last Accessed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último acesso"
+          }
+        }
+      }
+    },
+    "Last Opened": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última abertura"
+          }
+        }
+      }
+    },
+    "Last Used": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último uso"
+          }
+        }
+      }
+    },
+    "Latency": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latência"
+          }
+        }
+      }
+    },
+    "Launch at login": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abertura automática"
+          }
+        }
+      }
+    },
+    "Legroom": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "Legroom is open on Cleanup. Hold the button to scan.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abri o Legroom na Limpeza. Segure o botão para ler."
+          }
+        }
+      }
+    },
+    "Legroom looks in /Applications and ~/Applications.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Legroom lê /Applications e ~/Applications."
+          }
+        }
+      }
+    },
+    "Legroom scans the disk once and answers the questions in the sidebar. Nothing runs on its own: the scan starts only when you hold the button. Nothing is deleted unless you ask, and removed items go to the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Legroom lê o disco uma vez e responde às perguntas da barra lateral. Nada roda sozinho: a leitura só começa quando você segurar o botão. Nada é apagado sem você pedir, e remoções vão para o Lixo."
+          }
+        }
+      }
+    },
+    "Legroom screen": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tela do Legroom"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claro"
+          }
+        }
+      }
+    },
+    "Link %lld Mb/s": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link %lld Mb/s"
+          }
+        }
+      }
+    },
+    "List": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lista"
+          }
+        }
+      }
+    },
+    "List Only": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só a lista"
+          }
+        }
+      }
+    },
+    "Lists apps you haven't opened in three months, from what Spotlight already knows. Nothing is uninstalled.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lista os apps que você não abre há três meses, pelo que o Spotlight já sabe. Nada é desinstalado."
+          }
+        }
+      }
+    },
+    "Local Maven repository.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositório local do Maven."
+          }
+        }
+      }
+    },
+    "Local backups made by Finder. Each one can be tens of GB. Before deleting, check in Finder › device › Manage Backups which one belongs to which device and date.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backups locais feitos pelo Finder. Cada um pode ter dezenas de GB. Antes de apagar, confira em Finder › aparelho › Gerenciar Backups qual é de qual aparelho e data."
+          }
+        }
+      }
+    },
+    "Local copies apps keep so they open faster. Deleting them is safe; apps recreate what they need, so the gain may be partial.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cópias locais que os apps guardam para abrir mais rápido. Apagar é seguro; os apps recriam o que precisarem, então o ganho pode ser parcial."
+          }
+        }
+      }
+    },
+    "Location": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onde"
+          }
+        }
+      }
+    },
+    "Logical": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lógico"
+          }
+        }
+      }
+    },
+    "Logs": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logs"
+          }
+        }
+      }
+    },
+    "Logs & crash reports": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registros e relatórios de falha"
+          }
+        }
+      }
+    },
+    "Logs from your apps. Safe to delete.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logs dos seus apps. Seguro apagar."
+          }
+        }
+      }
+    },
+    "Looking for duplicates…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurando duplicados…"
+          }
+        }
+      }
+    },
+    "Looking for large files": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurando arquivos pesados"
+          }
+        }
+      }
+    },
+    "Looking for the app's data, caches, and preferences…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurando dados, caches e preferências do app…"
+          }
+        }
+      }
+    },
+    "Loosen the size or age filter to see more items.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afrouxe o filtro de tamanho ou idade para ver mais itens."
+          }
+        }
+      }
+    },
+    "Low on space": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pouco espaço"
+          }
+        }
+      }
+    },
+    "Manual Selection": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seleção manual"
+          }
+        }
+      }
+    },
+    "Map": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapa"
+          }
+        }
+      }
+    },
+    "Map Only": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só o mapa"
+          }
+        }
+      }
+    },
+    "Map and List": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapa e lista"
+          }
+        }
+      }
+    },
+    "Mapped": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapeados"
+          }
+        }
+      }
+    },
+    "Mapped by Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapeados pelo Legroom"
+          }
+        }
+      }
+    },
+    "May belong to a command-line tool with the same name. Select it only if you're sure.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pode ser de uma ferramenta de terminal com o mesmo nome. Marque só se tiver certeza."
+          }
+        }
+      }
+    },
+    "Measuring…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medindo…"
+          }
+        }
+      }
+    },
+    "Memory": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória"
+          }
+        }
+      }
+    },
+    "Memory has room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória folgada"
+          }
+        }
+      }
+    },
+    "Memory that overflowed to disk. Zero is ideal; a few GB is normal under heavy use.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória que transbordou para o disco. Zero é o ideal; alguns GB são normais em uso pesado."
+          }
+        }
+      }
+    },
+    "Memory under pressure": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória sob pressão"
+          }
+        }
+      }
+    },
+    "Messages history and attachments.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Histórico e anexos do Mensagens."
+          }
+        }
+      }
+    },
+    "Modified": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modificado"
+          }
+        }
+      }
+    },
+    "Most recent: %@. Everything went to the Trash and can be put back from there.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última vez %@. Tudo foi para o Lixo e pode voltar de lá."
+          }
+        }
+      }
+    },
+    "Move \"%@\" to the Trash?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover \"%@\" para o Lixo?"
+          }
+        }
+      }
+    },
+    "Move %lld items to the Trash?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover %lld itens para o Lixo?"
+          }
+        }
+      }
+    },
+    "Move to Trash": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover para o Lixo"
+          }
+        }
+      }
+    },
+    "Move to Trash…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover para o Lixo…"
+          }
+        }
+      }
+    },
+    "Moves the app to the Trash. You confirm first and can restore it. Preferences and caches in ~/Library stay.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move o app para o Lixo. Você confirma antes e pode recuperar. Preferências e caches em ~/Library ficam."
+          }
+        }
+      }
+    },
+    "Music and the Music app library.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Músicas e a biblioteca do app Música."
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome"
+          }
+        }
+      }
+    },
+    "Near the limit: the system is compressing and swapping to disk.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perto do limite: o sistema está comprimindo e trocando para o disco."
+          }
+        }
+      }
+    },
+    "Network": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rede"
+          }
+        }
+      }
+    },
+    "No Access": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem permissão"
+          }
+        }
+      }
+    },
+    "No apps found": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum app encontrado"
+          }
+        }
+      }
+    },
+    "No duplicates found": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum duplicado encontrado"
+          }
+        }
+      }
+    },
+    "No folders to scan": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma pasta para ler"
+          }
+        }
+      }
+    },
+    "No heavy apps right now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum app pesando agora"
+          }
+        }
+      }
+    },
+    "No permission to read": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem permissão para ler"
+          }
+        }
+      }
+    },
+    "No permission to read this folder.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem permissão para ler esta pasta."
+          }
+        }
+      }
+    },
+    "No volume found.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum volume encontrado."
+          }
+        }
+      }
+    },
+    "No volume selected.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum volume selecionado."
+          }
+        }
+      }
+    },
+    "Node versions installed by nvm.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versões do Node instaladas pelo nvm."
+          }
+        }
+      }
+    },
+    "None": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada"
+          }
+        }
+      }
+    },
+    "Normal memory use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memória em uso normal"
+          }
+        }
+      }
+    },
+    "Normal temperature": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temperatura normal"
+          }
+        }
+      }
+    },
+    "Normal usage. The system compresses what isn't in use.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uso normal. O sistema comprime o que não está em uso."
+          }
+        }
+      }
+    },
+    "Nothing has built up here": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada acumulado por aqui"
+          }
+        }
+      }
+    },
+    "Nothing here": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada por aqui"
+          }
+        }
+      }
+    },
+    "Nothing is deleted permanently. You confirm first and can restore items from the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada é apagado permanentemente. Você confirma antes e pode recuperar no Lixo."
+          }
+        }
+      }
+    },
+    "Nothing is permanently deleted. You confirm first and can restore it from the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada é apagado permanentemente. Você confirma antes e pode recuperar no Lixo."
+          }
+        }
+      }
+    },
+    "Nothing this large here": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada desse tamanho por aqui"
+          }
+        }
+      }
+    },
+    "Nothing yet": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada ainda"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "Old downloads": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Downloads antigos"
+          }
+        }
+      }
+    },
+    "On Disk": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em disco"
+          }
+        }
+      }
+    },
+    "On for more than a week. Restarting now and then frees memory and caches.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mais de uma semana ligado. Reiniciar de vez em quando libera memória e caches."
+          }
+        }
+      }
+    },
+    "One app hasn't been used in over three months: ": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um app está sem uso há mais de três meses: "
+          }
+        }
+      }
+    },
+    "One folder per iOS version you've connected to Xcode. Keep only the versions for devices you still use; Xcode downloads them again if needed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uma pasta por versão de iOS que já conectou ao Xcode. Fique só com as versões dos aparelhos que ainda usa; o Xcode baixa de novo se precisar."
+          }
+        }
+      }
+    },
+    "Only what the Mac recreates on its own, unchanged for days and not in use by an open app. The rest is up to you.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só o que o Mac recria sozinho, sem alterações há dias e sem app aberto usando. O resto você decide."
+          }
+        }
+      }
+    },
+    "Open Folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir pasta"
+          }
+        }
+      }
+    },
+    "Open Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir o Legroom"
+          }
+        }
+      }
+    },
+    "Open Legroom on ${screen}": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir o Legroom em ${screen}"
+          }
+        }
+      }
+    },
+    "Open Privacy Settings": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes de Privacidade"
+          }
+        }
+      }
+    },
+    "Open network": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aberta"
+          }
+        }
+      }
+    },
+    "Opens Legroom on a screen. It only opens it: nothing is read until you start it.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre o Legroom numa tela. Só abre: nada é lido até você começar."
+          }
+        }
+      }
+    },
+    "Other": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outros"
+          }
+        }
+      }
+    },
+    "Other disks, USB drives, and mounted images. They're scanned separately.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outros discos, pen drives e imagens montadas. São analisados separadamente."
+          }
+        }
+      }
+    },
+    "Overview": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resumo"
+          }
+        }
+      }
+    },
+    "Package": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacote"
+          }
+        }
+      }
+    },
+    "Packages & project files": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacotes e arquivos de projeto"
+          }
+        }
+      }
+    },
+    "Packages downloaded by npm, pnpm, yarn, bun, Gradle, Cargo, Maven, CocoaPods, and Homebrew. Everything is downloaded again when a project needs it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacotes baixados por npm, pnpm, yarn, bun, Gradle, Cargo, Maven, CocoaPods e Homebrew. Tudo volta a ser baixado quando um projeto precisar."
+          }
+        }
+      }
+    },
+    "Packages from the Nix package manager.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacotes do gerenciador Nix."
+          }
+        }
+      }
+    },
+    "Per-user caches and temporary files. The system recreates what it needs; deleting by hand is rarely worth it.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches e temporários por usuário. O sistema recria o que precisar; apagar à mão raramente compensa."
+          }
+        }
+      }
+    },
+    "Photos, including the Photos library.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotos, incluindo a biblioteca do app Fotos."
+          }
+        }
+      }
+    },
+    "Photos, videos & audio": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotos, vídeos e áudio"
+          }
+        }
+      }
+    },
+    "Plenty of room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disco folgado"
+          }
+        }
+      }
+    },
+    "Preferences & state": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preferências e estado"
+          }
+        }
+      }
+    },
+    "Pressure": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pressão"
+          }
+        }
+      }
+    },
+    "Probably safe to move": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Provavelmente seguro mover"
+          }
+        }
+      }
+    },
+    "Processor": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processador"
+          }
+        }
+      }
+    },
+    "Purgeable (in available)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purgáveis (já nos livres)"
+          }
+        }
+      }
+    },
+    "Purgeable by System": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purgáveis pelo sistema"
+          }
+        }
+      }
+    },
+    "Python versions installed by pyenv.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versões do Python instaladas pelo pyenv."
+          }
+        }
+      }
+    },
+    "Quick Look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick Look"
+          }
+        }
+      }
+    },
+    "Quit": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair"
+          }
+        }
+      }
+    },
+    "Quit %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encerrar %@"
+          }
+        }
+      }
+    },
+    "Quits Legroom and removes its icon from the menu bar": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encerra o Legroom e tira o ícone da barra de menus"
+          }
+        }
+      }
+    },
+    "Reading processes…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo processos…"
+          }
+        }
+      }
+    },
+    "Refresh Volumes": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar volumes"
+          }
+        }
+      }
+    },
+    "Restarted recently.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reiniciado há pouco tempo."
+          }
+        }
+      }
+    },
+    "Rust caches and binaries.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caches e binários do Rust."
+          }
+        }
+      }
+    },
+    "SSD at %@. The battery ages faster above 35 °C; avoid charging your Mac in a stuffy place.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSD a %@. A bateria envelhece mais rápido acima de 35 °C; evite carregar o Mac em lugar abafado."
+          }
+        }
+      }
+    },
+    "Saved window state": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado salvo das janelas"
+          }
+        }
+      }
+    },
+    "Says how much free space the startup disk has.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diz quanto espaço livre o disco de inicialização tem."
+          }
+        }
+      }
+    },
+    "Says how much the last Cleanup scan found. Legroom doesn't scan anything new on its own.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diz quanto a última leitura da Limpeza encontrou. O Legroom não lê nada novo sozinho."
+          }
+        }
+      }
+    },
+    "Scan": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analisar"
+          }
+        }
+      }
+    },
+    "Scan Again": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ler de novo"
+          }
+        }
+      }
+    },
+    "Scan Folder…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analisar pasta…"
+          }
+        }
+      }
+    },
+    "Scan Now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ler agora"
+          }
+        }
+      }
+    },
+    "Scan canceled.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Análise cancelada."
+          }
+        }
+      }
+    },
+    "Scanned on %@. The disk may have changed since then; use Scan Again to update.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lido em %@. O disco pode ter mudado desde então; use Ler de novo para atualizar."
+          }
+        }
+      }
+    },
+    "Scanning %@…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo %@…"
+          }
+        }
+      }
+    },
+    "Scanning apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo aplicativos"
+          }
+        }
+      }
+    },
+    "Scanning caches and logs": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo caches e logs"
+          }
+        }
+      }
+    },
+    "Scanning disk": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo o disco"
+          }
+        }
+      }
+    },
+    "Scanning the disk": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo o disco"
+          }
+        }
+      }
+    },
+    "Scanning the disk…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo o disco…"
+          }
+        }
+      }
+    },
+    "Scanning your home folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo as pastas da sua pasta pessoal"
+          }
+        }
+      }
+    },
+    "Screen": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tela"
+          }
+        }
+      }
+    },
+    "Screenshots": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capturas de tela"
+          }
+        }
+      }
+    },
+    "Screenshots and screen recordings on the Desktop and in Downloads. They're usually disposable once shared.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capturas e gravações de tela na Mesa e em Downloads. Costumam ser descartáveis depois de enviadas."
+          }
+        }
+      }
+    },
+    "See the whole disk at once and dive into what takes up space.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veja o disco inteiro de uma vez e mergulhe no que pesa."
+          }
+        }
+      }
+    },
+    "Select All": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar tudo"
+          }
+        }
+      }
+    },
+    "Select Copies, Keep Newest": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar cópias, manter a mais recente"
+          }
+        }
+      }
+    },
+    "Selected %@ in %lld items, out of %@ reclaimable.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Selected %1$@ in %2$lld items, out of %3$@ reclaimable."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Já marquei %@ em %lld itens, de %@ possíveis."
+          }
+        }
+      }
+    },
+    "Selected %@ in 1 item, out of %@ reclaimable.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Selected %1$@ in 1 item, out of %2$@ reclaimable."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Já marquei %@ em 1 item, de %@ possíveis."
+          }
+        }
+      }
+    },
+    "Selecting everything includes items that need review. Even so, everything goes to the Trash and can be restored.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marcar tudo inclui o que pede revisão. Mesmo assim, tudo vai para o Lixo e pode voltar."
+          }
+        }
+      }
+    },
+    "Show % free next to the icon": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar % livre ao lado do ícone"
+          }
+        }
+      }
+    },
+    "Show All %lld": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar todos os %lld"
+          }
+        }
+      }
+    },
+    "Show Hidden Items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar itens ocultos"
+          }
+        }
+      }
+    },
+    "Show Trash": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar o Lixo"
+          }
+        }
+      }
+    },
+    "Show hidden files and folders": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar arquivos e pastas ocultos"
+          }
+        }
+      }
+    },
+    "Show in Finder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar no Finder"
+          }
+        }
+      }
+    },
+    "Show in menu bar": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar na barra de menus"
+          }
+        }
+      }
+    },
+    "Simulators": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simuladores"
+          }
+        }
+      }
+    },
+    "Size": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamanho"
+          }
+        }
+      }
+    },
+    "Sizes always show the space allocated on disk (what you get back as free space when you delete). The logical size appears in the details panel.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamanhos são sempre o espaço alocado em disco (o que volta como espaço livre ao apagar). O tamanho lógico aparece no painel de detalhes."
+          }
+        }
+      }
+    },
+    "Some folders couldn't be read": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algumas pastas não puderam ser lidas"
+          }
+        }
+      }
+    },
+    "Suggested: unchanged for %lld days; the app recreates it if needed.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sugerido: nada alterado há %lld dias; o app recria se precisar."
+          }
+        }
+      }
+    },
+    "Suggested: unchanged for 1 day; the app recreates it if needed.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sugerido: nada alterado há 1 dia; o app recria se precisar."
+          }
+        }
+      }
+    },
+    "Suggested: unchanged since it was created.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sugerido: nada alterado desde que existe."
+          }
+        }
+      }
+    },
+    "Suggestion": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sugestão"
+          }
+        }
+      }
+    },
+    "Swap": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swap"
+          }
+        }
+      }
+    },
+    "Symbols for each iOS version you've connected. Keep only the versions you still use.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Símbolos de cada versão de iOS que você já conectou. Mantenha só as versões que ainda usa."
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema"
+          }
+        }
+      }
+    },
+    "System (wired)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema (wired)"
+          }
+        }
+      }
+    },
+    "System data that changes constantly: logs, databases, caches, and virtual memory.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados do sistema que mudam o tempo todo: logs, bancos de dados, caches e a memória virtual."
+          }
+        }
+      }
+    },
+    "Temporary files. Cleaned up by the system itself.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos temporários. Limpos pelo próprio sistema."
+          }
+        }
+      }
+    },
+    "Test Connection": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testar a conexão"
+          }
+        }
+      }
+    },
+    "Test Speed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testar velocidade"
+          }
+        }
+      }
+    },
+    "Test: ↓ %@ · ↑ %@ · %lld ms": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Test: ↓ %1$@ · ↑ %2$@ · %3$lld ms"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teste: ↓ %@ · ↑ %@ · %lld ms"
+          }
+        }
+      }
+    },
+    "The Apple Intelligence model is still downloading; explanations will be available once it finishes.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O modelo do Apple Intelligence ainda está sendo baixado; a explicação fica disponível em seguida."
+          }
+        }
+      }
+    },
+    "The Trash. Emptying it actually frees the space.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Lixo. Esvaziar libera o espaço de verdade."
+          }
+        }
+      }
+    },
+    "The app and what it stored on your Mac go to the Trash. You can restore them from there until the Trash is emptied.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O app e o que ele guardou no Mac vão para o Lixo. Dá para recuperar de lá enquanto o Lixo não for esvaziado."
+          }
+        }
+      }
+    },
+    "The app is always included.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O app sempre vai junto."
+          }
+        }
+      }
+    },
+    "The app left nothing outside its bundle.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada do app ficou fora do pacote."
+          }
+        }
+      }
+    },
+    "The battery ages faster above 35 °C; avoid charging your Mac in a stuffy place.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A bateria envelhece mais rápido acima de 35 °C; evite carregar o Mac em lugar abafado."
+          }
+        }
+      }
+    },
+    "The disk has plenty of room.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O disco está folgado."
+          }
+        }
+      }
+    },
+    "The disk is almost full.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O disco está quase cheio."
+          }
+        }
+      }
+    },
+    "The disk is in good shape.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O disco está saudável."
+          }
+        }
+      }
+    },
+    "The logical size is much larger than the allocated size: a sparse or compressed file, or an APFS clone sharing blocks. Deleting frees only the \"on disk\" amount.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O tamanho lógico é bem maior que o alocado: arquivo esparso, comprimido ou clone APFS compartilhando blocos. Apagar libera só o valor \"em disco\"."
+          }
+        }
+      }
+    },
+    "The space is only freed when you empty the Trash. If you miss something, you can restore it from there.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O espaço só volta de verdade quando você esvaziar o Lixo. Se algo fizer falta, dá para recuperar de lá."
+          }
+        }
+      }
+    },
+    "The test uses Cloudflare's public servers and runs only when you click. Nothing is measured in the background.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O teste usa os servidores públicos da Cloudflare e só roda quando você clica. Nada é medido em segundo plano."
+          }
+        }
+      }
+    },
+    "Third-party software installed outside the standard locations, like Homebrew on Intel Macs.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Software de terceiros instalado fora do padrão, como o Homebrew em Macs Intel."
+          }
+        }
+      }
+    },
+    "Top Processes": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maiores consumidores"
+          }
+        }
+      }
+    },
+    "Total of everything you moved to the Trash with Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soma de tudo o que você moveu para o Lixo pelo Legroom"
+          }
+        }
+      }
+    },
+    "Trash": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lixo"
+          }
+        }
+      }
+    },
+    "Turn on Apple Intelligence in System Settings so Legroom can explain unfamiliar items.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ative o Apple Intelligence nos Ajustes do Sistema para o Legroom explicar itens desconhecidos."
+          }
+        }
+      }
+    },
+    "Uninstall": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar"
+          }
+        }
+      }
+    },
+    "Uninstall \"%@\"?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar \"%@\"?"
+          }
+        }
+      }
+    },
+    "Uninstall %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar %@"
+          }
+        }
+      }
+    },
+    "Uninstall %lld apps?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar %lld apps?"
+          }
+        }
+      }
+    },
+    "Uninstall…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar…"
+          }
+        }
+      }
+    },
+    "Unix command-line tools and libraries.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ferramentas de linha de comando e bibliotecas do Unix."
+          }
+        }
+      }
+    },
+    "Unused apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps sem uso"
+          }
+        }
+      }
+    },
+    "Unused for 1 month": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem uso há 1 mês"
+          }
+        }
+      }
+    },
+    "Unused for 1 year": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem uso há 1 ano"
+          }
+        }
+      }
+    },
+    "Unused for 6 months": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem uso há 6 meses"
+          }
+        }
+      }
+    },
+    "Upload": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upload"
+          }
+        }
+      }
+    },
+    "Uptime": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligado há"
+          }
+        }
+      }
+    },
+    "Used": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usados"
+          }
+        }
+      }
+    },
+    "User (apps)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuário (apps)"
+          }
+        }
+      }
+    },
+    "User Library": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biblioteca do usuário"
+          }
+        }
+      }
+    },
+    "Very hot: the Mac is slowing down a lot": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muito quente: o Mac reduz bastante o ritmo"
+          }
+        }
+      }
+    },
+    "Video": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo"
+          }
+        }
+      }
+    },
+    "Videos, including iMovie and Final Cut libraries.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeos, incluindo bibliotecas do iMovie e do Final Cut."
+          }
+        }
+      }
+    },
+    "View": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visualizar"
+          }
+        }
+      }
+    },
+    "Virtual memory swap and hibernation files. macOS manages them on its own.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos de troca da memória virtual e da hibernação. O macOS gerencia sozinho."
+          }
+        }
+      }
+    },
+    "Volumes": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volumes"
+          }
+        }
+      }
+    },
+    "WPA Personal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WPA Pessoal"
+          }
+        }
+      }
+    },
+    "WPA2 Personal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WPA2 Pessoal"
+          }
+        }
+      }
+    },
+    "WPA3 Personal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WPA3 Pessoal"
+          }
+        }
+      }
+    },
+    "What Legroom can clean": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que o Legroom pode limpar"
+          }
+        }
+      }
+    },
+    "What can I safely clean up?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que posso limpar sem medo?"
+          }
+        }
+      }
+    },
+    "What can be cleaned": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que dá para limpar"
+          }
+        }
+      }
+    },
+    "What's This?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que é isto?"
+          }
+        }
+      }
+    },
+    "What's already in the Trash still takes up space. Emptying it is the only permanent removal, so Legroom doesn't do it for you: open the Trash in Finder and empty it when you're sure.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que já está no Lixo ainda ocupa espaço. Esvaziar é a única remoção definitiva, e por isso o Legroom não faz isso por você: abra o Lixo no Finder e esvazie quando tiver certeza."
+          }
+        }
+      }
+    },
+    "What's large and forgotten?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que é pesado e esquecido?"
+          }
+        }
+      }
+    },
+    "What's taking up my disk?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que ocupa meu disco?"
+          }
+        }
+      }
+    },
+    "What's taking up space on %@?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onde está o espaço de %@?"
+          }
+        }
+      }
+    },
+    "Where's the clutter?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onde está a bagunça?"
+          }
+        }
+      }
+    },
+    "Which apps do I no longer use?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quais apps eu nem uso mais?"
+          }
+        }
+      }
+    },
+    "Window positions and contents used to restore each app when it reopens. Small, and harmless to delete.": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posição e conteúdo das janelas para restaurar ao reabrir cada app. Pequeno, mas inofensivo de apagar."
+          }
+        }
+      }
+    },
+    "Window state used to restore apps when they reopen. Small and safe.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado das janelas para restaurar apps ao reabrir. Pequeno e seguro."
+          }
+        }
+      }
+    },
+    "Wired Connection": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão com fio"
+          }
+        }
+      }
+    },
+    "Wired connection or Wi‑Fi off": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão com fio ou Wi‑Fi desligado"
+          }
+        }
+      }
+    },
+    "Wi‑Fi Network": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rede Wi‑Fi"
+          }
+        }
+      }
+    },
+    "Wi‑Fi connected": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi‑Fi conectado"
+          }
+        }
+      }
+    },
+    "Wi‑Fi on %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi‑Fi em %@"
+          }
+        }
+      }
+    },
+    "Xcode Archives": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archives do Xcode"
+          }
+        }
+      }
+    },
+    "Xcode builds (DerivedData)": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compilações do Xcode (DerivedData)"
+          }
+        }
+      }
+    },
+    "Xcode's intermediate builds. Delete them whenever you like; Xcode rebuilds.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compilações intermediárias do Xcode. Pode apagar quando quiser; o Xcode recompila."
+          }
+        }
+      }
+    },
+    "You have %@ free of %@ on %@. ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "You have %1$@ free of %2$@ on %3$@. "
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você tem %@ livres de %@ no %@. "
+          }
+        }
+      }
+    },
+    "You selected everything, including items that need review. Check the list before moving.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você marcou tudo, inclusive o que pede revisão. Confira a lista antes de mover."
+          }
+        }
+      }
+    },
+    "You've used all your apps in the last three months.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você usou todos os seus apps nos últimos três meses."
+          }
+        }
+      }
+    },
+    "Your Mac has plenty of room for more tasks.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seu Mac tem espaço de sobra para mais tarefas."
+          }
+        }
+      }
+    },
+    "Your Mail messages and attachments. Don't delete them here; use Mail itself.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suas mensagens e anexos do Mail. Não apague por aqui; use o próprio Mail."
+          }
+        }
+      }
+    },
+    "Your apps' data: preferences, caches, support files, containers, and mail. This is where most of “System Data” lives.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dados dos seus apps: preferências, caches, suporte, contêineres e e-mails. É aqui que mora a maior parte dos 'Dados do Sistema'."
+          }
+        }
+      }
+    },
+    "Your home folder. Almost everything you can safely delete is here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua pasta pessoal. Quase tudo que você pode apagar com segurança está aqui."
+          }
+        }
+      }
+    },
+    "across %@ item": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %@ item"
+          }
+        }
+      }
+    },
+    "across %@ items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %@ itens"
+          }
+        }
+      }
+    },
+    "already counted as available": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "já contados nos livres"
+          }
+        }
+      }
+    },
+    "as in System Settings": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "como nos Ajustes do Sistema"
+          }
+        }
+      }
+    },
+    "at its limit": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no limite"
+          }
+        }
+      }
+    },
+    "busy": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ocupado"
+          }
+        }
+      }
+    },
+    "channel %lld": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "canal %lld"
+          }
+        }
+      }
+    },
+    "details ↗": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "detalhes ↗"
+          }
+        }
+      }
+    },
+    "excellent signal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sinal ótimo"
+          }
+        }
+      }
+    },
+    "from Map, scanned": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "do Mapa, lido"
+          }
+        }
+      }
+    },
+    "good signal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sinal bom"
+          }
+        }
+      }
+    },
+    "has room": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "folgada"
+          }
+        }
+      }
+    },
+    "iOS symbols (DeviceSupport)": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Símbolos de iOS (DeviceSupport)"
+          }
+        }
+      }
+    },
+    "iPhone & iPad backups": {
+      "extractionState": "manual",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backups de iPhone e iPad"
+          }
+        }
+      }
+    },
+    "iPhone and iPad backups made by Finder. Each one can be tens of GB.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backups de iPhone e iPad feitos pelo Finder. Cada um pode ter dezenas de GB."
+          }
+        }
+      }
+    },
+    "iPhone, iPad, and Watch simulators, with their apps and data. Run xcrun simctl delete unavailable for outdated ones.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simuladores de iPhone, iPad e Watch, com seus apps e dados. Use xcrun simctl delete unavailable para os obsoletos."
+          }
+        }
+      }
+    },
+    "in %@ items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %@ itens"
+          }
+        }
+      }
+    },
+    "in %@ selected items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %@ itens marcados"
+          }
+        }
+      }
+    },
+    "in %lld apps": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em %lld apps"
+          }
+        }
+      }
+    },
+    "in 1 item": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em 1 item"
+          }
+        }
+      }
+    },
+    "in 1 selected item": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em 1 item marcado"
+          }
+        }
+      }
+    },
+    "in use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "em uso"
+          }
+        }
+      }
+    },
+    "info only": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "só informação"
+          }
+        }
+      }
+    },
+    "just now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "agora"
+          }
+        }
+      }
+    },
+    "link %lld Mb/s": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "link %lld Mb/s"
+          }
+        }
+      }
+    },
+    "looking for leftovers…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "procurando restos…"
+          }
+        }
+      }
+    },
+    "macOS itself. Protected and read-only; its size is fixed and there's nothing to clean here.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O macOS em si. Protegido e somente leitura; o tamanho é fixo e não há o que limpar aqui."
+          }
+        }
+      }
+    },
+    "never": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nunca"
+          }
+        }
+      }
+    },
+    "newest · %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mais recente · %@"
+          }
+        }
+      }
+    },
+    "no read permission": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sem permissão de leitura"
+          }
+        }
+      }
+    },
+    "normal use": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "uso normal"
+          }
+        }
+      }
+    },
+    "not scanned yet": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ainda não lido"
+          }
+        }
+      }
+    },
+    "nothing": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nada"
+          }
+        }
+      }
+    },
+    "nothing selected": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nada marcado"
+          }
+        }
+      }
+    },
+    "nothing yet": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nada ainda"
+          }
+        }
+      }
+    },
+    "npm cache. Safe to delete; npm downloads it again.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cache do npm. Seguro apagar; o npm baixa de novo."
+          }
+        }
+      }
+    },
+    "of %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "de %@"
+          }
+        }
+      }
+    },
+    "ready to view": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pronto para ver"
+          }
+        }
+      }
+    },
+    "relaxed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tranquilo"
+          }
+        }
+      }
+    },
+    "review first": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "revise antes"
+          }
+        }
+      }
+    },
+    "scanned": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lido"
+          }
+        }
+      }
+    },
+    "scanned %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lido %@"
+          }
+        }
+      }
+    },
+    "scanned in %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lido em %@"
+          }
+        }
+      }
+    },
+    "scanning…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "lendo…"
+          }
+        }
+      }
+    },
+    "symbolic link": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "link simbólico"
+          }
+        }
+      }
+    },
+    "system": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sistema"
+          }
+        }
+      }
+    },
+    "today": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hoje"
+          }
+        }
+      }
+    },
+    "under pressure": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sob pressão"
+          }
+        }
+      }
+    },
+    "used": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "usado"
+          }
+        }
+      }
+    },
+    "version %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "versão %@"
+          }
+        }
+      }
+    },
+    "weak signal": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sinal fraco"
+          }
+        }
+      }
+    },
+    "yesterday": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ontem"
+          }
+        }
+      }
+    },
+    "·": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "… and %lld more": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "… e mais %lld"
+          }
+        }
+      }
+    },
+    "↑ %@": {
+      "localizations": {},
+      "shouldTranslate": false
+    },
+    "↓ %@": {
+      "localizations": {},
+      "shouldTranslate": false
+    }
+  },
+  "version": "1.0"
+}
