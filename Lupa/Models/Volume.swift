@@ -1,4 +1,5 @@
 import Foundation
+import DiskArbitration
 
 /// A mounted volume, with its capacity and an estimate of purgeable space.
 /// Uses only public NSURL keys: the difference between the capacity available
@@ -43,6 +44,9 @@ struct Volume: Identifiable, Hashable {
             guard let v = try? url.resourceValues(forKeys: resourceKeys) else { continue }
             if v.volumeIsBrowsable == false { continue }
             if url.path.hasPrefix("/System/Volumes/") { continue }
+            // Read-only disk images are installers (like Legroom's own DMG left
+            // mounted after installing), not disks you'd scan or clean.
+            if v.volumeIsReadOnly == true, isDiskImage(url) { continue }
             let name = v.volumeLocalizedName ?? v.volumeName ?? url.lastPathComponent
             result.append(Volume(
                 url: url,
@@ -60,5 +64,15 @@ struct Volume: Identifiable, Hashable {
             if a.isRootVolume != b.isRootVolume { return a.isRootVolume }
             return a.name.localizedStandardCompare(b.name) == .orderedAscending
         }
+    }
+
+    /// Whether the volume lives on a mounted disk image (.dmg, .sparsebundle…).
+    static func isDiskImage(_ url: URL) -> Bool {
+        guard let session = DASessionCreate(kCFAllocatorDefault),
+              let disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, session, url as CFURL),
+              let desc = DADiskCopyDescription(disk) as? [String: Any] else { return false }
+        let model = (desc[kDADiskDescriptionDeviceModelKey as String] as? String)?
+            .trimmingCharacters(in: .whitespaces)
+        return model == "Disk Image"
     }
 }

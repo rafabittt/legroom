@@ -85,6 +85,10 @@ struct LegroomApp: App {
 /// (it remains the way back to Legroom). Without the item, closing the last
 /// window quits, like macOS single-window utilities.
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        MoveToApplications.offerIfNeeded()
+    }
+
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         !MenuBarPrefs.isShown
     }

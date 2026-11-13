@@ -1519,6 +1519,16 @@
         }
       }
     },
+    "Couldn't move Legroom": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível mover o Legroom"
+          }
+        }
+      }
+    },
     "Couldn't move to the Trash:": {
       "localizations": {
         "pt-BR": {
@@ -1845,6 +1855,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Downloads. Instaladores .dmg e .pkg já usados costumam estar aqui."
+          }
+        }
+      }
+    },
+    "Drag Legroom from the disk image to the Applications folder in Finder, then open it from there.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Finder, arraste o Legroom da imagem de disco para a pasta Aplicativos e abra por lá."
           }
         }
       }
@@ -2658,6 +2678,16 @@
         }
       }
     },
+    "Legroom is running from its disk image. In the Applications folder it stays after you eject the disk image, and it can update itself.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Legroom está rodando de dentro da imagem de disco. Na pasta Aplicativos ele continua lá depois que você ejeta a imagem e consegue se atualizar sozinho."
+          }
+        }
+      }
+    },
     "Legroom looks in /Applications and ~/Applications.": {
       "localizations": {
         "pt-BR": {
@@ -3051,6 +3081,26 @@
         }
       }
     },
+    "Move Legroom to Applications?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover o Legroom para Aplicativos?"
+          }
+        }
+      }
+    },
+    "Move to Applications": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover para Aplicativos"
+          }
+        }
+      }
+    },
     "Move to Trash": {
       "localizations": {
         "pt-BR": {
@@ -3287,6 +3337,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Uso normal. O sistema comprime o que não está em uso."
+          }
+        }
+      }
+    },
+    "Not Now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agora não"
           }
         }
       }
