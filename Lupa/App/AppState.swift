@@ -165,6 +165,7 @@ final class AppState {
     func runGoal(_ g: Goal) {
         Trail.note("goal scan: \(g.rawValue)")
         guard g != .map else { startScan(); return }
+        guard g != .security else { runSecurityCheck(); return }
         cancelGoal(g)
         let scopes = g.scopes(source: selectedSource)
         guard !scopes.isEmpty else { goalResults[g] = GoalResult(roots: [], duration: 0, finished: Date()); return }
@@ -338,6 +339,61 @@ final class AppState {
             memoryCleaning = false
             refreshMemory()
         }
+    }
+
+    // MARK: Check-up
+
+    /// Last Check-up (nil until the user runs it; nothing runs on its own).
+    var securityReport: SecurityReport?
+    /// Items turned off during this session (to show them as done right away).
+    var securityTurnedOff: Set<String> = []
+
+    func runSecurityCheck() {
+        guard !goalScanning.contains(.security) else { return }
+        Trail.note("check-up: start")
+        goalScanning.insert(.security)
+        let started = Date()
+        Task.detached(priority: .userInitiated) { [weak self] in
+            let report = SecurityCheck.run()
+            await MainActor.run {
+                guard let self else { return }
+                self.securityReport = report
+                self.securityTurnedOff = []
+                self.goalScanning.remove(.security)
+                self.goalSummary[.security] = Self.securitySummary(report)
+                Trail.note("check-up: \(report.startup.count) startup items, \(report.reviewCount) to review, \(report.defensesOff.count) defenses off, in \(Format.seconds(Date().timeIntervalSince(started)))")
+            }
+        }
+    }
+
+    static func securitySummary(_ r: SecurityReport) -> String {
+        let look = r.reviewCount + r.defensesOff.count
+        if look == 0 { return String(localized: "nothing unusual") }
+        return look == 1 ? String(localized: "1 worth a look") : String(localized: "\(look) worth a look")
+    }
+
+    /// Turns off a startup item (its plist goes to the Trash; reversible).
+    func turnOff(_ item: StartupItem) {
+        Trail.note("check-up: turn off \(item.label)")
+        Task { @MainActor in
+            if await SecurityCheck.turnOff(item) {
+                securityTurnedOff.insert(item.id)
+                trashNotice = String(localized: "“\(item.displayName)” won't start on its own anymore. Its file is in the Trash.")
+                let shown = trashNotice
+                try? await Task.sleep(for: .seconds(5))
+                if trashNotice == shown { trashNotice = nil }
+            } else {
+                errorMessage = String(localized: "Couldn't turn off “\(item.displayName)”.")
+            }
+        }
+    }
+
+    /// Opens the uninstall review for the app a startup item belongs to.
+    func uninstallOwner(of item: StartupItem) {
+        guard let app = item.ownerApp, FileManager.default.fileExists(atPath: app.path) else { return }
+        let node = FileNode(name: app.path, isDirectory: true, isHidden: false)
+        node.allocatedSize = AppLeftovers.allocatedSize(app)
+        startUninstall([node])
     }
 
     func cancelGoal(_ g: Goal) {
@@ -733,6 +789,7 @@ final class AppState {
         case "large", "grandes": selectGoal(.large)
         case "apps": selectGoal(.apps)
         case "clutter", "bagunca": selectGoal(.clutter)
+        case "security", "checkup", "check-up": selectGoal(.security)
         default: break
         }
         NSApp.activate(ignoringOtherApps: true)

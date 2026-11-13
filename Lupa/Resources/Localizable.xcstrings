@@ -2,7 +2,6 @@
   "sourceLanguage": "en",
   "strings": {
     "": {
-      "localizations": {},
       "shouldTranslate": false
     },
     " To uninstall, use the Apps screen in Legroom.": {
@@ -26,7 +25,6 @@
       }
     },
     "%": {
-      "localizations": {},
       "shouldTranslate": false
     },
     "% CPU": {
@@ -307,6 +305,17 @@
         }
       }
     },
+    "%@ · %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$lld"
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
     "%@. Hottest point: %@. Up to about 95 °C under load is normal for M chips.": {
       "localizations": {
         "en": {
@@ -434,7 +443,6 @@
       }
     },
     "%lld dBm": {
-      "localizations": {},
       "shouldTranslate": false
     },
     "%lld days ago": {
@@ -483,6 +491,26 @@
         }
       }
     },
+    "%lld items run macOS's own tools": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld itens usam ferramentas do próprio macOS"
+          }
+        }
+      }
+    },
+    "%lld items start on their own": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld itens abrem sozinhos"
+          }
+        }
+      }
+    },
     "%lld items to the Trash": {
       "localizations": {
         "pt-BR": {
@@ -509,6 +537,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld sem abrir há mais de 6 meses"
+          }
+        }
+      }
+    },
+    "%lld of %lld defenses on": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld of %2$lld defenses on"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld de %lld defesas ligadas"
           }
         }
       }
@@ -565,6 +609,26 @@
         }
       }
     },
+    "%lld things worth a look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld coisas que valem uma olhada"
+          }
+        }
+      }
+    },
+    "%lld worth a look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld valem uma olhada"
+          }
+        }
+      }
+    },
     "1 folder": {
       "localizations": {
         "pt-BR": {
@@ -585,6 +649,26 @@
         }
       }
     },
+    "1 item runs macOS's own tools": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 item usa ferramentas do próprio macOS"
+          }
+        }
+      }
+    },
+    "1 item starts on its own": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 item abre sozinho"
+          }
+        }
+      }
+    },
     "1 item to the Trash": {
       "localizations": {
         "pt-BR": {
@@ -601,6 +685,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "1 sugerido"
+          }
+        }
+      }
+    },
+    "1 thing worth a look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 coisa que vale uma olhada"
+          }
+        }
+      }
+    },
+    "1 worth a look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 vale uma olhada"
           }
         }
       }
@@ -716,6 +820,66 @@
         }
       }
     },
+    "Apple": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple"
+          }
+        }
+      }
+    },
+    "Apple reported results for these families. XProtect removes what it can on its own; restarting lets it finish.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A Apple registrou resultados para estas famílias. O XProtect remove sozinho o que consegue; reiniciar o Mac ajuda a concluir."
+          }
+        }
+      }
+    },
+    "Apple's built-in malware check. Runs when apps open and in the background, and updates on its own.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A checagem de malware embutida da Apple. Roda quando apps abrem e em segundo plano, e se atualiza sozinha."
+          }
+        }
+      }
+    },
+    "Apple's last check found nothing (%@)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A última checagem da Apple não encontrou nada (%@)"
+          }
+        }
+      }
+    },
+    "Apple's last check reported something (%@)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A última checagem da Apple registrou algo (%@)"
+          }
+        }
+      }
+    },
+    "Apple's own checks": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As checagens da própria Apple"
+          }
+        }
+      }
+    },
     "Application": {
       "localizations": {
         "pt-BR": {
@@ -752,6 +916,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apps que não uso"
+          }
+        }
+      }
+    },
+    "Apps can also open at login through Login Items, which only System Settings can list in full.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps também podem abrir no login pelos Itens de Início, que só os Ajustes do Sistema listam por completo."
           }
         }
       }
@@ -822,6 +996,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Status geral: disco, memória, processador, rede e o que o Legroom já liberou."
+          }
+        }
+      }
+    },
+    "At every user's login": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No login de cada usuário"
+          }
+        }
+      }
+    },
+    "At startup, as the system": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ao ligar, como o sistema"
+          }
+        }
+      }
+    },
+    "At your login": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No seu login"
           }
         }
       }
@@ -903,6 +1107,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Melhor manter"
+          }
+        }
+      }
+    },
+    "Blocks incoming connections to apps you haven't allowed. Most useful on public Wi‑Fi.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloqueia conexões de entrada para apps que você não liberou. Mais útil em Wi‑Fi público."
           }
         }
       }
@@ -1058,6 +1272,16 @@
         }
       }
     },
+    "Check Now": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificar agora"
+          }
+        }
+      }
+    },
     "Check before moving": {
       "localizations": {
         "pt-BR": {
@@ -1084,6 +1308,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Procurar atualizações automaticamente"
+          }
+        }
+      }
+    },
+    "Check-up": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check-up"
+          }
+        }
+      }
+    },
+    "Checking your Mac": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificando o Mac"
+          }
+        }
+      }
+    },
+    "Checking your Mac…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificando o Mac…"
           }
         }
       }
@@ -1235,6 +1489,16 @@
         }
       }
     },
+    "Copy Label": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar identificador"
+          }
+        }
+      }
+    },
     "Copy Path": {
       "localizations": {
         "pt-BR": {
@@ -1291,6 +1555,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Não deu para testar agora: %@"
+          }
+        }
+      }
+    },
+    "Couldn't turn off “%@”.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível desativar “%@”."
           }
         }
       }
@@ -1616,6 +1890,16 @@
         }
       }
     },
+    "Encrypts the disk, so nobody can read it if the Mac is lost or stolen.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Criptografa o disco, para ninguém ler seus dados se o Mac for perdido ou roubado."
+          }
+        }
+      }
+    },
     "Enterprise": {
       "localizations": {
         "pt-BR": {
@@ -1702,6 +1986,16 @@
         }
       }
     },
+    "FileVault": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FileVault"
+          }
+        }
+      }
+    },
     "Files": {
       "localizations": {
         "pt-BR": {
@@ -1738,6 +2032,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Arquivos com conteúdo idêntico (mesmo tamanho e mesma assinatura) nas suas pastas, fora da Biblioteca. Escolha quais cópias vão para o Lixo; uma sempre fica."
+          }
+        }
+      }
+    },
+    "Firewall": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firewall"
           }
         }
       }
@@ -1808,6 +2112,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Liberado pelo Legroom"
+          }
+        }
+      }
+    },
+    "Gatekeeper": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gatekeeper"
           }
         }
       }
@@ -1982,6 +2296,16 @@
         }
       }
     },
+    "Identified developers": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desenvolvedores identificados"
+          }
+        }
+      }
+    },
     "Idle": {
       "localizations": {
         "pt-BR": {
@@ -2064,6 +2388,16 @@
         }
       }
     },
+    "Installs Apple's security responses and XProtect updates as soon as they're released.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instala as respostas de segurança da Apple e as atualizações do XProtect assim que saem."
+          }
+        }
+      }
+    },
     "Interface %@": {
       "localizations": {
         "pt-BR": {
@@ -2091,6 +2425,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dados internos do sistema: temporários, logs e caches em var/folders."
+          }
+        }
+      }
+    },
+    "Is anything running that shouldn't be?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tem algo rodando que não deveria?"
+          }
+        }
+      }
+    },
+    "It can only be turned back on from macOS Recovery (csrutil enable).": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só dá para religar pela Recuperação do macOS (csrutil enable)."
+          }
+        }
+      }
+    },
+    "It stops now and won't start again. Its file (%@) goes to the Trash; put it back and log in again to undo.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ele para agora e não abre mais. O arquivo dele (%@) vai para o Lixo; para desfazer, devolva o arquivo e entre de novo na sua conta."
           }
         }
       }
@@ -2135,12 +2499,32 @@
         }
       }
     },
+    "Its file (%@) goes to the Trash; Finder will ask for an administrator password. It stops after the next restart; put the file back to undo.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O arquivo dele (%@) vai para o Lixo; o Finder vai pedir a senha de administrador. Ele para depois de reiniciar; para desfazer, devolva o arquivo."
+          }
+        }
+      }
+    },
     "Keep holding…": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Continue segurando…"
+          }
+        }
+      }
+    },
+    "Keeps the system files of macOS read-only, even for apps with administrator rights.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantém os arquivos do sistema só para leitura, mesmo para apps com permissão de administrador."
           }
         }
       }
@@ -2205,12 +2589,38 @@
         }
       }
     },
+    "Last run %@, with %lld malware-family scanners.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Last run %1$@, with %2$lld malware-family scanners."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última execução %@, com %lld verificadores de famílias de malware."
+          }
+        }
+      }
+    },
     "Latency": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Latência"
+          }
+        }
+      }
+    },
+    "Launch agents and services, and who signed what they run. Something unsigned isn't necessarily bad — your own scripts look the same — but it's worth knowing what it is.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agentes e serviços que abrem sozinhos, e quem assinou o que eles rodam. Algo sem assinatura não é necessariamente ruim — seus próprios scripts aparecem assim —, mas vale saber o que é."
           }
         }
       }
@@ -2225,8 +2635,17 @@
         }
       }
     },
+    "Leftovers": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobras"
+          }
+        }
+      }
+    },
     "Legroom": {
-      "localizations": {},
       "shouldTranslate": false
     },
     "Legroom is open on Cleanup. Hold the button to scan.": {
@@ -2592,6 +3011,16 @@
         }
       }
     },
+    "Most Mac malware today arrives this way: a fake “verification” or a guide to free up space asks you to paste a command. The same goes for scripts in Script Editor and apps from outside the App Store or the developer's own site.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A maior parte do malware de Mac hoje chega assim: uma “verificação” falsa ou um guia para liberar espaço pede para você colar um comando. Vale o mesmo para scripts no Editor de Scripts e apps de fora da App Store ou do site do próprio desenvolvedor."
+          }
+        }
+      }
+    },
     "Most recent: %@. Everything went to the Trash and can be put back from there.": {
       "localizations": {
         "pt-BR": {
@@ -2762,6 +3191,26 @@
         }
       }
     },
+    "No real website asks you to paste commands into Terminal.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum site de verdade pede para você colar comandos no Terminal."
+          }
+        }
+      }
+    },
+    "No record of a run in the last 4 days.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum registro de execução nos últimos 4 dias."
+          }
+        }
+      }
+    },
     "No volume found.": {
       "localizations": {
         "pt-BR": {
@@ -2802,6 +3251,16 @@
         }
       }
     },
+    "None of them found anything.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum deles encontrou nada."
+          }
+        }
+      }
+    },
     "Normal memory use": {
       "localizations": {
         "pt-BR": {
@@ -2832,6 +3291,16 @@
         }
       }
     },
+    "Not from an identified developer": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não é de um desenvolvedor identificado"
+          }
+        }
+      }
+    },
     "Nothing has built up here": {
       "localizations": {
         "pt-BR": {
@@ -2848,6 +3317,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nada por aqui"
+          }
+        }
+      }
+    },
+    "Nothing in the launch agent folders.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada nas pastas de agentes de inicialização."
           }
         }
       }
@@ -2882,6 +3361,16 @@
         }
       }
     },
+    "Nothing unusual": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada fora do comum"
+          }
+        }
+      }
+    },
     "Nothing yet": {
       "localizations": {
         "pt-BR": {
@@ -2902,12 +3391,32 @@
         }
       }
     },
+    "Off": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desligado"
+          }
+        }
+      }
+    },
     "Old downloads": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Downloads antigos"
+          }
+        }
+      }
+    },
+    "On": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligado"
           }
         }
       }
@@ -2953,6 +3462,16 @@
         }
       }
     },
+    "Only opens apps that are signed and checked by Apple, unless you allow an exception.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só abre apps assinados e verificados pela Apple, a não ser que você libere uma exceção."
+          }
+        }
+      }
+    },
     "Only what the Mac recreates on its own, unchanged for days and not in use by an open app. The rest is up to you.": {
       "localizations": {
         "pt-BR": {
@@ -2993,12 +3512,32 @@
         }
       }
     },
+    "Open Login Items": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Itens de Início"
+          }
+        }
+      }
+    },
     "Open Privacy Settings": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Abrir Ajustes de Privacidade"
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes"
           }
         }
       }
@@ -3134,6 +3673,26 @@
         }
       }
     },
+    "Point to something that no longer exists. Safe to turn off.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apontam para algo que não existe mais. Pode desativar sem medo."
+          }
+        }
+      }
+    },
+    "Points to a missing file": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aponta para um arquivo que não existe"
+          }
+        }
+      }
+    },
     "Preferences & state": {
       "localizations": {
         "pt-BR": {
@@ -3170,6 +3729,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Processador"
+          }
+        }
+      }
+    },
+    "Protections built into macOS. Legroom only reads their state.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proteções do próprio macOS. O Legroom só lê o estado delas."
           }
         }
       }
@@ -3244,6 +3813,16 @@
         }
       }
     },
+    "Reading Apple's scan results and what starts on its own.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lendo os resultados das varreduras da Apple e o que abre sozinho."
+          }
+        }
+      }
+    },
     "Reading processes…": {
       "localizations": {
         "pt-BR": {
@@ -3270,6 +3849,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Reiniciado há pouco tempo."
+          }
+        }
+      }
+    },
+    "Review and uninstall %@ with its leftovers": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisar e desinstalar o %@ com os restos dele"
+          }
+        }
+      }
+    },
+    "Runs a tool built into macOS": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa uma ferramenta do macOS"
+          }
+        }
+      }
+    },
+    "Runs only on this Mac. Nothing is sent anywhere, and nothing changes unless you ask.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Roda só neste Mac. Nada é enviado para fora, e nada muda sem você pedir."
           }
         }
       }
@@ -3485,6 +4094,26 @@
         }
       }
     },
+    "Script": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Script"
+          }
+        }
+      }
+    },
+    "Security updates": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizações de segurança"
+          }
+        }
+      }
+    },
     "See the whole disk at once and dive into what takes up space.": {
       "localizations": {
         "pt-BR": {
@@ -3577,12 +4206,32 @@
         }
       }
     },
+    "Show File in Finder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar arquivo no Finder"
+          }
+        }
+      }
+    },
     "Show Hidden Items": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Mostrar itens ocultos"
+          }
+        }
+      }
+    },
+    "Show Program in Finder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar programa no Finder"
           }
         }
       }
@@ -3623,6 +4272,32 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mostrar na barra de menus"
+          }
+        }
+      }
+    },
+    "Signed by %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assinado por %@"
+          }
+        }
+      }
+    },
+    "Signed by %@ (%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Signed by %1$@ (%2$@)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assinado por %@ (%@)"
           }
         }
       }
@@ -3744,6 +4419,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sistema (wired)"
+          }
+        }
+      }
+    },
+    "System Integrity": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Integridade do Sistema"
           }
         }
       }
@@ -3965,12 +4650,82 @@
         }
       }
     },
+    "Turn Off": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativar"
+          }
+        }
+      }
+    },
+    "Turn Off…": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativar…"
+          }
+        }
+      }
+    },
+    "Turn it back on in Privacy & Security, under “Allow applications from”.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Religue em Privacidade e Segurança, em “Permitir aplicativos de”."
+          }
+        }
+      }
+    },
+    "Turn it on in Network › Firewall.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligue em Rede › Firewall."
+          }
+        }
+      }
+    },
+    "Turn it on in Privacy & Security › FileVault.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligue em Privacidade e Segurança › FileVault."
+          }
+        }
+      }
+    },
+    "Turn off “%@”?": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativar “%@”?"
+          }
+        }
+      }
+    },
     "Turn on Apple Intelligence in System Settings so Legroom can explain unfamiliar items.": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Ative o Apple Intelligence nos Ajustes do Sistema para o Legroom explicar itens desconhecidos."
+          }
+        }
+      }
+    },
+    "Turn on “Install Security Responses and system files” in Software Update › Automatic Updates.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligue “Instalar Respostas de Segurança e arquivos do sistema” em Atualização de Software › Atualizações Automáticas."
           }
         }
       }
@@ -4031,6 +4786,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ferramentas de linha de comando e bibliotecas do Unix."
+          }
+        }
+      }
+    },
+    "Unknown": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desconhecido"
           }
         }
       }
@@ -4121,6 +4886,32 @@
           "stringUnit": {
             "state": "translated",
             "value": "Biblioteca do usuário"
+          }
+        }
+      }
+    },
+    "Version %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versão %@"
+          }
+        }
+      }
+    },
+    "Version %@, updated %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Version %1$@, updated %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versão %@, atualizada %@"
           }
         }
       }
@@ -4241,6 +5032,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "O que dá para limpar"
+          }
+        }
+      }
+    },
+    "What starts on its own": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que abre sozinho"
+          }
+        }
+      }
+    },
+    "What starts on its own, who signed it, and whether macOS's own defenses are on.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que abre sozinho, quem assinou e se as defesas do próprio macOS estão ligadas."
           }
         }
       }
@@ -4387,6 +5198,46 @@
         }
       }
     },
+    "Worth a look": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vale uma olhada"
+          }
+        }
+      }
+    },
+    "XProtect": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "XProtect"
+          }
+        }
+      }
+    },
+    "XProtect Remediator runs when the Mac is idle, usually on power. This isn't a problem by itself.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O XProtect Remediator roda quando o Mac está ocioso, normalmente ligado na tomada. Isso por si só não é um problema."
+          }
+        }
+      }
+    },
+    "XProtect Remediator scans for known malware in the background and removes what it finds. This is Apple's result, as macOS recorded it.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O XProtect Remediator procura malware conhecido em segundo plano e remove o que encontra. Este é o resultado da Apple, como o macOS registrou."
+          }
+        }
+      }
+    },
     "Xcode Archives": {
       "extractionState": "manual",
       "localizations": {
@@ -4465,6 +5316,16 @@
         }
       }
     },
+    "Your Mac's defenses": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As defesas do Mac"
+          }
+        }
+      }
+    },
     "Your Mail messages and attachments. Don't delete them here; use Mail itself.": {
       "localizations": {
         "pt-BR": {
@@ -4515,6 +5376,26 @@
         }
       }
     },
+    "added %lld days ago": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "adicionado há %lld dias"
+          }
+        }
+      }
+    },
+    "added today": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "adicionado hoje"
+          }
+        }
+      }
+    },
     "already counted as available": {
       "localizations": {
         "pt-BR": {
@@ -4561,6 +5442,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "canal %lld"
+          }
+        }
+      }
+    },
+    "checked": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "verificado"
           }
         }
       }
@@ -4747,6 +5638,26 @@
         }
       }
     },
+    "lives in a hidden folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fica numa pasta oculta"
+          }
+        }
+      }
+    },
+    "lives in a temporary or shared folder": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fica numa pasta temporária ou compartilhada"
+          }
+        }
+      }
+    },
     "looking for leftovers…": {
       "localizations": {
         "pt-BR": {
@@ -4763,6 +5674,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "O macOS em si. Protegido e somente leitura; o tamanho é fixo e não há o que limpar aqui."
+          }
+        }
+      }
+    },
+    "named like an Apple item, but isn't Apple's": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tem nome de item da Apple, mas não é da Apple"
           }
         }
       }
@@ -4807,12 +5728,32 @@
         }
       }
     },
+    "not notarized by Apple": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "não notarizado pela Apple"
+          }
+        }
+      }
+    },
     "not scanned yet": {
       "localizations": {
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "ainda não lido"
+          }
+        }
+      }
+    },
+    "not signed": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sem assinatura"
           }
         }
       }
@@ -4833,6 +5774,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "nada marcado"
+          }
+        }
+      }
+    },
+    "nothing unusual": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nada fora do comum"
           }
         }
       }
@@ -4897,6 +5848,26 @@
         }
       }
     },
+    "runs a script": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "roda um script"
+          }
+        }
+      }
+    },
+    "runs an inline command": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "roda um comando direto"
+          }
+        }
+      }
+    },
     "scanned": {
       "localizations": {
         "pt-BR": {
@@ -4937,6 +5908,26 @@
         }
       }
     },
+    "signature doesn't check out": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "assinatura não confere"
+          }
+        }
+      }
+    },
+    "signed ad hoc (no developer)": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "assinatura ad hoc (sem desenvolvedor)"
+          }
+        }
+      }
+    },
     "symbolic link": {
       "localizations": {
         "pt-BR": {
@@ -4963,6 +5954,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "hoje"
+          }
+        }
+      }
+    },
+    "turned off": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "desativado"
           }
         }
       }
@@ -5018,8 +6019,17 @@
       }
     },
     "·": {
-      "localizations": {},
       "shouldTranslate": false
+    },
+    "“%@” won't start on its own anymore. Its file is in the Trash.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” não abre mais sozinho. O arquivo está no Lixo."
+          }
+        }
+      }
     },
     "… and %lld more": {
       "localizations": {
@@ -5032,11 +6042,9 @@
       }
     },
     "↑ %@": {
-      "localizations": {},
       "shouldTranslate": false
     },
     "↓ %@": {
-      "localizations": {},
       "shouldTranslate": false
     }
   },

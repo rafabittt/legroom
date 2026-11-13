@@ -11,7 +11,7 @@ import AppKit
 // MARK: Screens Siri can open
 
 enum LegroomScreen: String, AppEnum {
-    case summary, map, cleanup, large, apps, clutter
+    case summary, map, cleanup, large, apps, clutter, security
 
     static let typeDisplayRepresentation: TypeDisplayRepresentation = "Legroom screen"
     static let caseDisplayRepresentations: [LegroomScreen: DisplayRepresentation] = [
@@ -21,6 +21,7 @@ enum LegroomScreen: String, AppEnum {
         .large: DisplayRepresentation(title: "Large & Forgotten", image: .init(systemName: "shippingbox")),
         .apps: DisplayRepresentation(title: "Apps", image: .init(systemName: "app.badge")),
         .clutter: DisplayRepresentation(title: "Clutter", image: .init(systemName: "tray.full")),
+        .security: DisplayRepresentation(title: "Check-up", image: .init(systemName: "stethoscope")),
     ]
 
     /// Same names that `AppState.handle(url:)` understands.

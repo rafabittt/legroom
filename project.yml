@@ -48,8 +48,8 @@ targets:
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "0.9.8"
-        CFBundleVersion: "9"
+        CFBundleShortVersionString: "0.9.9"
+        CFBundleVersion: "10"
         LSMinimumSystemVersion: "14.0"
         LSApplicationCategoryType: public.app-category.utilities
         NSPrincipalClass: NSApplication
@@ -99,8 +99,8 @@ targets:
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "0.9.8"
-        CFBundleVersion: "9"
+        CFBundleShortVersionString: "0.9.9"
+        CFBundleVersion: "10"
         LSMinimumSystemVersion: "14.0"
         NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
         NSExtension:

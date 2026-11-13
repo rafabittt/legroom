@@ -6,6 +6,22 @@
     <description>Legroom updates</description>
     <language>en</language>
     <item>
+      <title>Legroom 0.9.9</title>
+      <pubDate>Fri, 13 Nov 2026 00:02:48 GMT</pubDate>
+      <sparkle:version>10</sparkle:version>
+      <sparkle:shortVersionString>0.9.9</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v0.9.9</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 0.9.9</h3>
+<ul>
+<li><b>New: Check-up.</b> A plain look at your Mac's built-in defenses (System Integrity, Gatekeeper, FileVault, firewall, XProtect and security updates), the result of Apple's own background malware checks, and everything that opens on its own — grouped by who signed it, with the reason anything is worth a look.</li>
+<li>Turn off a startup item (its file goes to the Trash, so you can undo it), uninstall the app that owns it, or show it in Finder.</li>
+<li>Runs only when you click <i>Check Now</i>. No password, no internet, nothing sent anywhere.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v0.9.9/Legroom-0.9.9.dmg" length="4086354" type="application/octet-stream" sparkle:edSignature="bgMFa5mdAVBBakUjA1QrVTTwn3lGWhM8ObfRVVLCf2WVMnTYm2EG3HIeWUyjg0cxokxkGThKBk8d/ryneoe3AA=="/>
+    </item>
+    <item>
       <title>Legroom 0.9.8</title>
       <pubDate>Thu, 12 Nov 2026 19:24:52 GMT</pubDate>
       <sparkle:version>9</sparkle:version>

@@ -12,10 +12,12 @@ struct ContentView: View {
             HStack(spacing: 4) {
                 SidebarView()
                 VStack(spacing: 0) {
-                    if state.goal != .home { VolumeHeaderView() }
+                    if state.goal != .home && state.goal != .security { VolumeHeaderView() }
                     Group {
                         if state.goal == .home {
                             HomeView()
+                        } else if state.goal == .security {
+                            SecurityScreen()
                         } else if state.goal != .map {
                             GoalScreen(goal: state.goal)
                         } else if state.isScanning {
@@ -214,7 +216,7 @@ struct GoalScreen: View {
                             case .large: LargeFilesView(roots: result.roots, key: result.key ^ state.treeVersion)
                             case .apps: AppsView(roots: result.roots, key: result.key ^ state.treeVersion)
                             case .clutter: ClutterView(roots: result.roots, key: result.key ^ state.treeVersion)
-                            case .map, .home: EmptyView()
+                            case .map, .home, .security: EmptyView()
                             }
                         }
                         .opacity(scanning ? 0.45 : 1)

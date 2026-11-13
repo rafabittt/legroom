@@ -38,6 +38,7 @@ Most Mac "cleaners" are subscriptions wrapped in scare tactics: red warnings, a 
 | **Large & Forgotten** | Files and packages over 50 MB, filterable by size, age and type. |
 | **Apps** | Every app with its real size, version and last opened date. **Uninstall** finds what the app left behind — app support data, containers, caches, preferences, logs, launch agents, hidden folders in your home, even the installer DMG in Downloads — and lets you review it before anything moves. |
 | **Clutter** | Duplicates confirmed by content (SHA-256), downloads you haven't opened in 90 days, leftover installers and screenshots. |
+| **Check-up** | Your Mac's built-in defenses (System Integrity, Gatekeeper, FileVault, firewall, XProtect, security updates), the result of Apple's own background malware checks (XProtect Remediator), and everything that opens on its own, grouped by who signed it. Items worth a look say why (a script, unsigned, a hidden or temporary folder, a name imitating Apple's, added in the last week); leftovers point to programs that no longer exist. Turn an item off (its file goes to the Trash), uninstall the app that owns it, or show it in Finder. It's a transparent look, not an antivirus. |
 | **Menu bar & widgets** | A compact Overview in the menu bar, and Desktop / Notification Center widgets in three sizes. |
 
 <p align="center">
@@ -63,6 +64,7 @@ Legroom is distributed outside the Mac App Store on purpose: the App Store requi
 - **Saved map.** The last full scan is stored as a compact pre-order binary tree (varints, LZFSE-compressed; ~35 MB for 4 million nodes) in `~/Library/Application Support/Legroom/maps`. Reopening it doesn't touch the disk; items you send to the Trash afterwards are recorded and removed from the saved tree.
 - **Uninstall.** Leftovers are matched by the app's bundle identifier (and those of the helpers, extensions and XPC services inside it) and by the app's exact name — never by substring, so uninstalling "Nod" finds `~/.nod-desktop` but not `chronod`. Names and identifiers belonging to other installed apps are excluded, and hidden folders that only match by name are left unchecked, since they're often command-line tools with the same name. Items owned by the system (apps installed by a `.pkg`) are moved by Finder, which asks for your administrator password in its own dialog; Legroom never sees it.
 - **Temperatures** are read from the sensors macOS publishes through IOHID (the same approach as tools like [Stats](https://github.com/exelban/stats)). There's no public API for this, so the functions are resolved at runtime; if they're unavailable, the temperature simply isn't shown.
+- **Check-up** runs the same tools you could run in Terminal (`csrutil`, `spctl`, `fdesetup`, `socketfilterfw`, `xprotect`), reads XProtect Remediator's results from the unified log, and checks each launch agent's program with the Security framework (`SecStaticCode`: Apple anchor, Developer ID, notarization). No administrator password and no network.
 - **Memory** uses `host_statistics64`; **CPU** uses `host_cpu_load_info`; **network** uses `getifaddrs`. Readings run only while the Overview or the menu bar panel is visible.
 
 ## Build from source
@@ -86,9 +88,9 @@ With ad hoc signing the app works fully; only the widget can't read the shared A
 Lupa/                  The app (the folder kept the project's working name)
   App/                 Entry point, AppState (state, navigation, actions), App Intents, debug launch flags
   Models/              Volumes, file tree, goals, cleanup rules, clutter, app leftovers, saved map,
-                       memory / CPU / network / temperature readings, formatting
+                       memory / CPU / network / temperature readings, Check-up, formatting
   Scanner/             FTSScanner: background fts(3) walk with progress and cancellation
-  Views/               SwiftUI views: Overview, Map (treemap + list), goal screens, sidebar, menu bar, uninstall sheet
+  Views/               SwiftUI views: Overview, Map (treemap + list), goal screens, Check-up, sidebar, menu bar, uninstall sheet
   Resources/           Localizable.xcstrings (pt-BR), cleanup-rules.json, App Shortcuts strings
 LegroomWidget/         WidgetKit extension (sandboxed; reads shared totals through an App Group)
 tools/                 build, install, release and widget snapshot scripts

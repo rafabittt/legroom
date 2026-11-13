@@ -89,6 +89,28 @@ enum DebugLaunch {
                 for l in AppLeftovers.find(for: [url]) { log("leftover: \(l.suggested ? "[x]" : "[ ]") \(l.kind.rawValue) | \(Format.bytes(l.bytes)) | \(l.url.path)") }
             }
         }
+        // --turn-off <plist>: turns off one startup item through the same code as the button
+        if let plist = value("--turn-off") {
+            Task { @MainActor in
+                let item = SecurityCheck.inspect(plist: URL(fileURLWithPath: plist), domain: .user)
+                log("inspect: \(String(describing: item?.verdict))")
+                if let item { log("turned off: \(await SecurityCheck.turnOff(item))") }
+                exit(0)
+            }
+        }
+        // --dump-checkup: runs the Check-up and logs each startup item's verdict (no UI)
+        if args.contains("--dump-checkup") {
+            Task.detached {
+                let r = SecurityCheck.run()
+                for d in r.defenses { log("defense \(d.kind.rawValue): \(d.state) \(d.detail ?? "")") }
+                if let s = r.appleScan { log("apple scan: \(s.date) scanners=\(s.scanners) findings=\(s.findings.map(\.family))") }
+                for i in r.startup {
+                    let reasons: String = { if case .review(let x) = i.verdict { return x.map(\.text).joined(separator: ", ") } else { return "" } }()
+                    log("item \(i.label) [\(i.domain.rawValue)] verdict=\(i.verdict) \(reasons) notes=\(i.notes.map(\.text)) program=\(i.program ?? "-") app=\(i.ownerApp?.lastPathComponent ?? "-")")
+                }
+                exit(0)
+            }
+        }
         let menubar = value("--menubar")
         // --settings: opens the Settings window (to reproduce problems in it)
         if args.contains("--settings") {

@@ -3,10 +3,12 @@ import Foundation
 /// The user's goals, one per tab. They all read the same scan tree; what changes
 /// is the slice they look at and the question they answer.
 enum Goal: String, Hashable, CaseIterable, Identifiable {
-    case home, map, cleanup, large, apps, clutter
+    case home, map, cleanup, large, apps, clutter, security
 
     /// Goals that read the disk (Home only summarizes).
     static let scanning: [Goal] = [.map, .cleanup, .large, .apps, .clutter]
+    /// Goals listed in the sidebar: the disk goals plus the Check-up.
+    static let sidebar: [Goal] = scanning + [.security]
 
     var id: String { rawValue }
 
@@ -18,6 +20,7 @@ enum Goal: String, Hashable, CaseIterable, Identifiable {
         case .large: return String(localized: "Large & Forgotten")
         case .apps: return String(localized: "Apps")
         case .clutter: return String(localized: "Clutter")
+        case .security: return String(localized: "Check-up")
         }
     }
 
@@ -29,6 +32,7 @@ enum Goal: String, Hashable, CaseIterable, Identifiable {
         case .large: return "shippingbox"
         case .apps: return "app.badge"
         case .clutter: return "tray.2"
+        case .security: return "stethoscope"
         }
     }
 
@@ -41,6 +45,7 @@ enum Goal: String, Hashable, CaseIterable, Identifiable {
         case .large: return String(localized: "Large files you haven't opened in months. Decide what goes to the Trash.")
         case .apps: return String(localized: "How much space each app really takes, and which ones you haven't opened in a while.")
         case .clutter: return String(localized: "Duplicates, old downloads, used installers, and piled-up screenshots.")
+        case .security: return String(localized: "What starts on its own, who signed it, and whether macOS's own defenses are on.")
         }
     }
 
@@ -53,6 +58,7 @@ enum Goal: String, Hashable, CaseIterable, Identifiable {
         case .large: return String(localized: "What's large and forgotten?")
         case .apps: return String(localized: "Which apps do I no longer use?")
         case .clutter: return String(localized: "Where's the clutter?")
+        case .security: return String(localized: "Is anything running that shouldn't be?")
         }
     }
 
@@ -65,6 +71,7 @@ enum Goal: String, Hashable, CaseIterable, Identifiable {
         case .large: return (0xFB923C, 0xF59E0B)    // orange → amber
         case .apps: return (0x60A5FA, 0x3B82F6)     // blue
         case .clutter: return (0xF472B6, 0xC084FC)  // pink → lilac
+        case .security: return (0x34D399, 0x10B981) // green
         }
     }
 }

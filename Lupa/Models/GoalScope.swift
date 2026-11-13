@@ -12,7 +12,7 @@ extension Goal {
             urls.filter { fm.fileExists(atPath: $0.path) }
         }
         switch self {
-        case .home:
+        case .home, .security:
             return []
         case .map:
             return source.map { [$0.url] } ?? []
@@ -60,6 +60,7 @@ extension Goal {
         case .large: return String(localized: "Looking for large files")
         case .apps: return String(localized: "Scanning apps")
         case .clutter: return String(localized: "Scanning your home folder")
+        case .security: return String(localized: "Checking your Mac")
         }
     }
 }

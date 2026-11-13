@@ -59,6 +59,9 @@ EN = dict(
     ov_ring="64%", ov_m=[("Memory", "22.3", " GB"), ("Chip", "48", " °C"), ("Freed", "10.8", " GB")],
     cu_tag="Clutter", cu_h="Where's the clutter?", cu_p="Duplicates confirmed by content, downloads you never opened again, old installers and piles of screenshots.",
     wd_tag="Menu bar & widgets", wd_h="At a glance, without opening it.", wd_p="A compact Overview in the menu bar, and widgets for the desktop and Notification Center.",
+    ck_tag="Check-up", ck_h="Is anything running that shouldn't be?", ck_p="Your Mac's built-in defenses, the result of Apple's own malware checks, and everything that opens on its own, grouped by who signed it. No alarms: it shows what runs and why something is worth a look, and you decide.",
+    ck_defs=[("System Integrity", "On", 1), ("Gatekeeper", "On", 1), ("FileVault", "On", 1), ("Firewall", "Off", 0), ("XProtect", "5372", 1), ("Security updates", "On", 1)],
+    ck_items=[("com.example.helper", "Runs a script · added today", "Worth a look", 1), ("com.google.keystone.agent", "Its program no longer exists", "Leftover", 2), ("com.valvesoftware.steam", "Valve Corporation", "Identified developer", 0)],
     t_kicker="Tour", t_h="A closer look.", t_p="Native SwiftUI, light and dark, English and Portuguese.",
     tabs=[("Map", "map", "Dive into folders and see exactly what takes up space."),
           ("Cleanup", "cleanup", "A conservative selection is pre-checked; the rest is your call."),
@@ -112,6 +115,9 @@ PT = dict(
     ov_ring="64%", ov_m=[("Memória", "22,3", " GB"), ("Chip", "48", " °C"), ("Liberado", "10,8", " GB")],
     cu_tag="Bagunça", cu_h="Onde está a bagunça?", cu_p="Duplicados confirmados pelo conteúdo, downloads esquecidos, instaladores antigos e pilhas de capturas de tela.",
     wd_tag="Barra de menus e widgets", wd_h="De relance, sem abrir o app.", wd_p="Um Resumo compacto na barra de menus e widgets para a Mesa e a Central de Notificações.",
+    ck_tag="Check-up", ck_h="Tem algo rodando que não deveria?", ck_p="As defesas que já vêm no Mac, o resultado das checagens de malware da própria Apple e tudo o que abre sozinho, agrupado por quem assinou. Sem alarme: mostra o que roda e por que algo vale uma olhada, e quem decide é você.",
+    ck_defs=[("Integridade do Sistema", "Ligado", 1), ("Gatekeeper", "Ligado", 1), ("FileVault", "Ligado", 1), ("Firewall", "Desligado", 0), ("XProtect", "5372", 1), ("Atualizações de segurança", "Ligado", 1)],
+    ck_items=[("com.example.helper", "Roda um script · adicionado hoje", "Vale uma olhada", 1), ("com.google.keystone.agent", "O programa não existe mais", "Sobra", 2), ("com.valvesoftware.steam", "Valve Corporation", "Desenvolvedor identificado", 0)],
     t_kicker="Tour", t_h="Olhando de perto.", t_p="SwiftUI nativo, claro e escuro, português e inglês.",
     tabs=[("Mapa", "map", "Entre nas pastas e veja exatamente o que ocupa espaço."),
           ("Limpeza", "cleanup", "Uma seleção conservadora vem marcada; o resto é com você."),
@@ -155,6 +161,8 @@ def page(t):
     stars_btn = f'<a class="btn btn-ghost btn-sm" href="{REPO}" aria-label="GitHub">{GITHUB}<span class="lbl">GitHub</span><span class="stars" data-stars hidden>{STAR}<b></b></span></a>'
     trust = "".join(f"<span>{CHECK}{e(x)}</span>" for x in t["trust"])
     un = "".join(f'<li><span class="bx"></span><span>{e(p)}</span><span class="sz">{e(s)}</span></li>' for p, s in t["un_items"])
+    ckdefs = "".join(f'<div class="def{"" if on else " off"}"><small>{e(n)}</small><b>{e(v)}</b></div>' for n, v, on in t["ck_defs"])
+    ckitems = "".join(f'<div class="srow k{k}"><code>{e(lbl)}</code><span>{e(sub)}</span><em>{e(tag)}</em></div>' for lbl, sub, tag, k in t["ck_items"])
     rows = "".join(f'<div class="row"><b>{e(n)}{f"<span class=pill>{e(tag)}</span>" if tag else ""}</b><span>{e(s)}</span><div class="bar"><i style="--w:{w}%"></i></div></div>' for n, s, w, tag in t["cl_rows"])
     metrics = "".join(f'<div class="metric"><small>{e(n)}</small><b><span data-count="{v.replace(",", ".")}" data-dec="{1 if "," in v or "." in v else 0}">0</span><i>{suf}</i></b></div>' for n, v, suf in t["ov_m"])
     dupes = "".join(f'<div class="dupe">{n}</div>' for n in ["IMG_2041", "report.pdf", "song.m4a", "deck.key", "deck.key", "IMG_2041", "song.m4a", "report.pdf"])
@@ -269,6 +277,10 @@ def page(t):
       <article class="cell w3 rv d1">
         <span class="tag">{e(t['wd_tag'])}</span><h3>{e(t['wd_h'])}</h3><p>{e(t['wd_p'])}</p>
         <div class="viz widgets"><img src="{R}assets/widget-small.webp" alt="" width="416" height="416" loading="lazy" class="ws"><img src="{R}assets/widget-medium.webp" alt="" width="776" height="416" loading="lazy" class="wm"></div>
+      </article>
+      <article class="cell w6 split rv" data-enter>
+        <div><span class="tag">{e(t['ck_tag'])}</span><h3>{e(t['ck_h'])}</h3><p>{e(t['ck_p'])}</p></div>
+        <div class="viz"><div class="defs" aria-hidden="true">{ckdefs}</div><div class="srows" aria-hidden="true">{ckitems}</div></div>
       </article>
     </div>
   </div>

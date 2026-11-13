@@ -18,7 +18,7 @@ struct SidebarView: View {
                 VStack(alignment: .leading, spacing: 18) {
                     GoalRow(goal: .home, selected: state.goal == .home) { state.selectGoal(.home) }
                     SidebarSection(title: String(localized: "Goals")) {
-                        ForEach(Goal.scanning) { g in
+                        ForEach(Goal.sidebar) { g in
                             GoalRow(goal: g, selected: state.goal == g) { state.selectGoal(g) }
                         }
                     }
