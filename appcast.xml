@@ -6,6 +6,21 @@
     <description>Legroom updates</description>
     <language>en</language>
     <item>
+      <title>Legroom 1.0.0</title>
+      <pubDate>Fri, 13 Nov 2026 03:12:20 GMT</pubDate>
+      <sparkle:version>11</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v1.0.0</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 1.0</h3>
+<ul>
+<li><b>Installer disks stay out of the way.</b> A disk image left mounted after installing (like Legroom's own DMG) no longer shows up as a second disk.</li>
+<li><b>Move to Applications.</b> If you open Legroom straight from the disk image, it offers to move itself to Applications, so it stays after you eject the disk image and can keep itself up to date.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v1.0.0/Legroom-1.0.0.dmg" length="4097349" type="application/octet-stream" sparkle:edSignature="TFVP2R1MGjEUxhLZWgfNB71SjpkbkiBh2Tb5U1hFrZVphAfSg8ZUvv87Rskh0v4yv3xsJmgvgw9t59XF2aNCBA=="/>
+    </item>
+    <item>
       <title>Legroom 0.9.9</title>
       <pubDate>Fri, 13 Nov 2026 00:02:48 GMT</pubDate>
       <sparkle:version>10</sparkle:version>
