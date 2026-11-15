@@ -521,6 +521,16 @@
         }
       }
     },
+    "%lld key presses ignored": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld teclas ignoradas"
+          }
+        }
+      }
+    },
     "%lld min": {
       "localizations": {
         "pt-BR": {
@@ -625,6 +635,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld valem uma olhada"
+          }
+        }
+      }
+    },
+    "+1 min": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+1 min"
           }
         }
       }
@@ -735,6 +755,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tudo marcado"
+          }
+        }
+      }
+    },
+    "Allow Legroom to lock the keyboard": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permita que o Legroom trave o teclado"
           }
         }
       }
@@ -1378,6 +1408,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Escolha um volume ao lado."
+          }
+        }
+      }
+    },
+    "Clean away: key presses do nothing until you unlock. The mouse and trackpad still work.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pode limpar: as teclas não fazem nada até você destravar. O mouse e o trackpad continuam funcionando."
           }
         }
       }
@@ -2336,6 +2376,16 @@
         }
       }
     },
+    "Ignores every key press so you can clean the keyboard. Click Unlock (or wait 3 minutes) to end it.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignora todas as teclas para você limpar o teclado. Clique em Destravar (ou espere 3 minutos) para terminar."
+          }
+        }
+      }
+    },
     "Image": {
       "localizations": {
         "pt-BR": {
@@ -2545,6 +2595,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mantém os arquivos do sistema só para leitura, mesmo para apps com permissão de administrador."
+          }
+        }
+      }
+    },
+    "Keyboard locked": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado travado"
           }
         }
       }
@@ -2806,6 +2866,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Onde"
+          }
+        }
+      }
+    },
+    "Lock Keyboard": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travar teclado"
           }
         }
       }
@@ -3598,6 +3668,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Abrir Ajustes"
+          }
+        }
+      }
+    },
+    "Open System Settings": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes do Sistema"
           }
         }
       }
@@ -4679,6 +4759,16 @@
         }
       }
     },
+    "To ignore key presses while you clean, macOS needs you to turn on Legroom in System Settings › Privacy & Security › Accessibility. Legroom only uses it while the keyboard is locked. Then click Lock Keyboard again.": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para ignorar as teclas enquanto você limpa, o macOS precisa que você ative o Legroom em Ajustes do Sistema › Privacidade e Segurança › Acessibilidade. O Legroom só usa isso enquanto o teclado está travado. Depois, clique em Travar teclado de novo."
+          }
+        }
+      }
+    },
     "Top Processes": {
       "localizations": {
         "pt-BR": {
@@ -4856,6 +4946,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Desconhecido"
+          }
+        }
+      }
+    },
+    "Unlock Keyboard": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Destravar teclado"
+          }
+        }
+      }
+    },
+    "Unlocks by itself in %@": {
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Destrava sozinho em %@"
           }
         }
       }

@@ -98,6 +98,34 @@ enum DebugLaunch {
                 exit(0)
             }
         }
+        // --keyboard-lock-test: reports the Accessibility permission; if granted, locks for
+        // 2 s, posts synthetic key presses, logs how many were blocked, captures the panel, unlocks
+        if args.contains("--keyboard-lock-test") {
+            let trusted = KeyboardLock.hasPermission(prompt: false)
+            log("keyboard lock: accessibility permission = \(trusted)")
+            guard trusted else { exit(0) }
+            KeyboardLock.shared.lock()
+            log("keyboard lock: locked = \(KeyboardLock.shared.isLocked)")
+            for i in 0..<5 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.1) {
+                    // F18 (keycode 79): does nothing anywhere if it ever got through
+                    CGEvent(keyboardEventSource: nil, virtualKey: 79, keyDown: true)?.post(tap: .cghidEventTap)
+                    CGEvent(keyboardEventSource: nil, virtualKey: 79, keyDown: false)?.post(tap: .cghidEventTap)
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                log("keyboard lock: blocked \(KeyboardLock.shared.blocked) of 5 key presses")
+                if let path = value("--snapshot"), let w = NSApp.windows.first(where: { $0 is NSPanel && $0.isVisible }),
+                   let cg = CGWindowListCreateImage(.null, .optionIncludingWindow, CGWindowID(w.windowNumber), [.boundsIgnoreFraming, .bestResolution]) {
+                    try? NSBitmapImageRep(cgImage: cg).representation(using: .png, properties: [:])?.write(to: URL(fileURLWithPath: path))
+                    log("panel captured: \(path)")
+                }
+                KeyboardLock.shared.unlock()
+                log("keyboard lock: unlocked = \(!KeyboardLock.shared.isLocked)")
+                exit(0)
+            }
+            return
+        }
         // --dump-checkup: runs the Check-up and logs each startup item's verdict (no UI)
         if args.contains("--dump-checkup") {
             Task.detached {

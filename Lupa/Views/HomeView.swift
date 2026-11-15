@@ -26,8 +26,11 @@ struct HomeView: View {
     private var summary: some View {
         VStack(spacing: 14) {
             GoalHeader(goal: .home) {
-                Text(Date().formatted(date: .abbreviated, time: .shortened))
-                    .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                HStack(spacing: 12) {
+                    Text(Date().formatted(date: .abbreviated, time: .shortened))
+                        .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                    KeyboardLockButton()
+                }
             }
             .padding(.horizontal, 24)
 

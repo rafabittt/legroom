@@ -127,6 +127,7 @@ struct MenuBarPanel: View {
         HStack(spacing: 8) {
             PillButton(title: String(localized: "Open Legroom"), prominent: true, compact: true) { Self.bringMainWindowForward(openWindow) }
             Spacer()
+            KeyboardLockButton(iconOnly: true)
             PillButton(title: String(localized: "Quit"), prominent: false, compact: true) { NSApp.terminate(nil) }
                 .help("Quits Legroom and removes its icon from the menu bar")
         }

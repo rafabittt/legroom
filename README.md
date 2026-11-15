@@ -32,7 +32,7 @@ Most Mac "cleaners" are subscriptions wrapped in scare tactics: red warnings, a 
 
 | | |
 |---|---|
-| **Overview** | Disk health at a glance, memory, CPU (with chip, battery and SSD temperatures), network, and how much Legroom has freed so far. |
+| **Overview** | Disk health at a glance, memory, CPU (with chip, battery and SSD temperatures), network, and how much Legroom has freed so far. **Lock Keyboard** ignores every key press while you clean the keyboard (needs the Accessibility permission; unlocks with a click or after 3 minutes). |
 | **Map** | A full scan of a volume or folder as a treemap plus a sortable list. The last scan is saved and reopens instantly, and it also fills in the other tabs. |
 | **Cleanup** | Caches, logs, Xcode DerivedData and archives, iOS device support, iPhone backups, Mail downloads and developer tool caches. The rules are plain JSON ([`cleanup-rules.json`](Lupa/Resources/cleanup-rules.json)), each with an explanation. A conservative selection is pre-checked: only safe groups, only items untouched for days, never caches of apps that are open. |
 | **Large & Forgotten** | Files and packages over 50 MB, filterable by size, age and type. |
