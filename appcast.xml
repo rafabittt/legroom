@@ -6,6 +6,20 @@
     <description>Legroom updates</description>
     <language>en</language>
     <item>
+      <title>Legroom 1.0.1</title>
+      <pubDate>Sun, 15 Nov 2026 22:09:27 GMT</pubDate>
+      <sparkle:version>12</sparkle:version>
+      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v1.0.1</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 1.0.1</h3>
+<ul>
+<li><b>Lock the keyboard to clean it.</b> Click <i>Lock Keyboard</i> in the Overview (or the keyboard button in the menu bar panel) and every key press is ignored while you wipe the keys. The mouse and trackpad keep working: click <i>Unlock Keyboard</i> when you're done, or it unlocks by itself after 3 minutes. The first time, macOS asks you to allow Legroom under Accessibility.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v1.0.1/Legroom-1.0.1.dmg" length="4140469" type="application/octet-stream" sparkle:edSignature="Y9NNr7mC2ss/hFPK9uQtJweNcjLfJEp0UtEaCN9IbB1+FA8+6eO0mVXerzuvnaaRwKDxQdzJuJQT1CRIfaTdDg=="/>
+    </item>
+    <item>
       <title>Legroom 1.0.0</title>
       <pubDate>Fri, 13 Nov 2026 03:12:20 GMT</pubDate>
       <sparkle:version>11</sparkle:version>
