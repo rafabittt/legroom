@@ -30,7 +30,7 @@ struct ClutterView: View {
                     if let hashing {
                         HStack(spacing: 8) {
                             ProgressView().controlSize(.small)
-                            Text("Comparing \(hashing.done) of \(hashing.total)").font(.system(size: 11.5)).foregroundStyle(.secondary).monospacedDigit()
+                            Text("Comparing \(hashing.done) of \(hashing.total)").font(.system(size: 11.5)).foregroundStyle(.muted).monospacedDigit()
                         }
                         .padding(.horizontal, 12).padding(.vertical, 6)
                         .background(Capsule().fill(.thinMaterial))
@@ -39,7 +39,7 @@ struct ClutterView: View {
                     Spacer()
                 }
                 HStack(alignment: .center, spacing: 12) {
-                    Text(kind.explanation).font(.system(size: 11.5)).foregroundStyle(.secondary).lineLimit(2)
+                    Text(kind.explanation).font(.system(size: 11.5)).foregroundStyle(.muted).lineLimit(2)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     SelectionBar(count: selectedNodes.count, bytes: selectedBytes) { state.requestTrash(selectedNodes) }
                 }
@@ -73,7 +73,7 @@ struct ClutterView: View {
                                         }
                                         .controlSize(.small)
                                         Spacer()
-                                        Text("\(Format.bytes(report.total(for: kind))) in \(items.count) items").font(.system(size: 11.5)).foregroundStyle(.secondary).monospacedDigit()
+                                        Text("\(Format.bytes(report.total(for: kind))) in \(items.count) items").font(.system(size: 11.5)).foregroundStyle(.muted).monospacedDigit()
                                     }
                                     .padding(.horizontal, 12).padding(.vertical, 8)
                                     ForEach(items) { n in
@@ -141,7 +141,7 @@ private struct DuplicateCard: View {
                 VStack(alignment: .leading, spacing: 1) {
                     Text(group.files[0].name).font(.system(size: 13, weight: .semibold)).lineLimit(1)
                     Text("\(group.files.count) copies of \(Format.bytes(group.size)) · \(Format.bytes(group.wasted)) more than needed")
-                        .font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit()
+                        .font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit()
                 }
                 Spacer()
                 Button(copiesMarked ? String(localized: "Deselect Copies") : String(localized: "Select Copies, Keep Newest")) {

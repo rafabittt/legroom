@@ -20,12 +20,12 @@ struct DetailView: View {
                     Text(node.category.label).font(.system(size: 10.5, weight: .semibold)).foregroundStyle(.white)
                         .padding(.horizontal, 8).padding(.vertical, 3)
                         .background(Capsule().fill(Theme.categoryGradient(node.category)))
-                    if node.isSymlink { Text("symbolic link").font(.caption).foregroundStyle(.secondary) }
+                    if node.isSymlink { Text("symbolic link").font(.caption).foregroundStyle(.muted) }
                     if node.accessDenied { Label("no read permission", systemImage: "lock").font(.caption).foregroundStyle(.orange) }
                 }
                 Text(node.path)
                     .font(.callout.monospaced())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.muted)
                     .textSelection(.enabled)
                     .lineLimit(1)
                     .truncationMode(.middle)
@@ -37,10 +37,10 @@ struct DetailView: View {
                     Fact(String(localized: "Last Accessed"), Format.relative(node.accessed))
                 }
                 if let d = KnownLocations.description(forPath: node.path) {
-                    Text(d).font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                    Text(d).font(.caption).foregroundStyle(.muted).lineLimit(2)
                 } else if node.logicalSize > node.allocatedSize * 2, node.logicalSize > 1_000_000 {
                     Text("The logical size is much larger than the allocated size: a sparse or compressed file, or an APFS clone sharing blocks. Deleting frees only the \"on disk\" amount.")
-                        .font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                        .font(.caption).foregroundStyle(.muted).lineLimit(2)
                 } else {
                     FolderExplainer(node: node)   // v9: Apple Intelligence, only when you ask
                 }
@@ -81,7 +81,7 @@ private struct Fact: View {
     init(_ title: String, _ value: String) { self.title = title; self.value = value }
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
-            Text(title).font(.caption2).foregroundStyle(.tertiary)
+            Text(title).font(.caption2).foregroundStyle(.faint)
             Text(value).font(.callout.monospacedDigit())
         }
     }

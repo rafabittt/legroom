@@ -25,8 +25,8 @@ struct HoldButton: View {
 
     var body: some View {
         let dark = scheme == .dark
-        let base = dark ? Color.white : Color.black
-        let baseText = dark ? Color.black : Color.white
+        let base = Theme.ink(dark)
+        let baseText = Theme.inkText(dark)
         let shape = Capsule()
 
         ZStack {

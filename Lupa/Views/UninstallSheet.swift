@@ -27,10 +27,10 @@ struct UninstallSheet: View {
                         if plan.searching {
                             HStack(spacing: 8) {
                                 ProgressView().controlSize(.small)
-                                Text("Looking for the app's data, caches, and preferences…").font(.system(size: 12)).foregroundStyle(.secondary)
+                                Text("Looking for the app's data, caches, and preferences…").font(.system(size: 12)).foregroundStyle(.muted)
                             }
                         } else if plan.leftovers.isEmpty {
-                            Text("The app left nothing outside its bundle.").font(.system(size: 12)).foregroundStyle(.secondary)
+                            Text("The app left nothing outside its bundle.").font(.system(size: 12)).foregroundStyle(.muted)
                         } else {
                             ForEach(Leftover.Kind.allCases, id: \.self) { kind in
                                 let items = plan.leftovers.filter { $0.kind == kind }
@@ -38,11 +38,11 @@ struct UninstallSheet: View {
                                     VStack(alignment: .leading, spacing: 6) {
                                         groupTitle(kind.title)
                                         ForEach(items) { l in
-                                            row(icon: AnyView(Image(systemName: symbol(kind)).font(.system(size: 12)).foregroundStyle(.secondary).frame(width: 18)),
+                                            row(icon: AnyView(Image(systemName: symbol(kind)).font(.system(size: 12)).foregroundStyle(.muted).frame(width: 18)),
                                                 path: l.displayPath, bytes: l.bytes, toggle: l.id)
                                             if !l.suggested {
                                                 Text("May belong to a command-line tool with the same name. Select it only if you're sure.")
-                                                    .font(.system(size: 10.5)).foregroundStyle(.secondary)
+                                                    .font(.system(size: 10.5)).foregroundStyle(.muted)
                                                     .padding(.leading, 56)
                                             }
                                         }
@@ -71,10 +71,10 @@ struct UninstallSheet: View {
         return VStack(alignment: .leading, spacing: 6) {
             Text("Uninstall \(name)").font(.system(size: 18, weight: .semibold)).tracking(-0.3)
             Text("The app and what it stored on your Mac go to the Trash. You can restore them from there until the Trash is emptied.")
-                .font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 12)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             if !plan.running.isEmpty {
                 Label("\(name) is open and will be quit first.", systemImage: "info.circle")
-                    .font(.system(size: 11.5, weight: .medium)).foregroundStyle(.secondary)
+                    .font(.system(size: 11.5, weight: .medium)).foregroundStyle(.muted)
             }
         }
     }
@@ -84,7 +84,7 @@ struct UninstallSheet: View {
             VStack(alignment: .leading, spacing: 1) {
                 Text(Format.bytes(plan.selectedBytes)).font(.system(size: 15, weight: .semibold)).monospacedDigit()
                 Text(plan.searching ? String(localized: "looking for leftovers…") : (plan.apps.count + plan.selected.count == 1 ? String(localized: "1 item to the Trash") : String(localized: "\(plan.apps.count + plan.selected.count) items to the Trash")))
-                    .font(.system(size: 11)).foregroundStyle(.secondary)
+                    .font(.system(size: 11)).foregroundStyle(.muted)
             }
             Spacer()
             PillButton(title: String(localized: "Cancel"), prominent: false) { state.pendingUninstall = nil }
@@ -96,7 +96,7 @@ struct UninstallSheet: View {
     }
 
     private func groupTitle(_ t: String) -> some View {
-        Text(t.uppercased()).font(.system(size: 10.5, weight: .semibold)).tracking(0.5).foregroundStyle(.secondary)
+        Text(t.uppercased()).font(.system(size: 10.5, weight: .semibold)).tracking(0.5).foregroundStyle(.muted)
     }
 
     private func row(icon: AnyView, path: String, bytes: Int64, toggle id: String?) -> some View {
@@ -109,14 +109,14 @@ struct UninstallSheet: View {
                     }))
                 .toggleStyle(.checkbox).labelsHidden()
             } else {
-                Image(systemName: "checkmark.square.fill").foregroundStyle(.secondary).font(.system(size: 13))
+                Image(systemName: "checkmark.square.fill").foregroundStyle(.muted).font(.system(size: 13))
                     .help("The app is always included.")
             }
             icon
             Text(path).font(.system(size: 12, design: .monospaced)).lineLimit(1).truncationMode(.middle)
                 .help(path)
             Spacer(minLength: 8)
-            Text(Format.bytes(bytes)).font(.system(size: 12, weight: .medium)).monospacedDigit().foregroundStyle(.secondary)
+            Text(Format.bytes(bytes)).font(.system(size: 12, weight: .medium)).monospacedDigit().foregroundStyle(.muted)
         }
     }
 

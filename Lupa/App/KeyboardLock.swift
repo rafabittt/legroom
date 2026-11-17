@@ -174,12 +174,12 @@ struct KeyboardLockPanel: View {
         VStack(spacing: 14) {
             Image(systemName: "keyboard")
                 .font(.system(size: 34, weight: .regular))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.muted)
                 .padding(.top, 6)
             VStack(spacing: 5) {
                 Text("Keyboard locked").font(.system(size: 17, weight: .semibold))
                 Text("Clean away: key presses do nothing until you unlock. The mouse and trackpad still work.")
-                    .font(.system(size: 12.5)).foregroundStyle(.secondary)
+                    .font(.system(size: 12.5)).foregroundStyle(.muted)
                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
             HStack(spacing: 6) {
@@ -188,10 +188,10 @@ struct KeyboardLockPanel: View {
                 Button("+1 min") { lock.extend() }
                     .buttonStyle(.borderless).font(.system(size: 11.5, weight: .semibold))
             }
-            .font(.system(size: 11.5)).foregroundStyle(.tertiary)
+            .font(.system(size: 11.5)).foregroundStyle(.faint)
             if lock.blocked > 0 {
                 Text("\(lock.blocked) key presses ignored")
-                    .font(.system(size: 11.5)).foregroundStyle(.tertiary).monospacedDigit()
+                    .font(.system(size: 11.5)).foregroundStyle(.faint).monospacedDigit()
                     .contentTransition(.numericText())
             }
             PillButton(title: String(localized: "Unlock Keyboard"), systemImage: "lock.open") { lock.unlock() }

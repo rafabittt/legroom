@@ -47,13 +47,13 @@ private struct SecurityStartView: View {
             GoalIcon(goal: .security, size: 64, prominent: true)
             VStack(spacing: 6) {
                 Text(Goal.security.question).font(.system(size: 22, weight: .semibold)).tracking(-0.4)
-                Text(Goal.security.promise).font(.system(size: 13)).foregroundStyle(.secondary)
+                Text(Goal.security.promise).font(.system(size: 13)).foregroundStyle(.muted)
                     .multilineTextAlignment(.center).frame(maxWidth: 460)
             }
             PillButton(title: String(localized: "Check Now"), systemImage: "arrow.right") { state.runSecurityCheck() }
                 .keyboardShortcut(.defaultAction)
             Text("Runs only on this Mac. Nothing is sent anywhere, and nothing changes unless you ask.")
-                .font(.system(size: 11)).foregroundStyle(.tertiary)
+                .font(.system(size: 11)).foregroundStyle(.faint)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -65,7 +65,7 @@ private struct CheckingView: View {
             ProgressView().controlSize(.regular)
             Text("Checking your Mac…").font(.system(size: 14, weight: .semibold))
             Text("Reading Apple's scan results and what starts on its own.")
-                .font(.system(size: 12)).foregroundStyle(.secondary)
+                .font(.system(size: 12)).foregroundStyle(.muted)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -106,7 +106,7 @@ private struct SecurityReportView: View {
                         subtitle: String(localized: "Launch agents and services, and who signed what they run. Something unsigned isn't necessarily bad — your own scripts look the same — but it's worth knowing what it is.")) {
                     VStack(alignment: .leading, spacing: 18) {
                         if report.startup.isEmpty {
-                            Text("Nothing in the launch agent folders.").font(.system(size: 12.5)).foregroundStyle(.secondary)
+                            Text("Nothing in the launch agent folders.").font(.system(size: 12.5)).foregroundStyle(.muted)
                         }
                         StartupGroup(title: String(localized: "Worth a look"), symbol: "eye", items: review, tint: .amber)
                         StartupGroup(title: String(localized: "Leftovers"), symbol: "tray",
@@ -117,7 +117,7 @@ private struct SecurityReportView: View {
                                 StartupGroup(title: nil, symbol: "apple.logo", items: apple, tint: .gray).padding(.top, 8)
                             } label: {
                                 Text(apple.count == 1 ? String(localized: "1 item runs macOS's own tools") : String(localized: "\(apple.count) items run macOS's own tools"))
-                                    .font(.system(size: 12.5, weight: .semibold)).foregroundStyle(.secondary)
+                                    .font(.system(size: 12.5, weight: .semibold)).foregroundStyle(.muted)
                             }
                         }
                         LoginItemsHint()
@@ -145,7 +145,7 @@ private struct Section<Content: View>: View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 3) {
                 Text(title).font(.system(size: 16, weight: .semibold)).tracking(-0.2)
-                Text(subtitle).font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                Text(subtitle).font(.system(size: 12)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             }
             content
         }
@@ -173,7 +173,7 @@ private struct SummaryCard: View {
                 Text(look == 0 ? String(localized: "Nothing unusual") : look == 1 ? String(localized: "1 thing worth a look") : String(localized: "\(look) things worth a look"))
                     .font(.system(size: 20, weight: .semibold)).tracking(-0.4)
                 Text(summaryLine(on: on))
-                    .font(.system(size: 12.5)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                    .font(.system(size: 12.5)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }
@@ -202,12 +202,12 @@ private struct DefenseCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Image(systemName: defense.symbol).font(.system(size: 13, weight: .semibold)).foregroundStyle(.secondary).frame(width: 18)
+                Image(systemName: defense.symbol).font(.system(size: 13, weight: .semibold)).foregroundStyle(.muted).frame(width: 18)
                 Text(defense.title).font(.system(size: 13, weight: .semibold)).lineLimit(2).fixedSize(horizontal: false, vertical: true)
                 Spacer(minLength: 4)
                 StatePill(state: defense.state)
             }
-            Text(defense.explanation).font(.system(size: 11.5)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+            Text(defense.explanation).font(.system(size: 11.5)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             if let d = defense.detail {
                 Text(d).font(.system(size: 11.5, weight: .medium)).monospacedDigit()
             }
@@ -235,7 +235,7 @@ private struct StatePill: View {
             switch state {
             case .on: return (String(localized: "On"), Color(hex: scheme == .dark ? 0x4ADE80 : 0x1B7F3B), Theme.success.opacity(0.14))
             case .off: return (String(localized: "Off"), Palette.amberText(scheme), Palette.amber.opacity(0.18))
-            case .unknown: return (String(localized: "Unknown"), .secondary, Color.primary.opacity(0.08))
+            case .unknown: return (String(localized: "Unknown"), Theme.textSecondary(scheme == .dark), Color.primary.opacity(0.08))
             }
         }()
         Text(text).font(.system(size: 10.5, weight: .semibold))
@@ -251,16 +251,16 @@ private struct AppleScanCard: View {
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            Image(systemName: "apple.logo").font(.system(size: 16)).foregroundStyle(.secondary).frame(width: 22)
+            Image(systemName: "apple.logo").font(.system(size: 16)).foregroundStyle(.muted).frame(width: 22)
             VStack(alignment: .leading, spacing: 6) {
                 if let scan {
                     Text("Last run \(Format.relative(scan.date)), with \(scan.scanners) malware-family scanners.")
                         .font(.system(size: 13, weight: .semibold))
                     if scan.findings.isEmpty {
-                        Text("None of them found anything.").font(.system(size: 12)).foregroundStyle(.secondary)
+                        Text("None of them found anything.").font(.system(size: 12)).foregroundStyle(.muted)
                     } else {
                         Text("Apple reported results for these families. XProtect removes what it can on its own; restarting lets it finish.")
-                            .font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                            .font(.system(size: 12)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
                         ForEach(scan.findings) { f in
                             HStack(spacing: 8) {
                                 Text(f.family).font(.system(size: 12, weight: .semibold))
@@ -271,7 +271,7 @@ private struct AppleScanCard: View {
                 } else {
                     Text("No record of a run in the last 4 days.").font(.system(size: 13, weight: .semibold))
                     Text("XProtect Remediator runs when the Mac is idle, usually on power. This isn't a problem by itself.")
-                        .font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                        .font(.system(size: 12)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
                 }
             }
             Spacer(minLength: 0)
@@ -300,8 +300,8 @@ private struct StartupGroup: View {
                         Image(systemName: symbol).font(.system(size: 11, weight: .semibold))
                         Text("\(title) · \(items.count)").font(.system(size: 12.5, weight: .semibold))
                     }
-                    .foregroundStyle(.secondary)
-                    if let caption { Text(caption).font(.system(size: 11.5)).foregroundStyle(.tertiary) }
+                    .foregroundStyle(.muted)
+                    if let caption { Text(caption).font(.system(size: 11.5)).foregroundStyle(.faint) }
                 }
                 VStack(spacing: 0) {
                     ForEach(Array(items.enumerated()), id: \.element.id) { i, item in
@@ -333,15 +333,15 @@ private struct StartupRow: View {
                     if off {
                         Text("turned off").font(.system(size: 10, weight: .semibold))
                             .padding(.horizontal, 7).padding(.vertical, 2)
-                            .background(Capsule().fill(Color.primary.opacity(0.08))).foregroundStyle(.secondary)
+                            .background(Capsule().fill(Color.primary.opacity(0.08))).foregroundStyle(.muted)
                     }
                 }
-                Text(subtitle).font(.system(size: 11)).foregroundStyle(.secondary).lineLimit(1)
+                Text(subtitle).font(.system(size: 11)).foregroundStyle(.muted).lineLimit(1)
                 if let p = item.program {
                     // the script itself is already the program; don't repeat it among the arguments
                     let args = item.arguments.filter { ($0 as NSString).expandingTildeInPath != p }
                     Text(abbreviated(p) + (args.isEmpty ? "" : " " + args.prefix(3).joined(separator: " ")))
-                        .font(.system(size: 11, design: .monospaced)).foregroundStyle(.secondary)
+                        .font(.system(size: 11, design: .monospaced)).foregroundStyle(.muted)
                         .lineLimit(1).truncationMode(.middle).help(p)
                 }
                 chips
@@ -370,7 +370,7 @@ private struct StartupRow: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 7, style: .continuous).fill(Color.primary.opacity(scheme == .dark ? 0.10 : 0.06))
                 Image(systemName: rowSymbol).font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(tint == .amber ? Palette.amberText(scheme) : .secondary)
+                    .foregroundStyle(tint == .amber ? Palette.amberText(scheme) : Theme.textSecondary(scheme == .dark))
             }
         }
     }
@@ -409,7 +409,7 @@ private struct StartupRow: View {
                 ForEach(item.notes, id: \.self) { r in
                     Text(r.text).font(.system(size: 10, weight: .semibold))
                         .padding(.horizontal, 7).padding(.vertical, 2)
-                        .background(Capsule().fill(Color.primary.opacity(0.07))).foregroundStyle(.secondary)
+                        .background(Capsule().fill(Color.primary.opacity(0.07))).foregroundStyle(.muted)
                 }
             }
         }
@@ -446,9 +446,9 @@ private struct StartupRow: View {
 private struct LoginItemsHint: View {
     var body: some View {
         HStack(spacing: 10) {
-            Image(systemName: "person.crop.circle.badge.checkmark").foregroundStyle(.secondary)
+            Image(systemName: "person.crop.circle.badge.checkmark").foregroundStyle(.muted)
             Text("Apps can also open at login through Login Items, which only System Settings can list in full.")
-                .font(.system(size: 11.5)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 11.5)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 8)
             PillButton(title: String(localized: "Open Login Items"), prominent: false, compact: true) {
                 if let url = URL(string: "x-apple.systempreferences:com.apple.LoginItems-Settings.extension") { NSWorkspace.shared.open(url) }
@@ -462,12 +462,12 @@ private struct LoginItemsHint: View {
 private struct TipCard: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            Image(systemName: "terminal").font(.system(size: 15)).foregroundStyle(.secondary).frame(width: 22)
+            Image(systemName: "terminal").font(.system(size: 15)).foregroundStyle(.muted).frame(width: 22)
             VStack(alignment: .leading, spacing: 4) {
                 Text("No real website asks you to paste commands into Terminal.")
                     .font(.system(size: 13, weight: .semibold))
                 Text("Most Mac malware today arrives this way: a fake “verification” or a guide to free up space asks you to paste a command. The same goes for scripts in Script Editor and apps from outside the App Store or the developer's own site.")
-                    .font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                    .font(.system(size: 12)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }

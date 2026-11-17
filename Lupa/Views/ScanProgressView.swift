@@ -31,7 +31,7 @@ struct ScanProgressView: View {
                             .stroke(accent, style: StrokeStyle(lineWidth: 6, lineCap: .round))
                             .rotationEffect(.degrees((t * 140).truncatingRemainder(dividingBy: 360)))
                     }
-                    Image(systemName: "magnifyingglass").font(.system(size: 22, weight: .semibold)).foregroundStyle(.secondary)
+                    Image(systemName: "magnifyingglass").font(.system(size: 22, weight: .semibold)).foregroundStyle(.muted)
                 }
             }
             .frame(width: 104, height: 104)
@@ -48,7 +48,7 @@ struct ScanProgressView: View {
                 }
             }
             Text(state.progress.currentPath)
-                .font(.caption.monospaced()).foregroundStyle(.secondary)
+                .font(.caption.monospaced()).foregroundStyle(.muted)
                 .lineLimit(1).truncationMode(.middle).frame(maxWidth: 640)
             PillButton(title: String(localized: "Cancel"), systemImage: "xmark", prominent: false) { state.cancelScan() }
                 .keyboardShortcut(.cancelAction)
@@ -63,7 +63,7 @@ struct ScanProgressView: View {
         var body: some View {
             VStack(spacing: 2) {
                 RollingNumber(text: value, font: .system(size: 24, weight: .semibold), tracking: -0.5)
-                Text(title).font(.system(size: 11)).foregroundStyle(.secondary)
+                Text(title).font(.system(size: 11)).foregroundStyle(.muted)
             }
         }
     }

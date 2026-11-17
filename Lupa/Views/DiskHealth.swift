@@ -127,6 +127,7 @@ struct DiskHealth: Equatable {
     /// Dark, neutral base; the color comes in as a glow at the top (`panelGlow`),
     /// so it doesn't turn brown when health is amber.
     func panelGradient(dark: Bool) -> LinearGradient {
+        // same numbers as Grafite.sidebarTop / sidebarBottom (Design Directory, tokens/Grafite.swift)
         let top = Color(hex: dark ? 0x232327 : 0x2E2E34)
         let bottom = Color(hex: dark ? 0x17171A : 0x1F1F24)
         return LinearGradient(colors: [top, bottom], startPoint: .top, endPoint: .bottom)

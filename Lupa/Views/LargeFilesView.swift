@@ -29,7 +29,7 @@ struct LargeFilesView: View {
                 HStack(spacing: 6) {
                     RollingNumber(text: Format.bytes(total), font: .system(size: 13, weight: .semibold))
                     Text(items.count == 1 ? String(localized: "in 1 item") : String(localized: "in \(Format.count(items.count)) items"))
-                        .font(.system(size: 12)).foregroundStyle(.secondary)
+                        .font(.system(size: 12)).foregroundStyle(.muted)
                 }
                 .padding(.horizontal, 12).padding(.vertical, 6)
                 .background(Capsule().fill(.regularMaterial))
@@ -50,7 +50,7 @@ struct LargeFilesView: View {
                                 Image(nsImage: NSWorkspace.shared.icon(forFile: n.path)).resizable().frame(width: 18, height: 18)
                                 VStack(alignment: .leading, spacing: 1) {
                                     Text(n.name).lineLimit(1)
-                                    Text(n.parent?.path ?? "").font(.system(size: 10.5)).foregroundStyle(.tertiary)
+                                    Text(n.parent?.path ?? "").font(.system(size: 10.5)).foregroundStyle(.faint)
                                         .lineLimit(1).truncationMode(.middle)
                                 }
                             }
@@ -68,7 +68,7 @@ struct LargeFilesView: View {
                         }
                         .width(min: 84, ideal: 96)
                         TableColumn("Last Used", value: \.lastUsed, comparator: OptionalDateComparator()) { n in
-                            Text(Format.relative(n.lastUsed)).foregroundStyle(.secondary)
+                            Text(Format.relative(n.lastUsed)).foregroundStyle(.muted)
                         }
                         .width(min: 100, ideal: 110)
                     }
@@ -108,7 +108,7 @@ struct FilterMenu<Content: View>: View {
             HStack(spacing: 6) {
                 Image(systemName: symbol).font(.system(size: 11, weight: .semibold))
                 Text(title).font(.system(size: 12, weight: .medium))
-                Image(systemName: "chevron.down").font(.system(size: 9, weight: .bold)).foregroundStyle(.secondary)
+                Image(systemName: "chevron.down").font(.system(size: 9, weight: .bold)).foregroundStyle(.muted)
             }
             .padding(.horizontal, 12).padding(.vertical, 7)
             .background(Capsule().fill(Theme.card(scheme == .dark)))
@@ -129,9 +129,9 @@ struct EmptyHint: View {
     let text: String
     var body: some View {
         VStack(spacing: 10) {
-            Image(systemName: symbol).font(.system(size: 34, weight: .light)).foregroundStyle(.secondary)
+            Image(systemName: symbol).font(.system(size: 34, weight: .light)).foregroundStyle(.muted)
             Text(title).font(.system(size: 15, weight: .semibold))
-            Text(text).font(.system(size: 12)).foregroundStyle(.secondary).multilineTextAlignment(.center).frame(maxWidth: 360)
+            Text(text).font(.system(size: 12)).foregroundStyle(.muted).multilineTextAlignment(.center).frame(maxWidth: 360)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

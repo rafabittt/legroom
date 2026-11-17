@@ -12,12 +12,12 @@ struct VolumeHeaderView: View {
                         .font(.system(size: 24, weight: .semibold)).tracking(-0.5)
                     Text(state.selectedSource?.url.path ?? v.url.path)
                         .font(.system(size: 12, design: .monospaced))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.muted)
                         .lineLimit(1).truncationMode(.middle)
                     Spacer()
                     Text("\(Format.bytes(v.usedCapacity)) of \(Format.bytes(v.totalCapacity)) in use")
                         .font(.system(size: 12, weight: .medium)).monospacedDigit()
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.muted)
                 }
                 let trigger = AnyHashable(state.selectedSource?.id ?? "")
                 HStack(spacing: 12) {

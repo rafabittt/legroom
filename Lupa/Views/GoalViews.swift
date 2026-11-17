@@ -12,7 +12,7 @@ struct GoalHeader<Trailing: View>: View {
             GoalIcon(goal: goal, size: 34)
             VStack(alignment: .leading, spacing: 1) {
                 Text(goal.question).font(.system(size: 15, weight: .semibold))
-                Text(goal.promise).font(.system(size: 11.5)).foregroundStyle(.secondary).lineLimit(1)
+                Text(goal.promise).font(.system(size: 11.5)).foregroundStyle(.muted).lineLimit(1)
             }
             Spacer(minLength: 12)
             trailing
@@ -22,19 +22,24 @@ struct GoalHeader<Trailing: View>: View {
 }
 
 /// Monochrome goal tile: gray with a dark symbol; "prominent" inverts it
-/// (black with a white symbol in light mode, white with a black symbol in dark mode).
+/// (Grafite ink with a white symbol in light mode, light ink with a dark symbol in dark mode).
+/// `pure` keeps the old pure white/black pair: only the sidebar uses it, so the panel
+/// (the Grafite standard) stays exactly as it was.
 struct GoalIcon: View {
     let goal: Goal
     var size: CGFloat = 30
     var prominent = false
+    var pure = false
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         let dark = scheme == .dark
+        let tile = pure ? (dark ? Color.white : Color.black) : Theme.ink(dark)
+        let symbol = pure ? (dark ? Color.black : Color.white) : Theme.inkText(dark)
         ZStack {
             RoundedRectangle(cornerRadius: size * 0.3, style: .continuous)
-                .fill(prominent ? (dark ? Color.white : Color.black) : Color.primary.opacity(dark ? 0.10 : 0.06))
+                .fill(prominent ? tile : Color.primary.opacity(dark ? 0.10 : 0.06))
             Image(systemName: goal.symbol).font(.system(size: size * 0.44, weight: .semibold))
-                .foregroundStyle(prominent ? (dark ? Color.black : Color.white) : Color.primary.opacity(0.8))
+                .foregroundStyle(prominent ? symbol : Color.primary.opacity(0.8))
         }
         .frame(width: size, height: size)
     }
@@ -51,7 +56,7 @@ struct SelectionBar: View {
             HStack(spacing: 6) {
                 RollingNumber(text: Format.bytes(bytes), font: .system(size: 13, weight: .semibold))
                 Text(count == 0 ? String(localized: "nothing selected") : (count == 1 ? String(localized: "in 1 selected item") : String(localized: "in \(Format.count(count)) selected items")))
-                    .font(.system(size: 12)).foregroundStyle(.secondary).lineLimit(1)
+                    .font(.system(size: 12)).foregroundStyle(.muted).lineLimit(1)
             }
             .fixedSize()
             .padding(.horizontal, 12).padding(.vertical, 6)
@@ -91,7 +96,7 @@ struct ItemRow: View {
             Image(nsImage: NSWorkspace.shared.icon(forFile: node.path)).resizable().frame(width: 18, height: 18)
             VStack(alignment: .leading, spacing: 1) {
                 Text(node.name).font(.system(size: 12.5)).lineLimit(1)
-                Text(subtitle ?? node.parent?.path ?? "").font(.system(size: 10.5)).foregroundStyle(.tertiary)
+                Text(subtitle ?? node.parent?.path ?? "").font(.system(size: 10.5)).foregroundStyle(.faint)
                     .lineLimit(1).truncationMode(.middle)
             }
             Spacer()
@@ -99,7 +104,7 @@ struct ItemRow: View {
                 Image(systemName: "sparkles").font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(Color(hex: scheme == .dark ? 0x4ADE80 : 0x16A34A)).help(hint)
             }
-            if let trailing { Text(trailing).font(.system(size: 11)).foregroundStyle(.secondary) }
+            if let trailing { Text(trailing).font(.system(size: 11)).foregroundStyle(.muted) }
             Text(Format.bytes(node.allocatedSize)).font(.system(size: 12, weight: .medium)).monospacedDigit()
                 .frame(width: 76, alignment: .trailing)
         }

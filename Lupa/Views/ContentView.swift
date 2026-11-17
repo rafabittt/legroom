@@ -100,7 +100,7 @@ struct StartView: View {
                     Text("What's taking up space on \(source.label)?")
                         .font(.system(size: 26, weight: .semibold)).tracking(-0.6)
                     Text("Legroom scans the disk once and answers the questions in the sidebar. Nothing runs on its own: the scan starts only when you hold the button. Nothing is deleted unless you ask, and removed items go to the Trash.")
-                        .font(.system(size: 13)).foregroundStyle(.secondary)
+                        .font(.system(size: 13)).foregroundStyle(.muted)
                         .multilineTextAlignment(.center).frame(maxWidth: 480)
                 }
                 HoldButton(title: String(localized: "Hold to Scan \(source.label)"), fill: state.health.accent(dark: scheme == .dark)) {
@@ -111,12 +111,12 @@ struct StartView: View {
                 HStack(spacing: 6) {
                     Image(systemName: state.health.symbol).foregroundStyle(state.health.accent(dark: scheme == .dark))
                     Text(state.health.label).font(.system(size: 12, weight: .medium))
-                    Text("·").foregroundStyle(.tertiary)
-                    Text(source.url.path).font(.system(size: 11, design: .monospaced)).foregroundStyle(.tertiary)
+                    Text("·").foregroundStyle(.faint)
+                    Text(source.url.path).font(.system(size: 11, design: .monospaced)).foregroundStyle(.faint)
                 }
                 .padding(.top, 6)
             } else {
-                Text("Choose a volume in the sidebar.").foregroundStyle(.secondary)
+                Text("Choose a volume in the sidebar.").foregroundStyle(.muted)
             }
             Spacer(minLength: 0)
         }
@@ -196,7 +196,7 @@ struct GoalScreen: View {
                         MapDateLabel(date: result.finished, restored: true, prefix: String(localized: "from Map, scanned"))
                     } else {
                         Text("scanned in \(Format.seconds(result.duration))")
-                            .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                            .font(.system(size: 11)).foregroundStyle(.faint).monospacedDigit()
                     }
                 }
                 if scanning {
@@ -229,13 +229,13 @@ struct GoalScreen: View {
                             GoalIcon(goal: goal, size: 64, prominent: true)
                             VStack(spacing: 6) {
                                 Text(goal.question).font(.system(size: 22, weight: .semibold)).tracking(-0.4)
-                                Text(goal.promise).font(.system(size: 13)).foregroundStyle(.secondary)
+                                Text(goal.promise).font(.system(size: 13)).foregroundStyle(.muted)
                                     .multilineTextAlignment(.center).frame(maxWidth: 440)
                             }
                             PillButton(title: String(localized: "Scan Now"), systemImage: "arrow.right") { state.runGoal(goal) }
                                 .keyboardShortcut(.defaultAction)
                             Text(goal.scopes(source: state.selectedSource).map { $0.path.replacingOccurrences(of: NSHomeDirectory(), with: "~") }.joined(separator: " · "))
-                                .font(.system(size: 11)).foregroundStyle(.tertiary).lineLimit(2).multilineTextAlignment(.center).frame(maxWidth: 640)
+                                .font(.system(size: 11)).foregroundStyle(.faint).lineLimit(2).multilineTextAlignment(.center).frame(maxWidth: 640)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
@@ -279,10 +279,10 @@ struct GoalProgressView: View {
                 Stat(title: String(localized: "Folders"), value: Format.count(p.directories))
                 Stat(title: String(localized: "On Disk"), value: Format.bytes(p.allocatedBytes))
             }
-            Text(p.currentPath).font(.caption.monospaced()).foregroundStyle(.secondary)
+            Text(p.currentPath).font(.caption.monospaced()).foregroundStyle(.muted)
                 .lineLimit(1).truncationMode(.middle).frame(maxWidth: 640)
             Text(goal.scopes(source: state.selectedSource).map { $0.path.replacingOccurrences(of: NSHomeDirectory(), with: "~") }.joined(separator: " · "))
-                .font(.system(size: 11)).foregroundStyle(.tertiary).lineLimit(2).multilineTextAlignment(.center).frame(maxWidth: 720)
+                .font(.system(size: 11)).foregroundStyle(.faint).lineLimit(2).multilineTextAlignment(.center).frame(maxWidth: 720)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -291,7 +291,7 @@ struct GoalProgressView: View {
         var body: some View {
             VStack(spacing: 2) {
                 RollingNumber(text: value, font: .system(size: 24, weight: .semibold))
-                Text(title).font(.system(size: 11)).foregroundStyle(.secondary)
+                Text(title).font(.system(size: 11)).foregroundStyle(.muted)
             }
         }
     }
@@ -306,7 +306,7 @@ struct GoalProgressStrip: View {
         HStack(spacing: 10) {
             ProgressView().controlSize(.small)
             Text(goal.scanningLabel).font(.system(size: 12, weight: .medium))
-            Text("\(Format.count(p.files)) files · \(Format.bytes(p.allocatedBytes))").font(.system(size: 12)).foregroundStyle(.secondary).monospacedDigit()
+            Text("\(Format.count(p.files)) files · \(Format.bytes(p.allocatedBytes))").font(.system(size: 12)).foregroundStyle(.muted).monospacedDigit()
         }
         .padding(.horizontal, 14).padding(.vertical, 8)
         .background(Capsule().fill(.thinMaterial))
@@ -444,12 +444,12 @@ struct BreadcrumbView: View {
                 HStack(spacing: 4) {
                     ForEach(chain) { node in
                         if node !== chain.first {
-                            Image(systemName: "chevron.right").font(.system(size: 9, weight: .bold)).foregroundStyle(.tertiary)
+                            Image(systemName: "chevron.right").font(.system(size: 9, weight: .bold)).foregroundStyle(.faint)
                         }
                         Button { state.navigate(to: node) } label: {
                             Text(node === root ? (state.selectedSource?.label ?? root.name) : node.name)
                                 .font(.system(size: 13, weight: node === current ? .semibold : .regular))
-                                .foregroundStyle(node === current ? .primary : .secondary)
+                                .foregroundStyle(node === current ? AnyShapeStyle(.primary) : AnyShapeStyle(.muted))
                         }
                         .buttonStyle(.plain)
                         .disabled(node === current)
@@ -458,7 +458,7 @@ struct BreadcrumbView: View {
             }
             Text("\(Format.bytes(current.allocatedSize)) · \(Format.count(current.fileCount)) items")
                 .font(.system(size: 12, weight: .medium)).monospacedDigit()
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.muted)
                 .padding(.horizontal, 10).padding(.vertical, 5)
                 .background(Capsule().fill(.regularMaterial))
                 .overlay(Capsule().strokeBorder(Color.primary.opacity(0.08), lineWidth: 1))
@@ -488,7 +488,7 @@ struct SettingsView: View {
                 get: { updates.automaticallyChecks },
                 set: { updates.automaticallyChecks = $0 }))
             Text("Sizes always show the space allocated on disk (what you get back as free space when you delete). The logical size appears in the details panel.")
-                .font(.footnote).foregroundStyle(.secondary)
+                .font(.footnote).foregroundStyle(.muted)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding()
@@ -504,7 +504,7 @@ struct MapDateLabel: View {
     var body: some View {
         TimelineView(.periodic(from: .now, by: 60)) { ctx in
             Text("\(prefix) \(Format.since(date, now: ctx.date))")
-                .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                .font(.system(size: 11)).foregroundStyle(.faint).monospacedDigit()
         }
         .help("Scanned on \(date.formatted(date: .long, time: .shortened)). The disk may have changed since then; use Scan Again to update.")
     }

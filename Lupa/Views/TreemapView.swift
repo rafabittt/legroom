@@ -41,7 +41,7 @@ struct TreemapView: View {
                 Color.clear
                 if tiles.isEmpty {
                     Text(node.accessDenied ? String(localized: "No permission to read this folder.") : String(localized: "Empty folder."))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.muted)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 ForEach(tiles) { tile in

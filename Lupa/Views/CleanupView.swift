@@ -45,12 +45,12 @@ struct CleanupView: View {
                             (suggestedIDs.count == 1
                              ? Text("Selected \(amount) in 1 item, out of \(Format.bytes(reclaimable)) reclaimable.")
                              : Text("Selected \(amount) in \(suggestedIDs.count) items, out of \(Format.bytes(reclaimable)) reclaimable."))
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(.muted)
                                 .lineLimit(1).truncationMode(.tail)
                             Text(markedEverything
                                  ? String(localized: "You selected everything, including items that need review. Check the list before moving.")
                                  : String(localized: "Only what the Mac recreates on its own, unchanged for days and not in use by an open app. The rest is up to you."))
-                                .font(.system(size: 11)).foregroundStyle(markedEverything ? AnyShapeStyle(Color(hex: scheme == .dark ? 0xFFD60A : 0xB45309)) : AnyShapeStyle(.tertiary)).lineLimit(1)
+                                .font(.system(size: 11)).foregroundStyle(markedEverything ? AnyShapeStyle(Color(hex: scheme == .dark ? 0xFFD60A : 0xB45309)) : AnyShapeStyle(.faint)).lineLimit(1)
                         }
                         Spacer(minLength: 8)
                         Menu {
@@ -63,7 +63,7 @@ struct CleanupView: View {
                                     .font(.system(size: 11, weight: .semibold))
                                 Text(markedEverything ? String(localized: "All Selected") : (checked == suggestedIDs ? String(localized: "Suggestion") : String(localized: "Manual Selection")))
                                     .font(.system(size: 12, weight: .medium))
-                                Image(systemName: "chevron.down").font(.system(size: 9, weight: .bold)).foregroundStyle(.secondary)
+                                Image(systemName: "chevron.down").font(.system(size: 9, weight: .bold)).foregroundStyle(.muted)
                             }
                             .padding(.horizontal, 12).padding(.vertical, 7)
                             .background(Capsule().fill(Theme.card(scheme == .dark)))
@@ -127,7 +127,7 @@ private struct CleanupGroupCard: View {
     /// Only the symbol changes color: amber when the rule calls for review.
     private var symbolColor: Color {
         switch (group.rule.mode, group.rule.safety) {
-        case (.info, _): return .secondary
+        case (.info, _): return Theme.textSecondary(scheme == .dark)
         case (_, .review?): return Color(hex: scheme == .dark ? 0xFFD60A : 0xB45309)
         default: return .primary
         }
@@ -154,7 +154,7 @@ private struct CleanupGroupCard: View {
                             if isInfo {
                                 Text("info only").font(.system(size: 10, weight: .semibold))
                                     .padding(.horizontal, 7).padding(.vertical, 2)
-                                    .background(Capsule().fill(Color.primary.opacity(0.08))).foregroundStyle(.secondary)
+                                    .background(Capsule().fill(Color.primary.opacity(0.08))).foregroundStyle(.muted)
                             }
                             if suggestedCount > 0 {
                                 Label(suggestedCount == 1 ? String(localized: "1 suggested") : String(localized: "\(suggestedCount) suggested"), systemImage: "sparkles")
@@ -164,7 +164,7 @@ private struct CleanupGroupCard: View {
                                     .foregroundStyle(Color(hex: scheme == .dark ? 0x4ADE80 : 0x1B7F3B))
                             }
                         }
-                        Text(group.rule.why).font(.system(size: 11)).foregroundStyle(.secondary)
+                        Text(group.rule.why).font(.system(size: 11)).foregroundStyle(.muted)
                             .lineLimit(expanded ? nil : 1).fixedSize(horizontal: false, vertical: expanded)
                             .multilineTextAlignment(.leading)
                     }
@@ -174,9 +174,9 @@ private struct CleanupGroupCard: View {
                         Text(isInfo ? (group.locations.count == 1 ? String(localized: "1 folder") : String(localized: "\(group.locations.count) folders"))
                                     : selectedCount > 0 ? String(localized: "\(selectedCount) of \(group.items.count) selected")
                                     : (group.items.count == 1 ? String(localized: "1 item") : String(localized: "\(group.items.count) items")))
-                            .font(.system(size: 10.5)).foregroundStyle(.secondary).monospacedDigit()
+                            .font(.system(size: 10.5)).foregroundStyle(.muted).monospacedDigit()
                     }
-                    Image(systemName: "chevron.down").font(.system(size: 11, weight: .bold)).foregroundStyle(.tertiary)
+                    Image(systemName: "chevron.down").font(.system(size: 11, weight: .bold)).foregroundStyle(.faint)
                         .rotationEffect(.degrees(expanded ? 180 : 0))
                 }
                 .padding(14)
@@ -248,7 +248,7 @@ private struct CleanupDoneBanner: View {
                  : Text("Done: moved \(Format.bytes(outcome.bytes)) in \(outcome.items) items to the Trash."))
                     .font(.system(size: 13, weight: .semibold))
                 Text("The space is only freed when you empty the Trash. If you miss something, you can restore it from there.")
-                    .font(.system(size: 11.5)).foregroundStyle(.secondary)
+                    .font(.system(size: 11.5)).foregroundStyle(.muted)
             }
             Spacer()
             PillButton(title: String(localized: "Show Trash"), systemImage: "trash", prominent: false, compact: true) { state.revealTrash() }

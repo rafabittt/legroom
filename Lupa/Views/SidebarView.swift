@@ -38,7 +38,8 @@ struct SidebarView: View {
             if (state.progress.deniedDirectories > 0 || hasDeniedAtRoot) && !FullDiskAccess.granted {
                 FullDiskAccessHint().padding(10)
             }
-            AppearanceFooter().padding(.horizontal, 12).padding(.bottom, 12)
+            AppearanceFooter().padding(.horizontal, 12).padding(.bottom, 9)
+            MarcaiSignature().padding(.horizontal, 16).padding(.bottom, 12)
         }
         .frame(width: 232)
         .frame(maxHeight: .infinity)
@@ -124,7 +125,7 @@ private struct GoalRow: View {
         let dark = scheme == .dark
         Button(action: action) {
             HStack(spacing: 10) {
-                GoalIcon(goal: goal, size: 24, prominent: selected)
+                GoalIcon(goal: goal, size: 24, prominent: selected, pure: true)
                 VStack(alignment: .leading, spacing: 1) {
                     Text(goal.title)
                         .font(.system(size: 13, weight: selected ? .semibold : .regular))
@@ -204,6 +205,16 @@ struct FullDiskAccessHint: View {
     }
 }
 
+
+/// Last line of the sidebar: who makes the app. Every Marcaí app ends its
+/// sidebar with this line; it's part of the Grafite sidebar.
+struct MarcaiSignature: View {
+    var body: some View {
+        Text("Legroom · a **Marcaí** app")
+            .font(.system(size: 11)).foregroundStyle(.secondary).lineLimit(1)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
 
 /// Sidebar footer: switch appearance in one click (Match Mac / Light / Dark).
 struct AppearanceFooter: View {

@@ -10,10 +10,26 @@ extension Color {
     }
 }
 
+/// Legroom's design tokens.
+///
+/// Source of truth since 2026-11-17: Grafite v1.0, the design directory shared by the
+/// Marcaí apps (kept outside this repository: rules in its DESIGN.md, numbers in its
+/// tokens/Grafite.swift). Every value here must match `Grafite.swift`. A design decision
+/// changes there first and is then mirrored here; whatever Legroom keeps different on
+/// purpose is listed in the directory's APPS.md. The file isn't imported: only the numbers match.
 enum Theme {
-    static let cornerXL: CGFloat = 20
-    static let cornerL: CGFloat = 16
-    static let cornerM: CGFloat = 10
+    // Shape (Grafite.cornerXL / cornerL / cornerM / cornerS)
+    static let cornerXL: CGFloat = 20   // main card, sidebar, overlay window
+    static let cornerL: CGFloat = 16    // regular card
+    static let cornerM: CGFloat = 10    // what sits inside a card
+    static let cornerS: CGFloat = 6     // tag
+
+    // Space (Grafite.gap / cardPadding / pagePadding / sidebarWidth / sidebarInset)
+    static let gap: CGFloat = 14
+    static let cardPadding: CGFloat = 18
+    static let pagePadding: CGFloat = 24
+    static let sidebarWidth: CGFloat = 232
+    static let sidebarInset: CGFloat = 12
 
     /// v4 direction (rondesignlab refs + Apple principles): near-neutral light-gray
     /// background, white cards with a 1 pt border and a short shadow, black/gray text,
@@ -56,8 +72,66 @@ enum Theme {
         return LinearGradient(colors: [col, col], startPoint: .top, endPoint: .bottom)
     }
 
+    static func background(_ dark: Bool) -> Color { dark ? darkBackground : lightBackground }
     static func card(_ dark: Bool) -> Color { dark ? darkCard : lightCard }
     static func hairline(_ dark: Bool) -> Color { dark ? darkHairline : lightHairline }
+    /// Quiet fill (Grafite.fill): icon tile, track, hover.
+    static func fill(_ dark: Bool) -> Color { dark ? .white.opacity(0.07) : .black.opacity(0.05) }
+
+    /// Ink (Grafite.ink / inkText): the main button, the active tab, the hold button.
+    /// Never pure black or pure white.
+    static func ink(_ dark: Bool) -> Color { Color(hex: dark ? 0xF5F5F7 : 0x1D1D1F) }
+    static func inkText(_ dark: Bool) -> Color { dark ? Color(hex: 0x1D1D1F) : .white }
+
+    /// Secondary text (Grafite DESIGN.md, "Texto secundário"): 6.4:1 on the card in both modes.
+    /// Use `.foregroundStyle(.muted)`; this function is for places that need a plain `Color`.
+    static func textSecondary(_ dark: Bool) -> Color { Color(hex: dark ? 0xA1A1A8 : 0x5E5E63) }
+    /// Tertiary text: the lightest gray that still reads at 4.5:1 on the card AND on the
+    /// window background (5.2:1 / 4.6:1 light, 5.1:1 / 5.6:1 dark). Use `.foregroundStyle(.faint)`.
+    static func textTertiary(_ dark: Bool) -> Color { Color(hex: dark ? 0x8E8E93 : 0x6C6C70) }
+
+    // The sidebar panel colors (Grafite.sidebarTop / sidebarBottom: #2E2E34 → #1F1F24 by day,
+    // #232327 → #17171A at night) live in `DiskHealth.panelGradient`, because that file is
+    // shared with the widget target and this one isn't.
+
+    // Motion (Grafite.hoverIn / hoverOut / select): springs without bounce, fast in, slow out.
+    static let hoverIn = Animation.spring(response: 0.28, dampingFraction: 1.0)
+    static let hoverOut = Animation.spring(response: 0.6, dampingFraction: 1.0)
+    static let select = Animation.spring(response: 0.3, dampingFraction: 1.0)
+    static let pressScale: CGFloat = 0.96
+    static let cardHoverScale: CGFloat = 1.004
+}
+
+/// Gray text that passes contrast. The system's `.secondary` and `.tertiary` are black at
+/// 50% and 26% in light mode: 3.95:1 and 1.9:1 on a white card (measured 2026-11-17), under
+/// Grafite's 4.5:1 rule. Dark mode's `.tertiary` (white 25%) fails too, at 2.3:1.
+/// With "Increase contrast" on, each one steps up a level, as the system colors would.
+/// They're applied at each call site (`.foregroundStyle(.muted)`) because on macOS a
+/// root-level `foregroundStyle(_:_:_:)` reaches shapes and symbols but not `Text`.
+/// The sidebar keeps the system grays: it's always dark, where `.secondary` reads at 5.2:1.
+struct MutedTextStyle: ShapeStyle {
+    func resolve(in environment: EnvironmentValues) -> Color {
+        let dark = environment.colorScheme == .dark
+        if environment.colorSchemeContrast == .increased { return Color(hex: dark ? 0xD1D1D6 : 0x3A3A3C) }
+        return Theme.textSecondary(dark)
+    }
+}
+
+struct FaintTextStyle: ShapeStyle {
+    func resolve(in environment: EnvironmentValues) -> Color {
+        let dark = environment.colorScheme == .dark
+        return environment.colorSchemeContrast == .increased ? Theme.textSecondary(dark) : Theme.textTertiary(dark)
+    }
+}
+
+extension ShapeStyle where Self == MutedTextStyle {
+    /// Secondary text: use instead of `.secondary`.
+    static var muted: MutedTextStyle { MutedTextStyle() }
+}
+
+extension ShapeStyle where Self == FaintTextStyle {
+    /// Tertiary text: use instead of `.tertiary`.
+    static var faint: FaintTextStyle { FaintTextStyle() }
 }
 
 /// Window background: a single color. The only "light" is a nearly invisible white
@@ -69,7 +143,7 @@ struct AppBackground: View {
     var body: some View {
         let dark = scheme == .dark
         ZStack {
-            (dark ? Theme.darkBackground : Theme.lightBackground)
+            Theme.background(dark)
             if !dark {
                 RadialGradient(colors: [.white.opacity(0.7), .clear], center: .top, startRadius: 0, endRadius: 700)
             }
@@ -94,9 +168,9 @@ struct ContentCard: ViewModifier {
             .background(shape.fill(Theme.card(dark)))
             .overlay(shape.strokeBorder(lit ? Color.primary.opacity(dark ? 0.18 : 0.12) : Theme.hairline(dark), lineWidth: 1))
             .shadow(color: .black.opacity(dark ? (lit ? 0.5 : 0.35) : (lit ? 0.10 : 0.05)), radius: lit ? (dark ? 24 : 18) : (dark ? 18 : 12), y: lit ? 10 : 6)
-            .scaleEffect(lit && !reduceMotion ? 1.004 : 1)
+            .scaleEffect(lit && !reduceMotion ? Theme.cardHoverScale : 1)
             .onHover { h in
-                withAnimation(h ? .spring(response: 0.28, dampingFraction: 1.0) : .spring(response: 0.6, dampingFraction: 1.0)) { hover = h }
+                withAnimation(h ? Theme.hoverIn : Theme.hoverOut) { hover = h }
             }
     }
 }
@@ -163,18 +237,18 @@ struct GradientCard: View {
         let accent = kind.accent(dark: dark)
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 6) {
-                Image(systemName: kind.symbol).font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
-                Text(title).font(.system(size: 12, weight: .medium)).foregroundStyle(.secondary).lineLimit(1)
+                Image(systemName: kind.symbol).font(.system(size: 11, weight: .semibold)).foregroundStyle(.muted)
+                Text(title).font(.system(size: 12, weight: .medium)).foregroundStyle(.muted).lineLimit(1)
             }
             .padding(.trailing, fraction == nil ? 0 : 52)
             Spacer(minLength: 4)
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 RollingNumber(text: parts.number, font: .system(size: 30, weight: .semibold), tracking: -0.8)
-                Text(parts.unit).font(.system(size: 13, weight: .medium)).foregroundStyle(.secondary)
+                Text(parts.unit).font(.system(size: 13, weight: .medium)).foregroundStyle(.muted)
             }
             .foregroundStyle(.primary)
             if let caption {
-                Text(caption).font(.system(size: 11)).foregroundStyle(.secondary)
+                Text(caption).font(.system(size: 11)).foregroundStyle(.muted)
                     .lineLimit(1).truncationMode(.tail).padding(.top, 2)
             }
         }
@@ -220,8 +294,8 @@ struct GradientCard: View {
     }
 }
 
-/// Pill selector (rondesignlab refs): active item is black with white text in light mode,
-/// white with black text in dark mode; the rest is just gray text.
+/// Pill selector (rondesignlab refs): active item is Grafite ink (#1D1D1F with white text in
+/// light mode, #F5F5F7 with dark text in dark mode); the rest is just gray text.
 struct PillTabs<T: Hashable>: View {
     let items: [(T, String, String?)]   // value, title, symbol
     @Binding var selection: T
@@ -234,7 +308,7 @@ struct PillTabs<T: Hashable>: View {
             ForEach(items, id: \.0) { item in
                 let active = item.0 == selection
                 PillTabItem(active: active, dark: dark, title: item.1, symbol: item.2, ns: ns) {
-                    withAnimation(.spring(response: 0.3, dampingFraction: 1.0)) { selection = item.0 }
+                    withAnimation(Theme.select) { selection = item.0 }
                 }
             }
         }
@@ -259,10 +333,10 @@ private struct PillTabItem: View {
                 if !title.isEmpty { Text(title).font(.system(size: 12, weight: .medium)).lineLimit(1).fixedSize() }
             }
             .padding(.horizontal, title.isEmpty ? 9 : 12).padding(.vertical, 6)
-            .foregroundStyle(active ? (dark ? Color.black : Color.white) : (hover ? Color.primary : Color.secondary))
+            .foregroundStyle(active ? Theme.inkText(dark) : (hover ? Color.primary : Theme.textSecondary(dark)))
             .background {
                 if active {
-                    Capsule().fill(dark ? Color.white : Color.black).matchedGeometryEffect(id: "pill", in: ns)
+                    Capsule().fill(Theme.ink(dark)).matchedGeometryEffect(id: "pill", in: ns)
                 } else if hover {
                     Capsule().fill(Color.primary.opacity(0.06))
                 }
@@ -274,7 +348,7 @@ private struct PillTabItem: View {
     }
 }
 
-/// Primary pill button: black in light mode, white in dark mode. Responds to presses.
+/// Primary pill button: Grafite ink (#1D1D1F in light mode, #F5F5F7 in dark mode). Responds to presses.
 struct PillButton: View {
     let title: String
     var systemImage: String? = nil
@@ -293,13 +367,13 @@ struct PillButton: View {
                 Text(title).font(.system(size: compact ? 12 : 13, weight: .semibold)).lineLimit(1).fixedSize()
             }
             .padding(.horizontal, compact ? 12 : 16).padding(.vertical, compact ? 7 : 9)
-            .foregroundStyle(prominent ? (dark ? Color.black : Color.white) : Color.primary)
-            .background(Capsule().fill(prominent ? (dark ? Color.white : Color.black) : Theme.card(dark)))
+            .foregroundStyle(prominent ? Theme.inkText(dark) : Color.primary)
+            .background(Capsule().fill(prominent ? Theme.ink(dark) : Theme.card(dark)))
             .overlay(Capsule().fill(Color.primary.opacity(hover ? (prominent ? 0 : 0.05) : 0)))
             .overlay(Capsule().fill(prominent ? Color.white.opacity(hover && !dark ? 0.12 : 0) : .clear))
             .overlay(Capsule().strokeBorder(prominent ? .clear : (hover ? Color.primary.opacity(dark ? 0.22 : 0.16) : Theme.hairline(dark)), lineWidth: 1))
             .shadow(color: .black.opacity(hover ? (dark ? 0.4 : 0.12) : 0), radius: 10, y: 5)
-            .scaleEffect(pressed ? 0.96 : (hover && !reduceMotion ? 1.03 : 1))
+            .scaleEffect(pressed ? Theme.pressScale : (hover && !reduceMotion ? 1.03 : 1))
             .contentShape(Capsule())
         }
         .buttonStyle(.plain)

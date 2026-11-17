@@ -23,9 +23,9 @@ struct FileListView: View {
                         .foregroundStyle(Theme.categoryColor(n.category))
                         .frame(width: 16)
                     Text(n.name)
-                        .foregroundStyle(n.isHidden ? .secondary : .primary)
+                        .foregroundStyle(n.isHidden ? AnyShapeStyle(.muted) : AnyShapeStyle(.primary))
                     if n.accessDenied {
-                        Image(systemName: "lock.fill").font(.caption2).foregroundStyle(.secondary)
+                        Image(systemName: "lock.fill").font(.caption2).foregroundStyle(.muted)
                             .help("No permission to read")
                     }
                 }
@@ -39,20 +39,20 @@ struct FileListView: View {
             TableColumn("%") { n in
                 let pct = node.allocatedSize > 0 ? Double(n.allocatedSize) / Double(node.allocatedSize) * 100 : 0
                 Text(pct < 0.1 && pct > 0 ? "<\(0.1.formatted(.number.precision(.fractionLength(1))))" : pct.formatted(.number.precision(.fractionLength(1))))
-                    .monospacedDigit().foregroundStyle(.secondary)
+                    .monospacedDigit().foregroundStyle(.muted)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .width(48)
             .defaultVisibility(compact ? .hidden : .visible)
             TableColumn("Items", value: \.fileCount) { n in
                 Text(n.isDirectory ? Format.count(n.fileCount) : "")
-                    .monospacedDigit().foregroundStyle(.secondary)
+                    .monospacedDigit().foregroundStyle(.muted)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .width(min: 60, ideal: 70)
             .defaultVisibility(compact ? .hidden : .visible)
             TableColumn("Date Modified", value: \.modified, comparator: OptionalDateComparator()) { n in
-                Text(Format.date(n.modified)).foregroundStyle(.secondary)
+                Text(Format.date(n.modified)).foregroundStyle(.muted)
             }
             .width(min: 110, ideal: 140)
             .defaultVisibility(compact ? .hidden : .visible)

@@ -118,7 +118,7 @@ struct MenuBarPanel: View {
             Text("Legroom").font(.system(size: 13, weight: .semibold)).tracking(-0.2)
             Spacer()
             Text(Date().formatted(date: .omitted, time: .shortened))
-                .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                .font(.system(size: 11)).foregroundStyle(.faint).monospacedDigit()
         }
         .padding(.horizontal, 4).padding(.bottom, 2)
     }
@@ -245,11 +245,11 @@ private struct MiniDiskCard: View {
                         Text(health.label).font(.system(size: 15, weight: .semibold)).tracking(-0.3).lineLimit(1)
                     }
                     Text("\(Format.bytes(v.free)) free of \(Format.bytes(v.totalCapacity))")
-                        .font(.system(size: 11.5)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                        .font(.system(size: 11.5)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
                 }
                 Spacer(minLength: 0)
             } else {
-                Text("No volume found.").font(.system(size: 12)).foregroundStyle(.secondary)
+                Text("No volume found.").font(.system(size: 12)).foregroundStyle(.muted)
             }
         }
         .padding(12)
@@ -278,25 +278,25 @@ private struct MiniMemoryCard: View {
             if let m = state.memory {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     RollingNumber(text: Format.memory(Int64(m.used)), font: .system(size: 18, weight: .semibold), tracking: -0.5)
-                    Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 11)).foregroundStyle(.muted)
                 }
                 .lineLimit(1).fixedSize()
                 MemoryBar(memory: m, height: 6)
                 HStack(spacing: 8) {
                     if state.memoryCleaning {
                         ProgressView().controlSize(.small)
-                        Text("Asking the system for memory…").font(.system(size: 11)).foregroundStyle(.secondary)
+                        Text("Asking the system for memory…").font(.system(size: 11)).foregroundStyle(.muted)
                     } else {
                         PillButton(title: String(localized: "Free Up Memory"), systemImage: "wind", prominent: false, compact: true) { state.cleanMemory() }
                         if let o = state.memoryOutcome {
                             Text(o.freed > 50_000_000 ? String(localized: "Freed \(Format.memory(o.freed))") : String(localized: "Already had room"))
-                                .font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                                .font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
                         }
                     }
                 }
                 .padding(.top, 2)
             } else {
-                Text("Couldn't read memory.").font(.system(size: 12)).foregroundStyle(.secondary)
+                Text("Couldn't read memory.").font(.system(size: 12)).foregroundStyle(.muted)
             }
         }
     }
@@ -313,7 +313,7 @@ private struct MiniCPUCard: View {
             HStack(alignment: .center, spacing: 12) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     RollingNumber(text: Format.percent(busy), font: .system(size: 18, weight: .semibold), tracking: -0.5)
-                    Text("in use").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("in use").font(.system(size: 11)).foregroundStyle(.muted)
                 }
                 Sparkline(values: Array(state.cpuHistory.map(\.busy).suffix(30)), color: .primary)
                     .frame(height: 24)
@@ -336,21 +336,21 @@ private struct MiniNetworkCard: View {
             HStack(alignment: .center, spacing: 8) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("↓ \(Format.rate(n.downBytesPerSec))").font(.system(size: 14, weight: .semibold)).monospacedDigit().tracking(-0.3)
-                    Text("↑ \(Format.rate(n.upBytesPerSec))").font(.system(size: 11.5, weight: .medium)).monospacedDigit().foregroundStyle(.secondary)
+                    Text("↑ \(Format.rate(n.upBytesPerSec))").font(.system(size: 11.5, weight: .medium)).monospacedDigit().foregroundStyle(.muted)
                 }
                 Spacer(minLength: 0)
                 if state.speedTesting {
                     ProgressView().controlSize(.small)
-                    Text("Measuring…").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("Measuring…").font(.system(size: 11)).foregroundStyle(.muted)
                 } else {
                     PillButton(title: String(localized: "Test Speed"), systemImage: "gauge.with.needle", prominent: false, compact: true) { state.runSpeedTest() }
                 }
             }
             if let r = state.speedResult {
                 Text("Test: ↓ \(Format.mbps(r.downloadMbps)) · ↑ \(Format.mbps(r.uploadMbps)) · \(r.latencyMs.safeInt) ms")
-                    .font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                    .font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
             } else if let e = state.speedError {
-                Text(e).font(.system(size: 11)).foregroundStyle(.secondary).lineLimit(2)
+                Text(e).font(.system(size: 11)).foregroundStyle(.muted).lineLimit(2)
             }
         }
     }
@@ -361,13 +361,13 @@ private struct MiniFreedRow: View {
     var body: some View {
         let _ = state.trashHistoryVersion
         HStack(spacing: 6) {
-            Image(systemName: "trash").font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
-            Text("Freed by Legroom").font(.system(size: 12, weight: .medium)).foregroundStyle(.secondary)
+            Image(systemName: "trash").font(.system(size: 11, weight: .semibold)).foregroundStyle(.muted)
+            Text("Freed by Legroom").font(.system(size: 12, weight: .medium)).foregroundStyle(.muted)
             Spacer(minLength: 0)
             if state.trashedItemsTotal > 0 {
                 Text(Format.bytes(state.trashedBytesTotal)).font(.system(size: 13, weight: .semibold)).monospacedDigit()
             } else {
-                Text("nothing yet").font(.system(size: 12)).foregroundStyle(.tertiary)
+                Text("nothing yet").font(.system(size: 12)).foregroundStyle(.faint)
             }
         }
         .padding(.horizontal, 12).padding(.vertical, 10)

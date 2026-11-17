@@ -35,7 +35,7 @@ struct AppsView: View {
                 }
                 HStack(spacing: 6) {
                     RollingNumber(text: Format.bytes(total), font: .system(size: 13, weight: .semibold))
-                    Text("in \(apps.count) apps").font(.system(size: 12)).foregroundStyle(.secondary)
+                    Text("in \(apps.count) apps").font(.system(size: 12)).foregroundStyle(.muted)
                 }
                 .padding(.horizontal, 12).padding(.vertical, 6)
                 .background(Capsule().fill(.thinMaterial))
@@ -56,7 +56,7 @@ struct AppsView: View {
                                 VStack(alignment: .leading, spacing: 1) {
                                     Text(a.name).lineLimit(1)
                                     Text(a.version.map { String(localized: "version \($0)") } ?? a.node.parent?.path ?? "")
-                                        .font(.system(size: 10.5)).foregroundStyle(.tertiary).lineLimit(1)
+                                        .font(.system(size: 10.5)).foregroundStyle(.faint).lineLimit(1)
                                 }
                             }
                         }
@@ -66,11 +66,11 @@ struct AppsView: View {
                         }
                         .width(min: 84, ideal: 96)
                         TableColumn("Last Opened", value: \.lastOpened, comparator: OptionalDateComparator()) { a in
-                            Text(a.lastOpened.map { Format.relative($0) } ?? "—").foregroundStyle(.secondary)
+                            Text(a.lastOpened.map { Format.relative($0) } ?? "—").foregroundStyle(.muted)
                         }
                         .width(min: 110, ideal: 120)
                         TableColumn("Location") { a in
-                            Text(a.node.parent?.path ?? "").font(.system(size: 11, design: .monospaced)).foregroundStyle(.tertiary)
+                            Text(a.node.parent?.path ?? "").font(.system(size: 11, design: .monospaced)).foregroundStyle(.faint)
                                 .lineLimit(1).truncationMode(.middle)
                         }
                         .width(min: 90, ideal: 140)

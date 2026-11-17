@@ -28,7 +28,7 @@ struct HomeView: View {
             GoalHeader(goal: .home) {
                 HStack(spacing: 12) {
                     Text(Date().formatted(date: .abbreviated, time: .shortened))
-                        .font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit()
+                        .font(.system(size: 11)).foregroundStyle(.faint).monospacedDigit()
                     KeyboardLockButton()
                 }
             }
@@ -65,10 +65,10 @@ struct CardTitle: View {
     var trailing: String? = nil
     var body: some View {
         HStack(spacing: 6) {
-            Image(systemName: symbol).font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
-            Text(title).font(.system(size: 12, weight: .medium)).foregroundStyle(.secondary)
+            Image(systemName: symbol).font(.system(size: 11, weight: .semibold)).foregroundStyle(.muted)
+            Text(title).font(.system(size: 12, weight: .medium)).foregroundStyle(.muted)
             Spacer(minLength: 0)
-            if let trailing { Text(trailing).font(.system(size: 11)).foregroundStyle(.tertiary).monospacedDigit() }
+            if let trailing { Text(trailing).font(.system(size: 11)).foregroundStyle(.faint).monospacedDigit() }
         }
     }
 }
@@ -78,7 +78,7 @@ private struct Fact: View {
     let value: String
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
-            Text(title).font(.system(size: 10.5)).foregroundStyle(.tertiary)
+            Text(title).font(.system(size: 10.5)).foregroundStyle(.faint)
             Text(value).font(.system(size: 13, weight: .medium)).monospacedDigit()
         }
     }
@@ -204,7 +204,7 @@ private struct InfoTile: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack { Text(title).font(.system(size: 12.5, weight: .semibold)); Spacer(); Text(value).font(.system(size: 12.5, weight: .semibold)).monospacedDigit() }
-            Text(text).font(.system(size: 11)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+            Text(text).font(.system(size: 11)).foregroundStyle(.muted).fixedSize(horizontal: false, vertical: true)
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -222,26 +222,26 @@ private struct ConsumersList: View {
             HStack {
                 Text("Top Processes").font(.system(size: 13, weight: .semibold))
                 Spacer()
-                Text(unit).font(.system(size: 11)).foregroundStyle(.tertiary)
+                Text(unit).font(.system(size: 11)).foregroundStyle(.faint)
             }
             if rows.isEmpty {
-                Text("Reading processes…").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                Text("Reading processes…").font(.system(size: 11.5)).foregroundStyle(.muted)
             }
             ForEach(rows) { r in
                 HStack(spacing: 10) {
                     if let icon = r.icon {
                         Image(nsImage: icon).resizable().frame(width: 20, height: 20)
                     } else {
-                        Image(systemName: "gearshape").font(.system(size: 12)).foregroundStyle(.secondary).frame(width: 20, height: 20)
+                        Image(systemName: "gearshape").font(.system(size: 12)).foregroundStyle(.muted).frame(width: 20, height: 20)
                     }
                     Text(r.name).font(.system(size: 12.5)).lineLimit(1)
                     Spacer()
-                    Text(value(r)).font(.system(size: 12)).monospacedDigit().foregroundStyle(.secondary)
+                    Text(value(r)).font(.system(size: 12)).monospacedDigit().foregroundStyle(.muted)
                     if r.isApp {
                         PillButton(title: String(localized: "Quit"), prominent: false, compact: true) { r.quit() }
                             .help("Asks the app to quit, like ⌘Q. It may still ask whether to save.")
                     } else {
-                        Text("system").font(.system(size: 10.5)).foregroundStyle(.tertiary).frame(width: 64)
+                        Text("system").font(.system(size: 10.5)).foregroundStyle(.faint).frame(width: 64)
                     }
                 }
                 .padding(.vertical, 3)
@@ -269,7 +269,7 @@ private struct DiskCard: View {
                         .animation(.spring(response: 0.9, dampingFraction: 1.0), value: v.usedFraction)
                     VStack(spacing: 0) {
                         RollingNumber(text: "\((v.usedFraction * 100).rounded().safeInt)%", font: .system(size: 24, weight: .semibold), tracking: -0.6)
-                        Text("used").font(.system(size: 10.5)).foregroundStyle(.secondary)
+                        Text("used").font(.system(size: 10.5)).foregroundStyle(.muted)
                     }
                 }
                 .frame(width: 112, height: 112)
@@ -280,7 +280,7 @@ private struct DiskCard: View {
                         Text(state.health.label).font(.system(size: 22, weight: .semibold)).tracking(-0.5)
                     }
                     Text("\(Format.bytes(v.usedCapacity)) used of \(Format.bytes(v.totalCapacity)). \(Format.bytes(v.free)) available.")
-                        .font(.system(size: 12.5)).foregroundStyle(.secondary)
+                        .font(.system(size: 12.5)).foregroundStyle(.muted)
                     HStack(spacing: 18) {
                         Fact(title: String(localized: "Purgeable (in available)"), value: Format.bytes(v.purgeableEstimate))
                         if let root = state.rootNode {
@@ -294,7 +294,7 @@ private struct DiskCard: View {
                 }
                 Spacer(minLength: 0)
             } else {
-                Text("No volume selected.").foregroundStyle(.secondary)
+                Text("No volume selected.").foregroundStyle(.muted)
             }
         }
         .padding(20)
@@ -323,14 +323,14 @@ private struct FreedCard: View {
             if state.trashedItemsTotal > 0 {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     RollingNumber(text: Format.bytes(state.trashedBytesTotal), font: .system(size: 26, weight: .semibold), tracking: -0.7)
-                    Text(state.trashedItemsTotal == 1 ? String(localized: "across \(Format.count(state.trashedItemsTotal)) item") : String(localized: "across \(Format.count(state.trashedItemsTotal)) items")).font(.system(size: 12)).foregroundStyle(.secondary)
+                    Text(state.trashedItemsTotal == 1 ? String(localized: "across \(Format.count(state.trashedItemsTotal)) item") : String(localized: "across \(Format.count(state.trashedItemsTotal)) items")).font(.system(size: 12)).foregroundStyle(.muted)
                 }
                 if let d = state.lastTrashDate {
-                    Text("Most recent: \(Format.relative(d)). Everything went to the Trash and can be put back from there.").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                    Text("Most recent: \(Format.relative(d)). Everything went to the Trash and can be put back from there.").font(.system(size: 11.5)).foregroundStyle(.muted)
                 }
             } else {
-                Text("Nothing yet").font(.system(size: 26, weight: .semibold)).tracking(-0.7).foregroundStyle(.secondary)
-                Text("Everything you move to the Trash with Legroom adds up here.").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                Text("Nothing yet").font(.system(size: 26, weight: .semibold)).tracking(-0.7).foregroundStyle(.muted)
+                Text("Everything you move to the Trash with Legroom adds up here.").font(.system(size: 11.5)).foregroundStyle(.muted)
             }
             Spacer(minLength: 0)
         }
@@ -367,23 +367,23 @@ private struct MemoryCard: View {
             if let m = state.memory {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     RollingNumber(text: Format.memory(Int64(m.used)), font: .system(size: 24, weight: .semibold), tracking: -0.6)
-                    Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                    Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 11.5)).foregroundStyle(.muted)
                 }
                 MemoryBar(memory: m)
                 Text(m.pressureLabel).font(.system(size: 12, weight: .medium))
             } else {
-                Text("Couldn't read memory.").foregroundStyle(.secondary)
+                Text("Couldn't read memory.").foregroundStyle(.muted)
             }
             Spacer(minLength: 2)
             HStack(spacing: 8) {
                 if state.memoryCleaning {
                     ProgressView().controlSize(.small)
-                    Text("Asking the system for memory…").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("Asking the system for memory…").font(.system(size: 11)).foregroundStyle(.muted)
                 } else {
                     PillButton(title: String(localized: "Free Up Memory"), systemImage: "wind", prominent: false, compact: true) { state.cleanMemory() }
                     if let o = state.memoryOutcome {
                         Text(o.freed > 50_000_000 ? String(localized: "Freed \(Format.memory(o.freed))") : String(localized: "Already had room"))
-                            .font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                            .font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
                     }
                 }
             }
@@ -432,7 +432,7 @@ private struct MemoryDetail: View {
                                        (Double(m.compressed) / Double(m.total), Color.primary.opacity(0.22))])
                         VStack(spacing: 0) {
                             RollingNumber(text: Format.memory(Int64(m.used)), font: .system(size: 20, weight: .semibold), tracking: -0.5)
-                            Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 10.5)).foregroundStyle(.secondary)
+                            Text("of \(Format.memory(Int64(m.total)))").font(.system(size: 10.5)).foregroundStyle(.muted)
                         }
                     }
                     .frame(width: 136, height: 136)
@@ -456,17 +456,17 @@ private struct MemoryDetail: View {
             ConsumersList(rows: state.topByMemory, value: { Format.memory($0.memory) }, unit: String(localized: "in use"))
             HStack {
                 if state.memoryCleaning {
-                    ProgressView().controlSize(.small); Text("Asking the system for memory…").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                    ProgressView().controlSize(.small); Text("Asking the system for memory…").font(.system(size: 11.5)).foregroundStyle(.muted)
                 } else {
                     PillButton(title: String(localized: "Free Up Memory"), systemImage: "wind") { state.cleanMemory() }
                     if let o = state.memoryOutcome {
-                        Text(o.freed > 50_000_000 ? String(localized: "Freed \(Format.memory(o.freed))") : String(localized: "Already had room")).font(.system(size: 11.5)).foregroundStyle(.secondary)
+                        Text(o.freed > 50_000_000 ? String(localized: "Freed \(Format.memory(o.freed))") : String(localized: "Already had room")).font(.system(size: 11.5)).foregroundStyle(.muted)
                     }
                 }
                 Spacer()
             }
             Text("Free Up Memory asks the system for memory so it discards file caches, then gives it back right away. The gain lasts until apps need it again.")
-                .font(.system(size: 10.5)).foregroundStyle(.tertiary).fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 10.5)).foregroundStyle(.faint).fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -480,7 +480,7 @@ private struct Legend: View {
         HStack(spacing: 8) {
             Circle().fill(color).frame(width: 8, height: 8)
             VStack(alignment: .leading, spacing: 0) {
-                Text(title).font(.system(size: 11)).foregroundStyle(.secondary)
+                Text(title).font(.system(size: 11)).foregroundStyle(.muted)
                 Text(value).font(.system(size: 12.5, weight: .medium)).monospacedDigit()
             }
         }
@@ -496,7 +496,7 @@ private struct CPUCard: View {
             let busy = state.cpu?.busy ?? 0
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 RollingNumber(text: Format.percent(busy), font: .system(size: 24, weight: .semibold), tracking: -0.6)
-                Text("in use").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                Text("in use").font(.system(size: 11.5)).foregroundStyle(.muted)
             }
             Sparkline(values: state.cpuHistory.map(\.busy), color: .primary)
                 .frame(height: 34)
@@ -507,7 +507,7 @@ private struct CPUCard: View {
                 if let t = state.thermal?.chip {
                     Label(Format.celsius(t), systemImage: "thermometer.medium")
                         .font(.system(size: 11.5, weight: .medium)).monospacedDigit()
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.muted)
                         .help("Chip temperature. \(state.thermal?.stateLabel ?? "").")
                 }
             }
@@ -517,7 +517,7 @@ private struct CPUCard: View {
                     PillButton(title: String(localized: "Quit \(top.name)"), systemImage: "xmark", prominent: false, compact: true) { top.quit() }
                         .help("\(top.name) is using \(top.cpu.formatted(.number.precision(.fractionLength(0))))% of the CPU. Asks the app to quit, like ⌘Q.")
                 } else {
-                    Text("No heavy apps right now").font(.system(size: 11)).foregroundStyle(.tertiary)
+                    Text("No heavy apps right now").font(.system(size: 11)).foregroundStyle(.faint)
                 }
             }
         }
@@ -533,7 +533,7 @@ private struct CPUDetail: View {
         VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 2) {
                 Text(CPUMonitor.chipName).font(.system(size: 17, weight: .semibold)).tracking(-0.3)
-                Text("\(CPUMonitor.coreCount) cores · last \(state.cpuHistory.count * 3 / 2) s").font(.system(size: 11)).foregroundStyle(.tertiary)
+                Text("\(CPUMonitor.coreCount) cores · last \(state.cpuHistory.count * 3 / 2) s").font(.system(size: 11)).foregroundStyle(.faint)
             }
             HStack(alignment: .top, spacing: 18) {
                 ZStack {
@@ -581,7 +581,7 @@ private struct NetworkCard: View {
             HStack(spacing: 14) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("↓ \(Format.rate(n.downBytesPerSec))").font(.system(size: 15, weight: .semibold)).monospacedDigit().tracking(-0.3)
-                    Text("↑ \(Format.rate(n.upBytesPerSec))").font(.system(size: 12.5, weight: .medium)).monospacedDigit().foregroundStyle(.secondary)
+                    Text("↑ \(Format.rate(n.upBytesPerSec))").font(.system(size: 12.5, weight: .medium)).monospacedDigit().foregroundStyle(.muted)
                 }
                 Spacer(minLength: 0)
             }
@@ -598,7 +598,7 @@ private struct NetworkCard: View {
             HStack(spacing: 8) {
                 if state.speedTesting {
                     ProgressView().controlSize(.small)
-                    Text("Measuring…").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("Measuring…").font(.system(size: 11)).foregroundStyle(.muted)
                 } else {
                     PillButton(title: String(localized: "Test Speed"), systemImage: "gauge.with.needle", prominent: false, compact: true) { state.runSpeedTest() }
                 }
@@ -623,13 +623,13 @@ private struct NetworkDetail: View {
                 Image(systemName: state.wifi == nil ? "cable.connector" : "wifi").font(.system(size: 22, weight: .medium))
                 VStack(alignment: .leading, spacing: 1) {
                     Text(state.wifi?.ssid ?? (state.wifi != nil ? String(localized: "Wi‑Fi Network") : String(localized: "Wired Connection"))).font(.system(size: 14, weight: .semibold))
-                    Text(subtitle).font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text(subtitle).font(.system(size: 11)).foregroundStyle(.muted)
                 }
                 Spacer()
                 if let w = state.wifi, let rssi = w.rssi {
                     VStack(alignment: .trailing, spacing: 1) {
                         Text("\(rssi) dBm").font(.system(size: 12.5, weight: .medium)).monospacedDigit()
-                        Text(rssi > -60 ? String(localized: "excellent signal") : rssi > -70 ? String(localized: "good signal") : String(localized: "weak signal")).font(.system(size: 10.5)).foregroundStyle(.secondary)
+                        Text(rssi > -60 ? String(localized: "excellent signal") : rssi > -70 ? String(localized: "good signal") : String(localized: "weak signal")).font(.system(size: 10.5)).foregroundStyle(.muted)
                     }
                 }
             }
@@ -644,7 +644,7 @@ private struct NetworkDetail: View {
                 HStack(spacing: 16) {
                     if state.speedTesting {
                         ProgressView().controlSize(.small)
-                        Text("Downloading 40 MB and uploading 12 MB…").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                        Text("Downloading 40 MB and uploading 12 MB…").font(.system(size: 11.5)).foregroundStyle(.muted)
                     } else {
                         PillButton(title: String(localized: "Test Speed"), systemImage: "gauge.with.needle") { state.runSpeedTest() }
                         if let r = state.speedResult {
@@ -659,7 +659,7 @@ private struct NetworkDetail: View {
                 }
                 if let e = state.speedError { Text(e).font(.system(size: 11)).foregroundStyle(Theme.destructive) }
                 Text("The test uses Cloudflare's public servers and runs only when you click. Nothing is measured in the background.")
-                    .font(.system(size: 10.5)).foregroundStyle(.tertiary).fixedSize(horizontal: false, vertical: true)
+                    .font(.system(size: 10.5)).foregroundStyle(.faint).fixedSize(horizontal: false, vertical: true)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -686,7 +686,7 @@ private struct ThroughputTile: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title).font(.system(size: 12.5, weight: .semibold))
             HStack {
-                Text(total.map { Format.bytes(Int64(clamping: $0)) } ?? "—").font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit()
+                Text(total.map { Format.bytes(Int64(clamping: $0)) } ?? "—").font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit()
                 Spacer()
                 Text(Format.rate(rate)).font(.system(size: 11, weight: .medium)).monospacedDigit()
             }
@@ -711,7 +711,7 @@ private struct GoalsSummaryCard: View {
                         GoalIcon(goal: g, size: 24)
                         VStack(alignment: .leading, spacing: 1) {
                             Text(g.title).font(.system(size: 12.5, weight: .medium)).lineLimit(1)
-                            Text(status(g)).font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                            Text(status(g)).font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
                         }
                         Spacer(minLength: 0)
                     }

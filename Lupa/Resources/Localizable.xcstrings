@@ -2778,6 +2778,17 @@
         }
       }
     },
+    "Legroom · a **Marcaí** app": {
+      "comment": "Signature at the bottom of the sidebar. Marcaí is the company name; keep the ** around it.",
+      "localizations": {
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legroom · um app da **Marcaí**"
+          }
+        }
+      }
+    },
     "Light": {
       "localizations": {
         "pt-BR": {
