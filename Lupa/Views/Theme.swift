@@ -81,6 +81,9 @@ enum Theme {
     /// Ink (Grafite.ink / inkText): the main button, the active tab, the hold button.
     /// Never pure black or pure white.
     static func ink(_ dark: Bool) -> Color { Color(hex: dark ? 0xF5F5F7 : 0x1D1D1F) }
+    /// The Legroom green: one tone for the mark, the app icon and the website.
+    /// It's the healthy end of the disk-health palette (`#2DD4BF` → `#22C55E`), at its midpoint.
+    static let brandGreen = Color(hex: 0x28CD8F)
     static func inkText(_ dark: Bool) -> Color { dark ? Color(hex: 0x1D1D1F) : .white }
 
     /// Gray text: the numbers live in TextStyles.swift (`TextGray`), which the widget shares.

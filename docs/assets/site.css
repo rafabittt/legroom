@@ -11,7 +11,7 @@
   --dim2: #6b6b75;
   --g1: #2dd4bf;
   --g2: #22c55e;
-  --accent: #34d399;
+  --accent: #28cd8f;
   --warm: #f59e0b;
   --ease: cubic-bezier(.22, 1, .36, 1);
   --radius: 22px;
@@ -63,8 +63,8 @@ p { margin: 0; text-wrap: pretty; }
 }
 .btn:active { transform: scale(.97); }
 .btn svg { width: 18px; height: 18px; flex: none; }
-.btn-primary { background: #fff; color: #0a0a0c; box-shadow: 0 0 0 0 rgba(52,211,153,0); }
-.btn-primary:hover { box-shadow: 0 8px 40px -6px rgba(52,211,153,.55); }
+.btn-primary { background: #fff; color: #0a0a0c; box-shadow: 0 0 0 0 rgba(40,205,143,0); }
+.btn-primary:hover { box-shadow: 0 8px 40px -6px rgba(40,205,143,.55); }
 .btn-ghost { background: rgba(255,255,255,.06); color: var(--text); border: 1px solid var(--line2); }
 .btn-ghost:hover { background: rgba(255,255,255,.1); }
 .btn-sm { --bh: 38px; padding: 0 16px; font-size: 14px; }
@@ -84,7 +84,7 @@ html { overflow-x: clip; }
   background: linear-gradient(160deg, rgba(255,255,255,.085), rgba(255,255,255,.02));
   transition: left .9s var(--ease), top .9s var(--ease), width .9s var(--ease), height .9s var(--ease), opacity .6s var(--ease), transform .6s var(--ease), background .6s;
 }
-.tree .blk.hot { background: linear-gradient(160deg, rgba(52,211,153,.28), rgba(45,212,191,.05)); border-color: rgba(52,211,153,.45); box-shadow: 0 0 40px -8px rgba(52,211,153,.5); }
+.tree .blk.hot { background: linear-gradient(160deg, rgba(40,205,143,.28), rgba(45,212,191,.05)); border-color: rgba(40,205,143,.45); box-shadow: 0 0 40px -8px rgba(40,205,143,.5); }
 .tree .blk.gone { opacity: 0; transform: scale(.6) translateY(30px); }
 .hero::before {
   content: ""; position: absolute; z-index: -2; left: 50%; top: 40px; width: 900px; height: 600px; translate: -50% 0;
@@ -124,7 +124,7 @@ html { overflow-x: clip; }
 .stage { perspective: 1600px; margin: 70px auto 0; width: min(1080px, 100% - 32px); position: relative; }
 .stage::after {
   content: ""; position: absolute; inset: 18% 8% -6% 8%; z-index: -1; border-radius: 40px;
-  background: radial-gradient(closest-side, rgba(52,211,153,.35), transparent 70%); filter: blur(40px);
+  background: radial-gradient(closest-side, rgba(40,205,143,.35), transparent 70%); filter: blur(40px);
 }
 .window {
   border-radius: 18px; overflow: hidden; border: 1px solid var(--line2);
@@ -173,11 +173,11 @@ section { padding: 120px 0 0; }
 .cell.split > * { min-width: 0; }
 .cell::before { /* cursor spotlight */
   content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .3s;
-  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(52,211,153,.10), transparent 60%);
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(40,205,143,.10), transparent 60%);
 }
 .cell::after { /* border glow */
   content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; opacity: 0; transition: opacity .3s;
-  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(52,211,153,.6), transparent 60%);
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(40,205,143,.6), transparent 60%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
           mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
 }
@@ -229,7 +229,7 @@ section { padding: 120px 0 0; }
 /* clutter dupes */
 .dupes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .dupe { aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); background: linear-gradient(150deg, rgba(255,255,255,.06), rgba(255,255,255,.01)); display: grid; place-items: center; font: 11px ui-monospace, Menlo, monospace; color: var(--dim2); position: relative; transition: transform .5s var(--ease), border-color .3s; }
-.dupe.same { border-color: rgba(52,211,153,.5); }
+.dupe.same { border-color: rgba(40,205,143,.5); }
 .dupe.same::after { content: "="; position: absolute; top: 6px; right: 8px; color: var(--accent); font-weight: 700; }
 
 /* check-up */

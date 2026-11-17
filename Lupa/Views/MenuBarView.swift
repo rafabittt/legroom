@@ -13,7 +13,7 @@ enum MenuBarPrefs {
 
 // MARK: - Icon
 
-/// The Legroom mark (icon outline, the two bars and the dash between them)
+/// The Legroom mark (icon outline, the L-shaped seat and the dash in front of it)
 /// redrawn as an 18 pt template image: macOS paints it black or white
 /// to match the menu bar, like the system icons.
 enum MenuBarIcon {
@@ -24,14 +24,18 @@ enum MenuBarIcon {
             let frame = NSBezierPath(roundedRect: NSRect(x: 1.65, y: 1.65, width: 14.7, height: 14.7), xRadius: 4.4, yRadius: 4.4)
             frame.lineWidth = 1.3
             frame.stroke()
-            // bar (seat), dash (the legroom), bar (floor)
-            let parts: [(w: CGFloat, h: CGFloat)] = [(8.6, 2.5), (3.6, 1.2), (8.6, 2.5)]
-            let gap: CGFloat = 1.45
-            var y = (18 - (parts.map(\.h).reduce(0, +) + gap * 2)) / 2
-            for p in parts {
-                NSBezierPath(roundedRect: NSRect(x: (18 - p.w) / 2, y: y, width: p.w, height: p.h), xRadius: p.h / 2, yRadius: p.h / 2).fill()
-                y += p.h + gap
-            }
+            // the app icon's 1024-unit drawing, scaled into the outline (a touch heavier, to read at this size)
+            let u: CGFloat = 14.7 / 1024, o: CGFloat = 1.65
+            let seat = NSBezierPath()
+            seat.move(to: NSPoint(x: o + 321 * u, y: o + 307 * u))
+            seat.line(to: NSPoint(x: o + 321 * u, y: o + 717 * u))
+            seat.line(to: NSPoint(x: o + 703 * u, y: o + 717 * u))
+            seat.lineWidth = 2.0
+            seat.lineCapStyle = .round
+            seat.lineJoinStyle = .round
+            seat.stroke()
+            let room = NSRect(x: o + 548 * u, y: o + 391 * u, width: 230 * u, height: 1.4)
+            NSBezierPath(roundedRect: room, xRadius: 0.7, yRadius: 0.7).fill()
             return true
         }
         img.isTemplate = true

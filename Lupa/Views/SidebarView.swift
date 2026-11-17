@@ -251,23 +251,29 @@ struct AppearanceFooter: View {
 }
 
 
-/// The Legroom mark: two bars (seat and floor) and the green gap between them.
-/// Same drawing as the AppIcon, at interface size.
+/// The Legroom mark: an L drawn as a seat in profile, and the green dash that
+/// is the legroom in front of it. Same drawing as the app icon (AppIcon.icon),
+/// on its 1024-unit canvas, at interface size.
 struct LegroomMark: View {
     var size: CGFloat = 30
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         let dark = scheme == .dark
-        ZStack {
+        let u = size / 1024
+        ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: size * 0.3, style: .continuous).fill(dark ? Color(hex: 0xECECF0) : Color.white)
             RoundedRectangle(cornerRadius: size * 0.3, style: .continuous).strokeBorder(Color.black.opacity(0.08), lineWidth: 1)
-            VStack(spacing: size * 0.1) {
-                Capsule().fill(Color(hex: 0x111114)).frame(width: size * 0.62, height: size * 0.145)
-                Capsule().fill(LinearGradient(colors: [Color(hex: 0x2DD4BF), Color(hex: 0x22C55E)], startPoint: .leading, endPoint: .trailing))
-                    .frame(width: size * 0.26, height: size * 0.06)
-                    .shadow(color: Color(hex: 0x22C55E).opacity(0.6), radius: size * 0.06)
-                Capsule().fill(Color(hex: 0x111114)).frame(width: size * 0.62, height: size * 0.145)
+            // the seat: backrest down, then the cushion
+            Path { p in
+                p.move(to: CGPoint(x: 321 * u, y: 307 * u))
+                p.addLine(to: CGPoint(x: 321 * u, y: 717 * u))
+                p.addLine(to: CGPoint(x: 703 * u, y: 717 * u))
             }
+            .stroke(Color(hex: 0x1D1D1F), style: StrokeStyle(lineWidth: 150 * u, lineCap: .round, lineJoin: .round))
+            // the legroom
+            Capsule().fill(Theme.brandGreen)
+                .frame(width: 276 * u, height: 92 * u)
+                .offset(x: 502 * u, y: 391 * u)
         }
         .frame(width: size, height: size)
         .shadow(color: .black.opacity(0.18), radius: size * 0.12, y: size * 0.06)
