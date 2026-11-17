@@ -24,8 +24,11 @@ import SwiftUI
 ///   --nowait               captures after --delay even with a scan in progress
 ///   --hover <x,y>          moves the cursor to that point in the window before capturing
 ///   --verbose              logs each round of readings to stderr, and when they start and stop
+///   --collapsed            Cleanup opens with every group closed, so a screenshot shows no file paths
 enum DebugLaunch {
     static let verbose = CommandLine.arguments.contains("--verbose")
+    /// `--collapsed`: Cleanup opens with every group closed (for public screenshots).
+    static let collapsed = CommandLine.arguments.contains("--collapsed")
     static func verboseLog(_ s: @autoclosure () -> String) { if verbose { log(s()) } }
 
     /// Called in the App's init, before any view: registers `--appearance`

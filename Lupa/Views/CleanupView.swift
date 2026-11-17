@@ -102,7 +102,9 @@ struct CleanupView: View {
                 shownSince = Date()
                 checked = suggestedIDs
                 appliedIdentity = rootsIdentity
-                expanded = Set(groups.filter { !$0.suggested.isEmpty }.prefix(1).map(\.id))
+                // the first group with a suggestion opens, so the pre-checked items are in view
+                // (`--collapsed` keeps every group closed: public screenshots without the home folder's paths)
+                expanded = DebugLaunch.collapsed ? [] : Set(groups.filter { !$0.suggested.isEmpty }.prefix(1).map(\.id))
             } else {
                 checked = checked.intersection(Set(allItems.map(\.id)))
             }
