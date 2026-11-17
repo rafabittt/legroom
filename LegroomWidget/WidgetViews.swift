@@ -49,7 +49,7 @@ private struct UsageRing: View {
             VStack(spacing: -1) {
                 Text("\(Int(((fraction.isFinite ? fraction : 0) * 100).rounded()))%")
                     .font(.system(size: fontSize, weight: .semibold)).tracking(-0.5).monospacedDigit()
-                Text("used").font(.system(size: max(9, fontSize * 0.42))).foregroundStyle(.secondary)
+                Text("used").font(.system(size: max(9, fontSize * 0.42))).foregroundStyle(.muted)
             }
         }
         .frame(width: size, height: size)
@@ -78,9 +78,9 @@ private struct Caption: View {
             Image(systemName: symbol).font(.system(size: 9.5, weight: .semibold))
             Text(title).font(.system(size: 10.5, weight: .medium)).lineLimit(1)
             Spacer(minLength: 0)
-            if let trailing { Text(trailing).font(.system(size: 10)).foregroundStyle(.tertiary).monospacedDigit() }
+            if let trailing { Text(trailing).font(.system(size: 10)).foregroundStyle(.faint).monospacedDigit() }
         }
-        .foregroundStyle(.secondary)
+        .foregroundStyle(.muted)
     }
 }
 
@@ -149,12 +149,12 @@ private struct MemoryBlock: View {
             if let m = memory {
                 HStack(alignment: .firstTextBaseline, spacing: 3) {
                     Text(mem(Int64(m.used))).font(.system(size: 15, weight: .semibold)).tracking(-0.3).monospacedDigit()
-                    Text("of \(mem(Int64(m.total)))").font(.system(size: 10)).foregroundStyle(.secondary).lineLimit(1)
+                    Text("of \(mem(Int64(m.total)))").font(.system(size: 10)).foregroundStyle(.muted).lineLimit(1)
                 }
                 .lineLimit(1).minimumScaleFactor(0.8)
                 MemoryBarMini(memory: m)
             } else {
-                Text("—").font(.system(size: 15, weight: .semibold)).foregroundStyle(.secondary)
+                Text("—").font(.system(size: 15, weight: .semibold)).foregroundStyle(.muted)
             }
         }
     }
@@ -186,15 +186,15 @@ struct SmallView: View {
             HStack(alignment: .top) {
                 UsageRing(fraction: entry.volume?.usedFraction ?? 0, accent: accent, size: 74, lineWidth: 8, fontSize: 19)
                 Spacer(minLength: 0)
-                Image(systemName: "internaldrive").font(.system(size: 11, weight: .semibold)).foregroundStyle(.tertiary)
+                Image(systemName: "internaldrive").font(.system(size: 11, weight: .semibold)).foregroundStyle(.faint)
             }
             Spacer(minLength: 6)
             HealthLabel(health: h, size: 12.5)
             if let v = entry.volume {
-                Text("\(gb(v.free)) available").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                Text("\(gb(v.free)) available").font(.system(size: 11.5)).foregroundStyle(.muted)
                     .monospacedDigit().lineLimit(1).padding(.top, 1)
             } else {
-                Text("Disk unavailable").font(.system(size: 11.5)).foregroundStyle(.secondary)
+                Text("Disk unavailable").font(.system(size: 11.5)).foregroundStyle(.muted)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -214,7 +214,7 @@ struct MediumView: View {
                 Spacer(minLength: 6)
                 HealthLabel(health: h, size: 12.5)
                 Text(entry.volume.map { String(localized: "\(gb($0.free)) available") } ?? String(localized: "Disk unavailable"))
-                    .font(.system(size: 11)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1).padding(.top, 1)
+                    .font(.system(size: 11)).foregroundStyle(.muted).monospacedDigit().lineLimit(1).padding(.top, 1)
             }
             .frame(width: 128, alignment: .leading)
             Rectangle().fill(Color.primary.opacity(0.08)).frame(width: 1).padding(.vertical, 2)
@@ -240,7 +240,7 @@ struct LargeView: View {
             HStack(alignment: .firstTextBaseline) {
                 Text("Overview").font(.system(size: 13, weight: .semibold)).tracking(-0.2)
                 Spacer()
-                Text(entry.date, style: .time).font(.system(size: 10)).foregroundStyle(.tertiary).monospacedDigit()
+                Text(entry.date, style: .time).font(.system(size: 10)).foregroundStyle(.faint).monospacedDigit()
             }
             .padding(.bottom, 6)
 
@@ -251,7 +251,7 @@ struct LargeView: View {
                     HealthLabel(health: h, size: 14)
                     if let v = entry.volume {
                         Text("\(gb(v.usedCapacity)) used of \(gb(v.totalCapacity)). \(gb(v.free)) available.")
-                            .font(.system(size: 10.5)).foregroundStyle(.secondary).lineLimit(2).fixedSize(horizontal: false, vertical: true)
+                            .font(.system(size: 10.5)).foregroundStyle(.muted).lineLimit(2).fixedSize(horizontal: false, vertical: true)
                     }
                 }
             }
@@ -284,11 +284,11 @@ struct LargeView: View {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
                     Text(gb(a.trashedBytesTotal)).font(.system(size: 15, weight: .semibold)).tracking(-0.3).monospacedDigit()
                     Text(a.trashedItemsTotal == 1 ? String(localized: "in 1 item") : String(localized: "in \(Format.count(a.trashedItemsTotal)) items"))
-                        .font(.system(size: 10.5)).foregroundStyle(.secondary)
+                        .font(.system(size: 10.5)).foregroundStyle(.muted)
                 }
             } else {
                 Text(entry.app == nil ? String(localized: "Open Legroom to start counting here.") : String(localized: "Nothing yet"))
-                    .font(.system(size: 12, weight: .medium)).foregroundStyle(.secondary)
+                    .font(.system(size: 12, weight: .medium)).foregroundStyle(.muted)
             }
         }
     }
@@ -305,11 +305,11 @@ struct LargeView: View {
                             .foregroundStyle(Color.primary.opacity(0.8))
                         Text(g.title).font(.system(size: 11, weight: .medium)).lineLimit(1)
                         Spacer(minLength: 6)
-                        Text(g.status).font(.system(size: 10.5)).foregroundStyle(.secondary).monospacedDigit().lineLimit(1)
+                        Text(g.status).font(.system(size: 10.5)).foregroundStyle(.muted).monospacedDigit().lineLimit(1)
                     }
                 }
             } else {
-                Text("Open Legroom to see the status of your goals.").font(.system(size: 11)).foregroundStyle(.secondary)
+                Text("Open Legroom to see the status of your goals.").font(.system(size: 11)).foregroundStyle(.muted)
             }
         }
     }

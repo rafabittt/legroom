@@ -48,8 +48,8 @@ targets:
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "1.0.2"
-        CFBundleVersion: "13"
+        CFBundleShortVersionString: "1.0.3"
+        CFBundleVersion: "14"
         LSMinimumSystemVersion: "14.0"
         LSApplicationCategoryType: public.app-category.utilities
         NSPrincipalClass: NSApplication
@@ -94,13 +94,14 @@ targets:
       - path: Lupa/Models/Memory.swift
       - path: Lupa/Models/Formatting.swift
       - path: Lupa/Views/DiskHealth.swift
+      - path: Lupa/Views/TextStyles.swift
     info:
       path: LegroomWidget/Info.plist
       properties:
         CFBundleName: Legroom
         CFBundleDisplayName: Legroom
-        CFBundleShortVersionString: "1.0.2"
-        CFBundleVersion: "13"
+        CFBundleShortVersionString: "1.0.3"
+        CFBundleVersion: "14"
         LSMinimumSystemVersion: "14.0"
         NSHumanReadableCopyright: "© 2026 Rafael Bittencourt. MIT License."
         NSExtension:

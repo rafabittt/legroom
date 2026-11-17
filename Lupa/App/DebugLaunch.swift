@@ -11,6 +11,8 @@ import SwiftUI
 ///   --goal <id>            opens on that tab (map, cleanup, large, apps, clutter)
 ///   --run                  starts the --goal scan (in the UI nothing runs without the user)
 ///   --popover memory|cpu|network  opens that Overview card's popover (the capture includes all app windows)
+///   --menubar render      with --snapshot, draws the menu bar panel off-screen (no click needed; it is
+///                          the same view, without the popover window around it)
 ///   --menubar wait        with --snapshot, waits for the menu bar item's popover to be opened
 ///                          (click the icon; the app can't click its own icon on macOS 26+,
 ///                          which lives in a system scene) and captures only it, --delay after opening
@@ -169,7 +171,7 @@ enum DebugLaunch {
             if !noWait {
                 while (state.isScanning || !state.goalScanning.isEmpty || state.restoringMap) && Date() < deadline { try? await Task.sleep(for: .milliseconds(200)) }
             }
-            if menubar != nil {
+            if menubar == "wait" {
                 log("waiting for the menu bar popover to open (click the icon)")
                 let limit = Date().addingTimeInterval(120)
                 while !(MenuBarPanel.hostWindow?.isVisible ?? false) && Date() < limit { try? await Task.sleep(for: .milliseconds(200)) }
@@ -177,7 +179,15 @@ enum DebugLaunch {
             try? await Task.sleep(for: .seconds(delay))
             if let hover { moveCursor(toWindowPoint: hover); try? await Task.sleep(for: .milliseconds(900)) }
             log("capturing (scanning=\(state.isScanning), error=\(state.errorMessage ?? "-"))")
-            if menubar != nil {
+            if menubar == "render" {
+                let scheme = AppearanceMode(rawValue: value("--appearance") ?? "")?.colorScheme ?? .light
+                let r = ImageRenderer(content: MenuBarPanel().environment(state).environment(\.colorScheme, scheme).environment(\.controlActiveState, .key))
+                r.scale = 2
+                if let img = r.nsImage, let tiff = img.tiffRepresentation, let rep = NSBitmapImageRep(data: tiff),
+                   let png = rep.representation(using: .png, properties: [:]) {
+                    try? png.write(to: URL(fileURLWithPath: snapshot))
+                }
+            } else if menubar != nil {
                 // only the menu bar popover (the icon lives in a system scene and isn't included in the capture)
                 capture(windows: [MenuBarPanel.hostWindow].compactMap { $0 }.filter(\.isVisible), to: snapshot)
             } else if uninstall != nil {

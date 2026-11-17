@@ -83,12 +83,12 @@ enum Theme {
     static func ink(_ dark: Bool) -> Color { Color(hex: dark ? 0xF5F5F7 : 0x1D1D1F) }
     static func inkText(_ dark: Bool) -> Color { dark ? Color(hex: 0x1D1D1F) : .white }
 
-    /// Secondary text (Grafite DESIGN.md, "Texto secundário"): 6.4:1 on the card in both modes.
-    /// Use `.foregroundStyle(.muted)`; this function is for places that need a plain `Color`.
-    static func textSecondary(_ dark: Bool) -> Color { Color(hex: dark ? 0xA1A1A8 : 0x5E5E63) }
-    /// Tertiary text: the lightest gray that still reads at 4.5:1 on the card AND on the
-    /// window background (5.2:1 / 4.6:1 light, 5.1:1 / 5.6:1 dark). Use `.foregroundStyle(.faint)`.
-    static func textTertiary(_ dark: Bool) -> Color { Color(hex: dark ? 0x8E8E93 : 0x6C6C70) }
+    /// Gray text: the numbers live in TextStyles.swift (`TextGray`), which the widget shares.
+    /// Use `.foregroundStyle(.muted)` and `.foregroundStyle(.faint)`; these two functions are
+    /// for places that need a plain `Color`. The sidebar keeps the system grays: it's always
+    /// dark, where `.secondary` reads at 5.2:1.
+    static func textSecondary(_ dark: Bool) -> Color { TextGray.secondary(dark) }
+    static func textTertiary(_ dark: Bool) -> Color { TextGray.tertiary(dark) }
 
     // The sidebar panel colors (Grafite.sidebarTop / sidebarBottom: #2E2E34 → #1F1F24 by day,
     // #232327 → #17171A at night) live in `DiskHealth.panelGradient`, because that file is
@@ -100,38 +100,6 @@ enum Theme {
     static let select = Animation.spring(response: 0.3, dampingFraction: 1.0)
     static let pressScale: CGFloat = 0.96
     static let cardHoverScale: CGFloat = 1.004
-}
-
-/// Gray text that passes contrast. The system's `.secondary` and `.tertiary` are black at
-/// 50% and 26% in light mode: 3.95:1 and 1.9:1 on a white card (measured 2026-11-17), under
-/// Grafite's 4.5:1 rule. Dark mode's `.tertiary` (white 25%) fails too, at 2.3:1.
-/// With "Increase contrast" on, each one steps up a level, as the system colors would.
-/// They're applied at each call site (`.foregroundStyle(.muted)`) because on macOS a
-/// root-level `foregroundStyle(_:_:_:)` reaches shapes and symbols but not `Text`.
-/// The sidebar keeps the system grays: it's always dark, where `.secondary` reads at 5.2:1.
-struct MutedTextStyle: ShapeStyle {
-    func resolve(in environment: EnvironmentValues) -> Color {
-        let dark = environment.colorScheme == .dark
-        if environment.colorSchemeContrast == .increased { return Color(hex: dark ? 0xD1D1D6 : 0x3A3A3C) }
-        return Theme.textSecondary(dark)
-    }
-}
-
-struct FaintTextStyle: ShapeStyle {
-    func resolve(in environment: EnvironmentValues) -> Color {
-        let dark = environment.colorScheme == .dark
-        return environment.colorSchemeContrast == .increased ? Theme.textSecondary(dark) : Theme.textTertiary(dark)
-    }
-}
-
-extension ShapeStyle where Self == MutedTextStyle {
-    /// Secondary text: use instead of `.secondary`.
-    static var muted: MutedTextStyle { MutedTextStyle() }
-}
-
-extension ShapeStyle where Self == FaintTextStyle {
-    /// Tertiary text: use instead of `.tertiary`.
-    static var faint: FaintTextStyle { FaintTextStyle() }
 }
 
 /// Window background: a single color. The only "light" is a nearly invisible white

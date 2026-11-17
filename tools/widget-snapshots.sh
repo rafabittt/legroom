@@ -8,6 +8,6 @@ mkdir -p "$OUT" build.noindex/widget-snapshot
 swiftc -parse-as-library -D SNAPSHOT_HARNESS -O -module-name LegroomWidgetSnapshot \
   -o build.noindex/widget-snapshot/render \
   LegroomWidget/*.swift Lupa/Models/WidgetSnapshot.swift Lupa/Models/Volume.swift \
-  Lupa/Models/Memory.swift Lupa/Models/Formatting.swift Lupa/Views/DiskHealth.swift \
+  Lupa/Models/Memory.swift Lupa/Models/Formatting.swift Lupa/Views/DiskHealth.swift Lupa/Views/TextStyles.swift \
   tools/widget-snapshot/main.swift 2>&1 | grep -v "^$" || true
 build.noindex/widget-snapshot/render "$OUT"
