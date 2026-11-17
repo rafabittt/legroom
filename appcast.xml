@@ -6,6 +6,22 @@
     <description>Legroom updates</description>
     <language>en</language>
     <item>
+      <title>Legroom 1.0.2</title>
+      <pubDate>Tue, 17 Nov 2026 19:14:52 GMT</pubDate>
+      <sparkle:version>13</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v1.0.2</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 1.0.2</h3>
+<ul>
+<li><b>Easier to read.</b> Gray text (labels, captions, file paths) is now dark enough to read comfortably in light mode, and the smallest notes are brighter in dark mode.</li>
+<li><b>A softer black.</b> The main buttons and the selected tab use a soft ink instead of pure black and white.</li>
+<li>Legroom is a Marcaí app: you'll find the signature at the bottom of the sidebar.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v1.0.2/Legroom-1.0.2.dmg" length="4144381" type="application/octet-stream" sparkle:edSignature="dOMqubwbRm5ppwtc1VTE/SP/yJoXSgWoKB4lyuuG9dMbNXZSIwgf6oSkdZocM+x9yTNiIeZUQ/5LjoeIPgelCw=="/>
+    </item>
+    <item>
       <title>Legroom 1.0.1</title>
       <pubDate>Sun, 15 Nov 2026 22:09:27 GMT</pubDate>
       <sparkle:version>12</sparkle:version>
