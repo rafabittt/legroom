@@ -6,6 +6,21 @@
     <description>Legroom updates</description>
     <language>en</language>
     <item>
+      <title>Legroom 1.0.4</title>
+      <pubDate>Tue, 17 Nov 2026 20:24:54 GMT</pubDate>
+      <sparkle:version>15</sparkle:version>
+      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/rafabittt/legroom/releases/tag/v1.0.4</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<h3>Legroom 1.0.4</h3>
+<ul>
+<li><b>New icon.</b> An L for Legroom, drawn as a seat in profile, with a green dash for the room in front of it. It's made in Apple's new icon format, so recent versions of macOS no longer shrink it onto a white plate in the Dock, and it has proper dark, clear and tinted versions.</li>
+<li>The mark in the sidebar and the menu bar icon follow the new drawing.</li>
+</ul>
+]]></description>
+      <enclosure url="https://github.com/rafabittt/legroom/releases/download/v1.0.4/Legroom-1.0.4.dmg" length="5409028" type="application/octet-stream" sparkle:edSignature="3vRYonFKn8orAlzswYdh8kZKFme2mSayJlJBRGK5qJf+pKsEDSf9+Rwn51RkOJSnfG7+XC0XU3Fqj0cDh84EDg=="/>
+    </item>
+    <item>
       <title>Legroom 1.0.3</title>
       <pubDate>Tue, 17 Nov 2026 19:27:33 GMT</pubDate>
       <sparkle:version>14</sparkle:version>
